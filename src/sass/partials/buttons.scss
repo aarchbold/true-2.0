@@ -1,0 +1,67 @@
+/* button styles
+*/
+
+button, .button {
+    transition: all 0.4s;
+    display: inline-block;
+    margin: 0;
+    padding: 14px 30px !important;
+    border-radius: 5px;
+    font-family: 'TruenoUltraLight', sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    background: $color-play-button;
+    &:hover {
+        opacity: 0.7;
+    }
+    &.button-play {
+        position: relative;
+        padding-left: 60px !important;
+    }
+    &.button-trial {
+        color: $color-nav-links;
+        background: $color-signup-button;
+    }
+    &.button-hotspots {
+        background-color: $bg-color-feature-hotspots;
+        color: $color-main-font;
+        box-shadow: 1px 4px 8px 1px rgba(0,0,0,0.2);
+    }
+    &.button-forecasting {
+        background-color: $bg-color-feature-forecasting;
+        color: $color-main-font;
+        box-shadow: 1px 4px 8px 1px rgba(0,0,0,0.2);
+    }
+    &.button-pulse {
+        color: $color-main-inverse;
+        background-color: $bg-color-feature-pulse;
+        box-shadow: 1px 4px 8px 1px rgba(0,0,0,0.2);
+    }
+    &.button-events {
+        background-color: $bg-color-feature-events;
+        color: $color-main-font;
+        box-shadow: 1px 4px 8px 1px rgba(0,0,0,0.2);
+    }
+    &.button-signup {
+        background-color: $color-play-button;
+        color: $color-main-font;
+        box-shadow: 1px 4px 8px 1px rgba(33,196,208,0.2);
+    }
+}
+
+.button-icon {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    width: 26px;
+}
+
+.button-topnav {
+    padding: 8px 15px !important;
+    color: $color-main-font;
+    background-color: $color-nav-button;
+    font-size: 15px;
+    font-family: 'TruenoRegular', sans-serif;
+    box-shadow: 1px 1px 10px 1px rgba(75,73,255,0.37);
+}
+
