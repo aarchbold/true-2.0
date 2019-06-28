@@ -1,4 +1,4 @@
-# geospark
+# True
 Marketing site for the True 2.0 landing page
 
 ## local development
