@@ -1,0 +1,47 @@
+/* animated cloud styles
+*/
+
+// vars
+
+// properties
+.animated-cloud {
+    transition: all 1s;
+    position: absolute;
+    background: url('../images/ui/scenery/cloud.png') 50% 50% no-repeat;
+    background-size: cover;
+    z-index: 1000;
+    &.cloud1 {
+        top: 40%;
+        left: 0;
+        width: 200px;
+        height: 100px;
+        transform: translateX(-200px);
+        &.-animate {
+            animation: movecloud 30s linear infinite;
+        }
+    }
+    &.cloud2 {
+        top: 50%;
+        left: 0;
+        width: 160px;
+        height: 80px;
+        transform: translateX(-200px);
+        &.-animate {
+            animation: movecloud 40s linear infinite;
+        }
+    }
+}
+
+
+// animations
+@keyframes movecloud
+{
+    0% {
+        left: -200px;
+        // transform: translateX(-200px);
+    }
+    100% {
+        left: 120%;
+        //transform: translateX(200%);
+    }
+}
