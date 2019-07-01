@@ -63,13 +63,13 @@ table {
 /* global styles
 */
 body {
-  background-color: #0F0F16;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #0F0F16;
   font-family: 'TruenoUltraLight', sans-serif;
 }
 
 a {
-  color: #ffffff;
+  color: #0F0F16;
   text-decoration: underline;
 }
 
@@ -83,7 +83,7 @@ a {
 .page-section__h1 {
   font-size: 44px;
   padding: 120px 0 40px;
-  color: #000000;
+  color: #ffffff;
 }
 
 .page-h2 {
@@ -94,7 +94,7 @@ a {
   font-family: 'TruenoRegular', sans-serif;
 }
 .page-h2.-inverse {
-  color: #000000;
+  color: #ffffff;
 }
 .page-h2.-about-section {
   font-size: 40px;
@@ -106,10 +106,10 @@ a {
   left: 4px;
   width: 32px;
   height: 6px;
-  background-color: #ffffff;
+  background-color: #0F0F16;
 }
 .page-h2__hr.-inverse {
-  background-color: #000000;
+  background-color: #ffffff;
 }
 
 .page-subheader {
@@ -119,7 +119,7 @@ a {
   line-height: 1.3;
 }
 .page-subheader.-inverse {
-  color: #000000;
+  color: #ffffff;
 }
 
 .page-description {
@@ -166,6 +166,109 @@ a {
 }
 /* home styles
 */
+.hero-stage {
+  -webkit-transition: all 0.9s;
+  transition: all 0.9s;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-color: black;
+  opacity: 0.8;
+}
+.hero-stage.-animate {
+  background-color: white;
+  opacity: 1;
+}
+
+.hero-stage__header {
+  -webkit-transition: all 0.9s;
+  transition: all 0.9s;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 30px;
+  top: 50%;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+  z-index: 20px;
+}
+.hero-stage__header.-animate {
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.hero-stage__tree {
+  position: absolute;
+  background-color: green;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  border-top: 1px solid #ffffff;
+}
+.hero-stage__tree.tree1 {
+  z-index: 100;
+  top: 50%;
+}
+.hero-stage__tree.tree2 {
+  z-index: 200;
+  top: 70%;
+}
+.hero-stage__tree.tree3 {
+  z-index: 300;
+  top: 90%;
+}
+
+.hero-stage__fog {
+  -webkit-transition: all 0.9s;
+  transition: all 0.9s;
+  position: absolute;
+  background: -webkit-linear-gradient(transparent 1%, white);
+  background: linear-gradient(transparent 1%, white);
+  width: 100%;
+  height: 40%;
+}
+.hero-stage__fog.-animate {
+  -webkit-transform: translate(0, 60%);
+  -ms-transform: translate(0, 60%);
+  transform: translate(0, 60%);
+}
+.hero-stage__fog.fog1 {
+  z-index: 101;
+  top: 50%;
+}
+.hero-stage__fog.fog2 {
+  z-index: 202;
+  top: 70%;
+}
+.hero-stage__fog.fog3 {
+  z-index: 304;
+  top: 90%;
+}
+
+.hero-stage__sun {
+  -webkit-transition: all 0.9s;
+  transition: all 0.9s;
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  top: 10%;
+  left: 60%;
+  border-radius: 50%;
+  background-color: yellow;
+  -webkit-transform: translate(400%, 400%);
+  -ms-transform: translate(400%, 400%);
+  transform: translate(400%, 400%);
+}
+.hero-stage__sun.-animate {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
 /* button styles
 */
 button, .button {
@@ -193,27 +296,27 @@ button.button-trial, .button.button-trial {
 }
 button.button-hotspots, .button.button-hotspots {
   background-color: #FF496F;
-  color: #ffffff;
+  color: #0F0F16;
   box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
 }
 button.button-forecasting, .button.button-forecasting {
   background-color: #003155;
-  color: #ffffff;
+  color: #0F0F16;
   box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
 }
 button.button-pulse, .button.button-pulse {
-  color: #000000;
+  color: #ffffff;
   background-color: #FFD66F;
   box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
 }
 button.button-events, .button.button-events {
   background-color: #01AEEB;
-  color: #ffffff;
+  color: #0F0F16;
   box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
 }
 button.button-signup, .button.button-signup {
   background-color: #21C4D0;
-  color: #ffffff;
+  color: #0F0F16;
   box-shadow: 1px 4px 8px 1px rgba(33, 196, 208, 0.2);
 }
 
@@ -226,7 +329,7 @@ button.button-signup, .button.button-signup {
 
 .button-topnav {
   padding: 8px 15px !important;
-  color: #ffffff;
+  color: #0F0F16;
   background-color: #4B49FF;
   font-size: 15px;
   font-family: 'TruenoRegular', sans-serif;
