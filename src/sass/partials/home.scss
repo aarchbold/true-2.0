@@ -10,9 +10,11 @@ $hero-animation-duration-long: 2s;
     // background-color: $color-hero-bg;
 }
 .hero-stage {
+    position: absolute;
+    top: 0px;
+    left: 0px;
     transition: opacity $hero-animation-duration;
     overflow: hidden;
-    position: relative;
     width: 100%;
     height: 560px;
     background-color: $color-hero-bg;
@@ -101,11 +103,17 @@ $hero-animation-duration-long: 2s;
     position: absolute;
     width: 480px;
     height: 460px;
-    top: 40%;
+    top: 30%;
     left: 60%;
     transform: translate(400%,400%);
     background: url('../images/ui/scenery/mr-sun.png') 50% 50% no-repeat;
     &.-animate {
         transform: translate(0,0);
     }
+}
+
+.main-site__container {
+    position: relative;
+    z-index: 1;
+    padding-top: 60px;
 }
