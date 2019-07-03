@@ -3,34 +3,52 @@
 
 // vars
 $hero-animation-duration: 0.9s;
+$hero-animation-duration-long: 2s;
 
 // properties
+.hero-outer {
+    // background-color: $color-hero-bg;
+}
 .hero-stage {
-    transition: all $hero-animation-duration;
+    transition: opacity $hero-animation-duration;
     overflow: hidden;
     position: relative;
     width: 100%;
-    background-color: black;
-    opacity: 0.8;
+    height: 560px;
+    background-color: $color-hero-bg;
+    background: url('../images/ui/scenery/bg-hero.jpg') 50% 50% no-repeat;
+    background-size: cover;
+    opacity: 0;
     &.-animate {
-        background-color: white;
-        opacity: 1;
+        // background-color: white;
+        opacity: 1; 
     }
 }
 
+.hero-stage__bottom {
+    position: relative;
+    top: -134px;
+}
+
 .hero-stage__header {
-    transition: all $hero-animation-duration;
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    box-sizing: border-box;
-    text-align: center;
-    font-size: 30px;
+    transition: opacity $hero-animation-duration-long;
+    font-size: 60px;
     top: 50%;
-    transform: translateY(100%);
-    z-index: 20px;
+    font-family: TruenoBlack;
+    opacity: 0;
+    line-height: 1;
+    padding: 10% 30% 10% 10%;
     &.-animate {
-        transform: translateY(-50%);
+        opacity: 1;
+    }
+    h1 {
+        font-size: 60px;
+    }
+    p {
+        padding-top: 20px;
+        line-height: 1.3;
+        font-size: 22px;
+        font-family: TruenoRegular;
     }
 }
 
@@ -79,15 +97,14 @@ $hero-animation-duration: 0.9s;
 }
 
 .hero-stage__sun {
-    transition: all $hero-animation-duration;
+    transition: all $hero-animation-duration-long;
     position: absolute;
-    width: 180px;
-    height: 180px;
-    top: 10%;
+    width: 480px;
+    height: 460px;
+    top: 40%;
     left: 60%;
-    border-radius: 50%;
-    background-color: yellow;
     transform: translate(400%,400%);
+    background: url('../images/ui/scenery/mr-sun.png') 50% 50% no-repeat;
     &.-animate {
         transform: translate(0,0);
     }
