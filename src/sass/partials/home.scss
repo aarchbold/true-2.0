@@ -10,10 +10,10 @@ $hero-animation-duration-long: 2s;
     // background-color: $color-hero-bg;
 }
 .hero-stage {
-    position: absolute;
+    transition: opacity $hero-animation-duration;
+    position: fixed;
     top: 0px;
     left: 0px;
-    transition: opacity $hero-animation-duration;
     overflow: hidden;
     width: 100%;
     height: 560px;
@@ -116,4 +116,14 @@ $hero-animation-duration-long: 2s;
     position: relative;
     z-index: 1;
     padding-top: 60px;
+}
+
+.main-site__trees1 {
+    position: absolute;
+    top: 13%;
+}
+
+.main-site__trees2 {
+    position: absolute;
+    top: 24%;
 }
