@@ -121,9 +121,22 @@ $hero-animation-duration-long: 2s;
 .main-site__trees1 {
     position: absolute;
     top: 13%;
+    z-index: 3;
 }
 
 .main-site__trees2 {
     position: absolute;
     top: 24%;
+    z-index: 3;
+}
+
+.main-site__mountains {
+    position: absolute;
+    top: 13.7%;
+    z-index: 1;
+}
+
+.main-site__background {
+    position: relative;
+    z-index: 2;
 }
