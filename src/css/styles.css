@@ -134,6 +134,10 @@ a {
   margin-top: 60px;
 }
 
+section {
+  margin: 0 auto;
+}
+
 @media (max-width: 650px) {
   .page-h1 {
     font-size: 50px;
@@ -165,6 +169,13 @@ a {
   margin: 0 auto;
   padding: 0 40px;
   box-sizing: border-box;
+}
+
+.card-outer {
+  width: 40%;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding: 40px;
 }
 
 @media (max-width: 400px) {
@@ -318,6 +329,15 @@ a {
 .main-site__background {
   position: relative;
   z-index: 2;
+}
+
+.section-sharing {
+  position: absolute;
+  top: 50%;
+  z-index: 1000;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 /* button styles

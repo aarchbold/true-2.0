@@ -17,6 +17,13 @@
     box-sizing: border-box;
 }
 
+.card-outer {
+    width: 40%;
+    background-color: $color-bg-card;
+    box-sizing: border-box;
+    padding: 40px;
+}
+
 @media (max-width: 400px) {
     .page-inner {
         padding: 0 20px;

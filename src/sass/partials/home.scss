@@ -154,3 +154,12 @@ $hero-animation-duration-long: 2s;
     position: relative;
     z-index: 2;
 }
+
+.section-sharing {
+    position: absolute;
+    top: 50%;
+    z-index: 1000;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
