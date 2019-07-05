@@ -31,6 +31,7 @@ initHero = debounce(function() {
     $header = $('.hero-stage__header',$heroContainer);
     $clouds = $('.animated-cloud',$heroContainer);
     $birds = $('.animated-bird',$heroContainer);
+    var $window = $(window);
     
     // Enable this if we want the hero to take up the window height
     //$heroContainer.height($(window).height());
@@ -46,6 +47,15 @@ initHero = debounce(function() {
         $header.addClass('-animate');
     }
 
+    window.addEventListener('scroll', function(){
+      var scrollTop = $window.scrollTop();
+      console.log(scrollTop);
+      if (scrollTop > 20) {
+        $header.addClass('-fade');
+      } else {
+        $header.removeClass('-fade');
+      }
+    });
     // start animations
     setTimeout(function() {
         startAnimations();
