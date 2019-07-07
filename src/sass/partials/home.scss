@@ -155,11 +155,31 @@ $hero-animation-duration-long: 2s;
     z-index: 2;
 }
 
-.section-sharing {
+.section-starts {
     position: absolute;
-    top: 50%;
+    top: 32%;
     z-index: 1000;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     width: 100%;
+}
+
+.section-sharing, .section-friends, .section-secure {
+    position: relative;
+    margin-bottom: 340px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.section-image {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    width: 38%;
+    &.-left {
+        right: auto;
+        left: 0px;
+    }
 }
