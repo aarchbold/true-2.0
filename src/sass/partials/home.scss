@@ -110,8 +110,31 @@ $hero-animation-duration-long: 2s;
     left: 60%;
     transform: translate(400%,400%);
     background: url('../images/ui/scenery/mr-sun.png') 50% 50% no-repeat;
+    z-index: 1;
     &.-animate {
         transform: translate(0,0);
+    }
+}
+
+.main-site__balloon1 {
+    transition: all 38s;
+    position: absolute;
+    top: 42%;
+    left: 78%;
+    z-index: 100;
+    &.-animate {
+        top: -30%;
+    }
+}
+
+.main-site__balloon2 {
+    transition: all 55s;
+    position: absolute;
+    top: 60%;
+    left: 75%;
+    z-index: 100;
+    &.-animate {
+        top: -20%;
     }
 }
 
