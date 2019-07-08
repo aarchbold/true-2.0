@@ -5,30 +5,37 @@
 
 // properties
 .animated-bird {
-    transition: all 1s;
+    // transition: left 1s;
     position: absolute;
-    background: url('../images/ui/scenery/bird1.gif') 50% 50% no-repeat;
+    background: url('../images/ui/scenery/bird1.png') 50% 50% no-repeat;
     background-size: cover;
-    z-index: 1000;
-    &.bird1 {
-        top: 80%;
-        left: 0;
-        width: 100px;
-        height: 100px;
-        transform: translateX(-200px);
-        &.-animate {
-            animation: movebird 8s linear infinite;
-        }
-    }
-    &.bird2 {
-        top: 120%;
+    z-index: 4;
+    &.bird1,&.bird3 {
+        top: 22%;
         left: 0;
         width: 50px;
         height: 50px;
         transform: translateX(-200px);
         &.-animate {
-            animation: movebird 12s linear infinite;
+            animation: movebird 12s linear infinite, flapper .3s linear infinite;
         }
+    }
+    &.bird3 {
+        top: 50%;
+    }
+    &.bird2,&.bird4 {
+        top: 25%;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        transform: translateX(-200px);
+        z-index: 6;
+        &.-animate {
+            animation: movebird 18s linear infinite, flapper .3s linear infinite;
+        }
+    }
+    &.bird4 {
+        top: 66%;
     }
 }
 
@@ -41,9 +48,27 @@
         // transform: translateX(-200px);
     }
 
+    30% {
+        transform: translateY(-100%);
+    }
+    60% {
+        transform: translateY(-50%);
+    }
     100% {
         left: 120%;
-        top: 10%;
+        transform: translateY(50%);
         //transform: translateX(200%);
     }
+}
+@keyframes flapper
+{
+    0% {
+        background-image: url('../images/ui/scenery/bird1.png');
+    }
+    50% {
+        background-image: url('../images/ui/scenery/bird2.png');
+    }
+    // 100% {
+    //     background-image: url('../images/ui/scenery/bird1.png');
+    // }
 }
