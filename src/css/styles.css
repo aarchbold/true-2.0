@@ -293,11 +293,101 @@ section {
   display: block;
 }
 
+.footer-waterfall__animation {
+  position: absolute;
+  left: 29%;
+  width: 64%;
+  height: 100%;
+  z-index: 4;
+  overflow: hidden;
+}
+.footer-waterfall__animation .waterfall-drop {
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 30%;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.3;
+  transform: translateY(-100%);
+}
+.footer-waterfall__animation .waterfall-drop.-drop1 {
+  left: 12%;
+  animation: waterfall 1.2s linear infinite;
+  animation-delay: 1s;
+}
+.footer-waterfall__animation .waterfall-drop.-drop2 {
+  left: 17%;
+  animation: waterfall 1.1s linear infinite;
+  animation-delay: 1.2s;
+}
+.footer-waterfall__animation .waterfall-drop.-drop3 {
+  left: 24%;
+  animation: waterfall 1.3s linear infinite;
+  animation-delay: 1.4s;
+}
+.footer-waterfall__animation .waterfall-drop.-drop4 {
+  left: 28%;
+  animation: waterfall 1.1s linear infinite;
+  animation-delay: 1.1s;
+}
+.footer-waterfall__animation .waterfall-drop.-drop5 {
+  left: 40%;
+  animation: waterfall 1.1s linear infinite;
+  animation-delay: 1.6s;
+}
+.footer-waterfall__animation .waterfall-drop.-drop6 {
+  left: 44%;
+  animation: waterfall 1.1s linear infinite;
+  animation-delay: 1.7s;
+}
+.footer-waterfall__animation .waterfall-drop.-drop7 {
+  left: 54%;
+  animation: waterfall 1.2s linear infinite;
+  animation-delay: 1.3s;
+}
+.footer-waterfall__animation .waterfall-drop.-drop8 {
+  left: 62%;
+  animation: waterfall 1.1s linear infinite;
+  animation-delay: 1.3s;
+}
+.footer-waterfall__animation .waterfall-drop.-drop9 {
+  left: 70%;
+  animation: waterfall 1.1s linear infinite;
+  animation-delay: 1.45s;
+}
+.footer-waterfall__animation .waterfall-drop.-drop10 {
+  left: 77%;
+  animation: waterfall 1.2s linear infinite;
+  animation-delay: 1.6s;
+}
+.footer-waterfall__animation .waterfall-drop.-drop11 {
+  left: 90%;
+  animation: waterfall 1.05s linear infinite;
+  animation-delay: 1.2s;
+}
+
+@keyframes waterfall {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(400%);
+  }
+}
 .footer-container {
   position: absolute;
   bottom: 0;
   width: 100%;
   max-width: 1200px;
+  z-index: 5;
+}
+
+.footer-cast {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
 }
 
 .footer-inner {
@@ -305,6 +395,27 @@ section {
   bottom: 0;
   padding: 0 100px 40px 80px;
   color: #ffffff;
+}
+
+.footer-boulder {
+  position: relative;
+  top: -200px;
+  max-width: 357px;
+  width: 40%;
+}
+
+.footer-old-man {
+  position: relative;
+  top: -100px;
+  max-width: 238px;
+  width: 30%;
+}
+
+.footer-doggers {
+  position: relative;
+  top: -50px;
+  max-width: 157px;
+  width: 16%;
 }
 
 .footer-background {
@@ -714,10 +825,9 @@ button:hover, .button:hover {
 }
 .animated-bird.bird1, .animated-bird.bird3 {
   top: 22%;
-  left: 0;
+  left: -100px;
   width: 50px;
   height: 50px;
-  transform: translateX(-200px);
 }
 .animated-bird.bird1.-animate, .animated-bird.bird3.-animate {
   animation: movebird 12s linear infinite, flapper .3s linear infinite;
@@ -727,10 +837,9 @@ button:hover, .button:hover {
 }
 .animated-bird.bird2, .animated-bird.bird4 {
   top: 25%;
-  left: 0;
+  left: -100px;
   width: 30px;
   height: 30px;
-  transform: translateX(-200px);
   z-index: 6;
 }
 .animated-bird.bird2.-animate, .animated-bird.bird4.-animate {
@@ -742,17 +851,17 @@ button:hover, .button:hover {
 
 @keyframes movebird {
   0% {
-    left: -200px;
+    left: -100px;
   }
   30% {
-    transform: translateY(-100%);
+    transform: translateY(-130%);
   }
   60% {
-    transform: translateY(-50%);
+    transform: translateY(10%);
   }
   100% {
     left: 120%;
-    transform: translateY(50%);
+    transform: translateY(0);
   }
 }
 @keyframes flapper {
