@@ -35,8 +35,6 @@ initHero = debounce(function() {
     $baloon1 = $('.main-site__balloon1',$heroContainer);
     $baloon2 = $('.main-site__balloon2',$heroContainer);
     var $window = $(window);
-
-    console.log($birds);
     
     // Enable this if we want the hero to take up the window height
     //$heroContainer.height($(window).height());
@@ -56,7 +54,6 @@ initHero = debounce(function() {
 
     window.addEventListener('scroll', function(){
       var scrollTop = $window.scrollTop();
-      console.log(scrollTop);
       if (scrollTop > 20) {
         $header.addClass('-fade');
       } else {

@@ -140,8 +140,14 @@ $hero-animation-duration-long: 2s;
 
 .main-site__container {
     position: relative;
-    z-index: 1;
+    z-index: 5;
     padding-top: 60px;
+    //overflow: hidden;
+}
+
+.main-site__container--inner {
+    position: relative;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -170,7 +176,7 @@ $hero-animation-duration-long: 2s;
 
 .main-site__mountains {
     position: absolute;
-    top: 13.7%;
+    top: 12%;
     z-index: 1;
 }
 
@@ -190,22 +196,43 @@ $hero-animation-duration-long: 2s;
 }
 
 .section-sharing, .section-friends, .section-secure {
-    position: relative;
+    transition: transform 0.3s ease-in-out;
+    position: absolute;
+    left: 50%;
     margin-bottom: 340px;
+    transform: translate(-50%,200px);
+    opacity: 1;
+    width: 100%;
+    &.-animate {
+        transform: translate(-50%,0);
+    }
     &:last-child {
         margin-bottom: 0;
     }
 }
 
+.section-sharing {
+    top: 0;
+}
+
+.section-friends {
+    top: 760px;
+}
+
+.section-secure {
+    top: 1600px;
+}
+
+
 .section-image {
     position: absolute;
     top: 50%;
-    right: 50px;
+    right: 0;
     transform: translateY(-50%);
     width: 38%;
     &.-left {
         right: auto;
-        left: 0px;
+        left: -50px;
     }
 }
 

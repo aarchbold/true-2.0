@@ -94,16 +94,6 @@
     }
 }
 
-@keyframes waterfall
-{
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(400%);
-    }
-}
-
 .footer-container {
     position: absolute;
     bottom: 0;
@@ -122,7 +112,7 @@
 .footer-inner {
     position: absolute;
     bottom: 0;
-    padding: 0 100px 40px 80px;
+    padding: 0 100px 100px 80px;
     color: $color-footer-font;
 }
 
@@ -190,4 +180,14 @@
 
 .footer-social__links {
     margin-bottom: 140px;
+}
+
+@keyframes waterfall
+{
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(400%);
+    }
 }

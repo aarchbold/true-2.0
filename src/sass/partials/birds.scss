@@ -9,7 +9,7 @@
     position: absolute;
     background: url('../images/ui/scenery/bird1.png') 50% 50% no-repeat;
     background-size: cover;
-    z-index: 4;
+    z-index: 10;
     &.bird1,&.bird3 {
         top: 22%;
         left: -100px;
