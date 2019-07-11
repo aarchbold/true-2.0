@@ -203,6 +203,7 @@ $hero-animation-duration-long: 2s;
     transform: translate(-50%,200px);
     opacity: 1;
     width: 100%;
+    z-index: 10;
     &.-animate {
         transform: translate(-50%,0);
     }
@@ -212,15 +213,15 @@ $hero-animation-duration-long: 2s;
 }
 
 .section-sharing {
-    top: 0;
+    top: 36%;
 }
 
 .section-friends {
-    top: 760px;
+    top: 67%;
 }
 
 .section-secure {
-    top: 1600px;
+    top: 100%;
 }
 
 
@@ -228,8 +229,8 @@ $hero-animation-duration-long: 2s;
     position: absolute;
     top: 50%;
     right: 0;
-    transform: translateY(-50%);
-    width: 38%;
+    transform: translateY(-46%);
+    width: 42%;
     &.-left {
         right: auto;
         left: -50px;
@@ -239,4 +240,49 @@ $hero-animation-duration-long: 2s;
 .section-footer {
     background-color: $color-bg-footer;
     min-height: 1600px;
+}
+
+
+@media (max-width: 1200px) {
+    .section-image {
+        width: 38%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .hero-stage__header {
+        h1 {
+            font-size: 50px;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+    .card-outer {
+        width: 60%;
+        &.-right {
+            margin-left: 40%;
+        }
+    }
+    .footer-boulder {
+        position: absolute;
+        top: -67px;
+        left: 18px;
+        max-width: 18%;
+        width: auto;
+    }
+    .footer-old-man {
+        position: absolute;
+        top: -133px;
+        left: 220px;
+        max-width: 18%;
+        width: auto;
+    }
+    .footer-doggers {
+        position: absolute;
+        top: 8px;
+        left: 400px;
+        max-width: 9%;
+        width: auto;
+    }
 }
