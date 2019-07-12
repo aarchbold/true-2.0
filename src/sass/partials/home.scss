@@ -327,26 +327,72 @@ $hero-animation-duration-long: 2s;
         &.-right {
             margin-left: 40%;
         }
+        h2 {
+            font-size: 32px;
+        }
+        p {
+            font-size: 18px;
+        }
     }
-    .footer-boulder {
-        position: absolute;
-        top: -67px;
-        left: 18px;
-        max-width: 18%;
-        width: auto;
+}
+
+@media (max-width: 800px) {
+    .hero-stage__header {
+        h1 {
+            font-size: 40px;
+        }
+        p {
+            font-size: 18px;
+        }
     }
-    .footer-old-man {
-        position: absolute;
-        top: -133px;
-        left: 220px;
-        max-width: 18%;
-        width: auto;
+    .section-image {
+        &.-left {
+            left: -35px;
+        }
     }
-    .footer-doggers {
-        position: absolute;
-        top: 8px;
-        left: 400px;
-        max-width: 9%;
-        width: auto;
+    .card-outer {
+        width: 66%;
+        &.-right {
+            margin-left: 34%;
+        }
+        h2 {
+            font-size: 26px;
+            margin-bottom: 24px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 24px;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .main-site__container {
+        padding-top: 100px;
+    }
+    .hero-stage__header {
+        padding: 12% 10% 10% 10%;
+        h1 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+    .card-outer {
+        width: 75%;
+        z-index: 1;
+        padding: 30px;
+        border-radius: 60px;
+        &.-right {
+            margin-left: 25%;
+        }
+    }
+    .section-image {
+        width: 50%;
+        top: 50%;
+        &.-left {
+            left: -35px;
+        }
     }
 }

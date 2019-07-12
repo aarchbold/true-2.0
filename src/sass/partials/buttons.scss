@@ -57,4 +57,25 @@ button, .button {
     }
 }
 
+@media (max-width: 800px) {
+    button, .button {
+        font-size: 16px;
+        padding: 14px 30px !important;
+    }
+    .button-social {
+        width: 42px;
+        height: 42px;
+        &.-facebook {
+            img {
+                width: 14px;
+            }
+        }
+        &.-twitter {
+            img {
+                width: 26px;
+            }
+        }
+    }
+}
+
 
