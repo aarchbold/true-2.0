@@ -746,6 +746,67 @@ section {
   min-height: 1600px;
 }
 
+.house-scene {
+  position: absolute;
+  top: 53.5%;
+  z-index: 9;
+  left: 0;
+  width: 35%;
+  height: 7.5%;
+}
+
+.house-scene__house {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+}
+
+.house-scene__smoke1 {
+  position: absolute;
+  bottom: 44%;
+  right: 13%;
+  width: 50%;
+  animation: smoke 7s linear infinite;
+}
+
+.house-scene__smoke2 {
+  position: absolute;
+  bottom: 62%;
+  right: 45%;
+  width: 50%;
+  animation: smoke2 8s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes smoke {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  79% {
+    opacity: 1;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+}
+@keyframes smoke2 {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  79% {
+    opacity: 1;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+}
 @media (max-width: 1200px) {
   .section-image {
     width: 38%;
