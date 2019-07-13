@@ -19,7 +19,7 @@
 
 .card-outer {
     position: relative;
-    width: 50%;
+    width: 55%;
     background-color: $color-bg-card;
     box-sizing: border-box;
     padding: 50px 50px;
@@ -27,16 +27,16 @@
     border-radius: 100px;
     margin-top: 20px;
     &.-right {
-        margin-left: 50%;
+        margin-left: 45%;
     }
     h2 {
         text-align: center;
-        font-size: 40px;
+        font-size: 38px;
         font-family: TruenoBlack, sans-serif;
         margin-bottom: 40px;
     }
     p {
-        font-size: 20px;
+        font-size: 19px;
         font-family: TruenoBold, sans-serif;
         line-height: 1.4;
         margin-bottom: 40px;

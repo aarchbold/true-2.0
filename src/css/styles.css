@@ -405,6 +405,24 @@ section {
   line-height: 1.3;
   font-family: TruenoBlack, sans-serif;
   padding-right: 30%;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.footer-subheader {
+  padding-right: 20%;
+  font-size: 20px;
+  font-family: TruenoBold, sans-serif;
+  opacity: 0.6;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.footer-hashtag {
+  padding-right: 20%;
+  font-size: 20px;
+  font-family: TruenoBold, sans-serif;
+  opacity: 0.6;
   margin-bottom: 40px;
 }
 
@@ -563,7 +581,7 @@ section {
 
 .card-outer {
   position: relative;
-  width: 50%;
+  width: 55%;
   background-color: #ffffff;
   box-sizing: border-box;
   padding: 50px 50px;
@@ -572,16 +590,16 @@ section {
   margin-top: 20px;
 }
 .card-outer.-right {
-  margin-left: 50%;
+  margin-left: 45%;
 }
 .card-outer h2 {
   text-align: center;
-  font-size: 40px;
+  font-size: 38px;
   font-family: TruenoBlack, sans-serif;
   margin-bottom: 40px;
 }
 .card-outer p {
-  font-size: 20px;
+  font-size: 19px;
   font-family: TruenoBold, sans-serif;
   line-height: 1.4;
   margin-bottom: 40px;
@@ -624,8 +642,9 @@ section {
   font-family: TruenoBlack, sans-serif;
   opacity: 0;
   line-height: 1;
-  padding: 10% 30% 10% 10%;
-  transform: translateY(60px);
+  padding: 14% 10%;
+  text-align: center;
+  transform: translateY(150px);
 }
 .hero-stage__header.-animate {
   opacity: 1;
@@ -666,28 +685,46 @@ section {
 }
 
 .hero-stage__fog {
-  transition: all 0.9s;
   position: absolute;
-  background: linear-gradient(transparent 1%, white);
   width: 100%;
-  height: 40%;
-}
-.hero-stage__fog.-animate {
-  transform: translate(0, 60%);
+  height: 100%;
 }
 .hero-stage__fog.fog1 {
-  z-index: 101;
-  top: 50%;
+  background: linear-gradient(transparent, white 20%);
+  z-index: 5;
+}
+.hero-stage__fog.fog1.-animate {
+  animation: foggydew 2s;
+  animation-delay: 1.4s;
+  animation-fill-mode: forwards;
 }
 .hero-stage__fog.fog2 {
-  z-index: 202;
-  top: 70%;
+  background: linear-gradient(transparent, white 20%);
+  z-index: 12;
+}
+.hero-stage__fog.fog2.-animate {
+  animation: foggydew 1.5s;
+  animation-delay: 1.4s;
+  animation-fill-mode: forwards;
 }
 .hero-stage__fog.fog3 {
-  z-index: 304;
-  top: 90%;
+  background-color: blue;
 }
 
+@keyframes foggydew {
+  0% {
+    transform: translate(0, 0);
+    display: block;
+  }
+  90% {
+    transform: translate(0, 100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 100%);
+    opacity: 0;
+  }
+}
 .hero-stage__sun {
   transition: all 2s;
   position: absolute;
@@ -706,7 +743,7 @@ section {
 .main-site__balloon1 {
   transition: all 68s;
   position: absolute;
-  top: 42%;
+  top: 50%;
   left: 68%;
   z-index: 100;
 }
