@@ -33,15 +33,17 @@ $hero-animation-duration-long: 2s;
 }
 
 .hero-stage__header {
-    transition: opacity $hero-animation-duration;
+    transition: all 1.5s;
     font-size: 60px;
     top: 50%;
     font-family: TruenoBlack, sans-serif;
     opacity: 0;
     line-height: 1;
     padding: 10% 30% 10% 10%;
+    transform: translateY(60px);
     &.-animate {
         opacity: 1;
+        transform: translateY(0);
     }
     &.-fade {
         opacity: 0;
@@ -117,24 +119,24 @@ $hero-animation-duration-long: 2s;
 }
 
 .main-site__balloon1 {
-    transition: all 38s;
+    transition: all 68s;
     position: absolute;
     top: 42%;
-    left: 78%;
+    left: 68%;
     z-index: 100;
     &.-animate {
-        top: -30%;
+        left: 110%;
     }
 }
 
 .main-site__balloon2 {
-    transition: all 55s;
+    transition: all 125s;
     position: absolute;
     top: 60%;
-    left: 75%;
+    left: 64%;
     z-index: 100;
     &.-animate {
-        top: -20%;
+        left: 110%;
     }
 }
 
@@ -153,7 +155,7 @@ $hero-animation-duration-long: 2s;
 
 .main-site__hills1 {
     position: absolute;
-    top: 11.6%;
+    top: 9%;
     z-index: 5;
 }
 
@@ -165,12 +167,12 @@ $hero-animation-duration-long: 2s;
 
 .main-site__hills3 {
     position: absolute;
-    top: 15%;
+    top: 12%;
     z-index: 5;
 }
 .main-site__hills4 {
     position: absolute;
-    top: 31%;
+    top: 30%;
     z-index: 6;
 }
 
@@ -208,7 +210,7 @@ $hero-animation-duration-long: 2s;
 }
 
 .section-sharing, .section-friends, .section-secure {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.75s ease-in-out;
     position: absolute;
     left: 50%;
     margin-bottom: 340px;
