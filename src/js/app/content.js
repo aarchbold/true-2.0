@@ -7,13 +7,13 @@ $(function() {
     $(window).on('DOMContentLoaded load resize scroll', function() {
 
         if (isElementInViewport($('#sharingSection'))) {
-            $('#sharingSection').addClass('-animate');
+            //$('#sharingSection').addClass('-animate');
         }
         if (isElementInViewport($('#friendsSection'))) {
-            $('#friendsSection').addClass('-animate');
+            //$('#friendsSection').addClass('-animate');
         }
         if (isElementInViewport($('#secureSection'))) {
-            $('#secureSection').addClass('-animate');
+            //$('#secureSection').addClass('-animate');
         } 
         // else {
         //     console.log('not in view');
