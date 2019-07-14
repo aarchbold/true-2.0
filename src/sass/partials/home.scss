@@ -107,7 +107,7 @@ html, body {
     width: 100%;
     height: 100%;
     &.fog1 {
-        background: linear-gradient(transparent, white 20%);
+        background: linear-gradient(rgba(255,255,255,0.2), white 20%);
         z-index: 5;
         &.-animate {
             animation: foggydew 2s;
@@ -116,7 +116,7 @@ html, body {
         }
     }
     &.fog2 {
-        background: linear-gradient(transparent, white 20%);
+        background: linear-gradient(rgba(255,255,255,0.2), white 20%);
         z-index: 12;
         &.-animate {
             animation: foggydew 1.5s;
@@ -270,6 +270,21 @@ html, body {
     &:last-child {
         margin-bottom: 0;
     }
+}
+
+.section-sharing__scroller {
+    position: absolute;
+    top: 31.5%;
+}
+
+.section-friends__scroller {
+    position: absolute;
+    top: 62.5%;
+}
+
+.section-secure__scroller {
+    position: absolute;
+    top: 92%;
 }
 
 .section-sharing {
