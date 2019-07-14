@@ -6,10 +6,11 @@
             "description": "Meta description here..."
         })
     </head>
-    <body>
+    <body class="-static">
         <div data-section-name="home" class="scroll-me page-outer">
             @@include('../includes/topnav.html')
         </div>
+        <div class="page-outer__scroll">
         <div class="page-outer hero-outer">
             <div id="heroStage" class="hero-stage" data-scroll-speed="3">
                 <!-- <div class="hero-stage__tree tree1">trees 1</div>
@@ -159,7 +160,7 @@
         <!-- <div class="page-outer">
             @@include('../includes/footer.html')
         </div> -->
-
+        </div>
         <script src="static/js/app.js?cache=[[busterDouglas]]"></script>
     </body>
 </html>

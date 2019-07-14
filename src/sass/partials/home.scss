@@ -6,6 +6,24 @@ $hero-animation-duration: 0.9s;
 $hero-animation-duration-long: 2s;
 
 // properties
+html, body {
+    // overflow: scroll;
+    // height: 100vh;
+    // scroll-snap-type: mandatory;
+    // scroll-snap-points-y: repeat(100vh);
+    // scroll-snap-type: y mandatory;
+    &.-static {
+        overflow: hidden;
+    }
+}
+
+.page-outer__scroll {
+    // overflow-y: scroll;
+    // scroll-snap-type: y mandatory;
+
+}
+
+
 .hero-outer {
     // background-color: $color-hero-bg;
 }
@@ -118,9 +136,10 @@ $hero-animation-duration-long: 2s;
     90% {
         transform: translate(0,100%);
         opacity: 1;
+        display: block;
     }
     100% {
-        transform: translate(0,100%);
+        transform: translate(-100%,100%);
         opacity: 0;
     }
 }
@@ -232,6 +251,7 @@ $hero-animation-duration-long: 2s;
 }
 
 .section-sharing, .section-friends, .section-secure {
+    scroll-snap-align: start;
     // transition: transform 0.75s ease-in-out;
     position: absolute;
     // left: 50%;
