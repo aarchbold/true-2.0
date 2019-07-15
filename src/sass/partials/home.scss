@@ -409,6 +409,21 @@ html, body {
             font-size: 18px;
         }
     }
+    .main-site__balloon1 {
+        top: 42%;
+    }
+    .main-site__balloon2 {
+        top: 50%;
+    }
+    .section-sharing {
+        top: 35%;
+    }
+    .section-friends {
+        top: 73%;
+    }
+    .section-secure {
+        top: 110%;
+    }
 }
 
 @media (max-width: 800px) {
@@ -446,7 +461,7 @@ html, body {
         padding-top: 100px;
     }
     .hero-stage__header {
-        padding: 12% 10% 10% 10%;
+        padding: 22% 10%;
         h1 {
             font-size: 30px;
         }
@@ -469,5 +484,29 @@ html, body {
         &.-left {
             left: -35px;
         }
+    }
+    .section-sharing {
+        top: 31%;
+    }
+    .section-friends {
+        top: 68%;
+    }
+    .section-secure {
+        top: 105%;
+    }
+}
+
+@media (max-width: 520px) {
+    .hero-stage__header {
+        padding: 22% 10%;
+    }
+    .section-sharing {
+        top: 31%;
+    }
+    .section-friends {
+        top: 77%;
+    }
+    .section-secure {
+        top: 125%;
     }
 }
