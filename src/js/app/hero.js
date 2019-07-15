@@ -103,7 +103,11 @@ $(function() {
     // var parallaxInstance = new Parallax(scene);
     // console.log(parallaxInstance)
     // $('.main-site__container').paroller();
+    
+    
     $('[data-scroll-speed]').moveIt();
+    
+    
     // $.scrollSpeed(100, 800, 'easeOutCubic');
 
 
