@@ -4,11 +4,46 @@
 
 // topnav
 .topnav-container {
+    transition: all 0.5s;
+    opacity: 0;
     position: absolute;
+    width: 100%;
+    &.-show {
+        opacity: 1;
+    }
+}
+
+.topnav-links {
+    position: absolute;
+    transition: all 0.5s;
+    right: 30px;
+    top: 34px;
+    width: 80%;
+    text-align: right;
+    a {
+        transition: all 0.5s;
+        font-family: TruenoBold, sans-serif;
+        display: inline-block;
+        padding-left: 40px;
+        text-decoration: none;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
 }
 
 .navigation-inner {
+    transition: all 0.5s;
     padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    &.-compact {
+        padding: 10px 20px;
+        background-color: white;
+        .topnav-links {
+            top: 28px;
+        }
+    }
 }
 
 // footer
