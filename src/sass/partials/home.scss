@@ -219,25 +219,33 @@ html, body {
     width: 100%;
     height: 100%;
     &.fog1 {
-        background: linear-gradient(rgba(255,255,255,0.2), white 20%);
+        background: linear-gradient(rgba(255, 255, 255, 0.01), white 20%);
         z-index: 5;
+        top: 11%;
         &.-animate {
-            animation: foggydew 2s;
-            animation-delay: 1.4s;
+            animation: foggydew 1.7s;
+            animation-delay: .2s;
             animation-fill-mode: forwards;
         }
     }
     &.fog2 {
-        background: linear-gradient(rgba(255,255,255,0.2), white 20%);
-        z-index: 12;
+        background: linear-gradient(rgba(255, 255, 255, 0.01), white 20%);
+        z-index: 5;
+        top: 12%;
         &.-animate {
-            animation: foggydew 1.5s;
-            animation-delay: 1.4s;
+            animation: foggydew 1.4s;
+            animation-delay: .1s;
             animation-fill-mode: forwards;
         }
     }
     &.fog3 {
-        background-color: blue;
+        background: linear-gradient(rgba(255, 255, 255, 0.01), white 20%);
+        z-index: 5;
+        top: 17%;
+        &.-animate {
+            animation: foggydew 1.2s;
+            animation-fill-mode: forwards;
+        }
     }
 }
 @keyframes foggydew {
