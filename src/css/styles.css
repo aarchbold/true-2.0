@@ -775,29 +775,55 @@ html.-static, body.-static {
   overflow: hidden;
   width: 100%;
   height: 560px;
-  background-color: red;
-  background: url("../images/ui/scenery/bg-hero2.png") 50% 50% no-repeat;
-  background-size: cover;
-  opacity: 0;
-  transform: scale(2);
-}
-.hero-stage.-animate {
   opacity: 1;
   transform: scale(1);
+  background: url("../images/ui/backgrounds/bg-sky-box.png") 50% 50% no-repeat;
 }
 
+.hero-sky {
+  transition: all 1.2s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/ui/backgrounds/bg-sky-box-clouds.png") 50% 50% no-repeat;
+  background-size: cover;
+  opacity: 0;
+  transform: scale(3);
+}
+.hero-sky.-animate {
+  animation: headerclouds 1.2s;
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes headerclouds {
+  0% {
+    transform: scale(3);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
 .hero-stage__bottom {
   position: relative;
   top: -134px;
 }
 
 .hero-stage__header {
+  transition: all 0.5s;
   position: relative;
   z-index: 2;
-  transition: all 1.2s;
   font-size: 60px;
   font-family: TruenoBlack, sans-serif;
-  opacity: 0;
+  opacity: 1;
   line-height: 1.2;
   padding: 8% 0;
   max-width: 600px;
@@ -805,27 +831,24 @@ html.-static, body.-static {
   text-align: center;
 }
 .hero-stage__header img {
-  transition: all .8s;
-  transition-delay: .4s;
-  opacity: 0;
+  opacity: 1;
   margin-bottom: 10px;
-  transform: translateY(100px);
+  transform: scale(1.5) translateY(80px);
 }
 .hero-stage__header h1 {
-  transition: all 1.2s;
   opacity: 0;
-  transform: translateY(450px);
+  transform: translateY(350px);
 }
 .hero-stage__header.-animate {
   opacity: 1;
 }
 .hero-stage__header.-animate img {
-  opacity: 1;
-  transform: translateY(0);
+  animation: headerzoom 1.2s;
+  animation-fill-mode: forwards;
 }
 .hero-stage__header.-animate h1 {
-  opacity: 1;
-  transform: translateY(0);
+  animation: headerswoop 1.2s;
+  animation-fill-mode: forwards;
 }
 .hero-stage__header.-fade {
   opacity: 0;
@@ -840,6 +863,31 @@ html.-static, body.-static {
   font-family: TruenoRegular, sans-serif;
 }
 
+@keyframes headerzoom {
+  0% {
+    transform: scale(1.5) translateY(80px);
+  }
+  80% {
+    transform: scale(0.95) translateY(0);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+@keyframes headerswoop {
+  0% {
+    transform: translateY(350px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(-15px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .hero-stage__tree {
   position: absolute;
   background-color: green;
