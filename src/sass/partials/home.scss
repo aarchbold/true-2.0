@@ -115,13 +115,15 @@ html, body {
 
 .hero-stage__header {
     transition: all 0.5s;
-    position: relative;
+    position: absolute;
     z-index: 2;
     font-size: 60px;
     font-family: TruenoBlack, sans-serif;
     opacity: 1;
     line-height: 1.2;
-    padding: 8% 0;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
@@ -275,15 +277,15 @@ html, body {
     background: url('../images/ui/scenery/mr-sun.png') 50% 50% no-repeat;
     z-index: 1;
     &.-animate {
-        transform: translate(-7%, -27%);
+        transform: translate(5%, -17%)
     }
 }
 
 .main-site__balloon1 {
-    transition: all 68s;
+    transition: all 80s linear;
     position: absolute;
-    top: 50%;
-    left: 68%;
+    top: 62%;
+    left: 74%;
     z-index: 100;
     &.-animate {
         left: 110%;
@@ -291,10 +293,10 @@ html, body {
 }
 
 .main-site__balloon2 {
-    transition: all 125s;
+    transition: all 135s linear;
     position: absolute;
-    top: 60%;
-    left: 64%;
+    top: 74%;
+    left: 68%;
     z-index: 100;
     &.-animate {
         left: 110%;
@@ -304,7 +306,7 @@ html, body {
 .main-site__container {
     position: relative;
     z-index: 5;
-    padding-top: 60px;
+    padding-top: 90px;
     //overflow: hidden;
 }
 
@@ -441,6 +443,7 @@ html, body {
 .section-footer {
     background-color: $color-bg-footer;
     min-height: 1600px;
+    overflow: hidden;
 }
 
 .house-scene {
@@ -589,7 +592,6 @@ html, body {
         padding-top: 100px;
     }
     .hero-stage__header {
-        padding: 22% 10%;
         h1 {
             font-size: 30px;
         }
@@ -626,7 +628,7 @@ html, body {
 
 @media (max-width: 520px) {
     .hero-stage__header {
-        padding: 22% 10%;
+        // padding: 22% 10%;
     }
     .section-sharing {
         top: 31%;

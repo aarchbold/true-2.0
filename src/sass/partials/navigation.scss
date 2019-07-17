@@ -51,6 +51,13 @@
     position: relative;
 }
 
+.footer-waterfall__mist {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: waterfallmist 7s ease-out infinite;
+}
+
 .footer-waterfall {
     display: block;
 }
@@ -72,32 +79,32 @@
         transform: translateY(-100%);
         &.-drop1 {
             left: -1%;
-            animation: waterfall 1.6s linear infinite;
+            animation: waterfall 1.9s linear infinite;
             animation-delay: 1s;
         }
         &.-drop2 {
             left: -2%;
-            animation: waterfall 1.6s linear infinite;
+            animation: waterfall 2s linear infinite;
             animation-delay: 1.2s;
         }
         &.-drop3 {
             left: 0;
-            animation: waterfall 1.6s linear infinite;
+            animation: waterfall 2.1s linear infinite;
             animation-delay: 1.4s;
         }
         &.-drop4 {
             left: 0;
-            animation: waterfall 1.6s linear infinite;
+            animation: waterfall 2s linear infinite;
             animation-delay: 1.6s;
         }
         &.-drop5 {
             left: 1%;
-            animation: waterfall 1.6s linear infinite;
+            animation: waterfall 1.8s linear infinite;
             animation-delay: 1.8s;
         }
         &.-drop6 {
             left: 2%;
-            animation: waterfall 1.6s linear infinite;
+            animation: waterfall 2s linear infinite;
             animation-delay: 2s;
         }
         &.-drop7 {
@@ -238,6 +245,25 @@
 #clipboardCopy {
     width: 1px;
     opacity: 0;
+}
+
+@keyframes waterfallmist
+{
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1.05);
+    }
+    50% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 @keyframes waterfall

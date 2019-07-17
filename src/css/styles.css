@@ -324,6 +324,13 @@ section {
   position: relative;
 }
 
+.footer-waterfall__mist {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: waterfallmist 7s ease-out infinite;
+}
+
 .footer-waterfall {
   display: block;
 }
@@ -347,32 +354,32 @@ section {
 }
 .footer-waterfall__animation .waterfall-drop.-drop1 {
   left: -1%;
-  animation: waterfall 1.6s linear infinite;
+  animation: waterfall 1.9s linear infinite;
   animation-delay: 1s;
 }
 .footer-waterfall__animation .waterfall-drop.-drop2 {
   left: -2%;
-  animation: waterfall 1.6s linear infinite;
+  animation: waterfall 2s linear infinite;
   animation-delay: 1.2s;
 }
 .footer-waterfall__animation .waterfall-drop.-drop3 {
   left: 0;
-  animation: waterfall 1.6s linear infinite;
+  animation: waterfall 2.1s linear infinite;
   animation-delay: 1.4s;
 }
 .footer-waterfall__animation .waterfall-drop.-drop4 {
   left: 0;
-  animation: waterfall 1.6s linear infinite;
+  animation: waterfall 2s linear infinite;
   animation-delay: 1.6s;
 }
 .footer-waterfall__animation .waterfall-drop.-drop5 {
   left: 1%;
-  animation: waterfall 1.6s linear infinite;
+  animation: waterfall 1.8s linear infinite;
   animation-delay: 1.8s;
 }
 .footer-waterfall__animation .waterfall-drop.-drop6 {
   left: 2%;
-  animation: waterfall 1.6s linear infinite;
+  animation: waterfall 2s linear infinite;
   animation-delay: 2s;
 }
 .footer-waterfall__animation .waterfall-drop.-drop7 {
@@ -499,6 +506,23 @@ section {
   opacity: 0;
 }
 
+@keyframes waterfallmist {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @keyframes waterfall {
   0% {
     transform: translateY(-100%);
@@ -819,13 +843,15 @@ html.-static, body.-static {
 
 .hero-stage__header {
   transition: all 0.5s;
-  position: relative;
+  position: absolute;
   z-index: 2;
   font-size: 60px;
   font-family: TruenoBlack, sans-serif;
   opacity: 1;
   line-height: 1.2;
-  padding: 8% 0;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
@@ -971,14 +997,14 @@ html.-static, body.-static {
   z-index: 1;
 }
 .hero-stage__sun.-animate {
-  transform: translate(-7%, -27%);
+  transform: translate(5%, -17%);
 }
 
 .main-site__balloon1 {
-  transition: all 68s;
+  transition: all 80s linear;
   position: absolute;
-  top: 50%;
-  left: 68%;
+  top: 62%;
+  left: 74%;
   z-index: 100;
 }
 .main-site__balloon1.-animate {
@@ -986,10 +1012,10 @@ html.-static, body.-static {
 }
 
 .main-site__balloon2 {
-  transition: all 125s;
+  transition: all 135s linear;
   position: absolute;
-  top: 60%;
-  left: 64%;
+  top: 74%;
+  left: 68%;
   z-index: 100;
 }
 .main-site__balloon2.-animate {
@@ -999,7 +1025,7 @@ html.-static, body.-static {
 .main-site__container {
   position: relative;
   z-index: 5;
-  padding-top: 60px;
+  padding-top: 90px;
 }
 
 .main-site__container--inner {
@@ -1130,6 +1156,7 @@ html.-static, body.-static {
 .section-footer {
   background-color: #103a31;
   min-height: 1600px;
+  overflow: hidden;
 }
 
 .house-scene {
@@ -1275,9 +1302,6 @@ html.-static, body.-static {
     padding-top: 100px;
   }
 
-  .hero-stage__header {
-    padding: 22% 10%;
-  }
   .hero-stage__header h1 {
     font-size: 30px;
   }
@@ -1316,10 +1340,6 @@ html.-static, body.-static {
   }
 }
 @media (max-width: 520px) {
-  .hero-stage__header {
-    padding: 22% 10%;
-  }
-
   .section-sharing {
     top: 31%;
   }
