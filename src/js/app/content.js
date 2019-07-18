@@ -72,10 +72,10 @@ $(function() {
             //$('#sharingSection').addClass('-animate');
         }
         if (isElementInViewport($('#friendsSection'))) {
-            //$('#friendsSection').addClass('-animate');
+            // $('#friendsSection').addClass('-animate');
         }
-        if (isElementInViewport($('#secureSection'))) {
-            //$('#secureSection').addClass('-animate');
+        if (isElementInViewport($('.footer-waterfall__mist'))) {
+            $('.footer-container').addClass('-animate');
         } 
         // else {
         //     console.log('not in view');

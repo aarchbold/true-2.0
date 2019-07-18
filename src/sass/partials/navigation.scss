@@ -17,7 +17,7 @@
     position: absolute;
     transition: all 0.5s;
     right: 30px;
-    top: 34px;
+    top: 32px;
     width: 80%;
     text-align: right;
     a {
@@ -41,7 +41,7 @@
         padding: 10px 20px;
         background-color: white;
         .topnav-links {
-            top: 28px;
+            top: 26px;
         }
     }
 }
@@ -136,11 +136,17 @@
 }
 
 .footer-container {
+    transition: all 1.2s;
+    transition-delay: .3s;
     position: absolute;
     bottom: 0;
     width: 100%;
     max-width: 1200px;
     z-index: 5;
+    transform: translate(-100%,100%);
+    &.-animate {
+        transform: translate(0,0);
+    }
 }
 
 .footer-cast {

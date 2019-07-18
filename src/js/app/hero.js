@@ -80,10 +80,10 @@ initHero = debounce(function() {
     // start animations
     setTimeout(function() {
         startAnimations();
-    },1000)
+    },1600)
     setTimeout(function() {
         startHeaderTextAnimation();
-    },1250)
+    },2000)
     setTimeout(function() {
       // fade fogs
       // $fogs.addClass('-animate');
@@ -91,7 +91,7 @@ initHero = debounce(function() {
     setTimeout(function() {
         //make body scrollable 
         $('body').removeClass('-static');
-    },4000)
+    },5000)
 },250);
 
 
