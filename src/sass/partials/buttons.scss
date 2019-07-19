@@ -15,6 +15,13 @@ button, .button {
     &:hover {
         transform: scale(1.05);
     }
+    &.-disabled {
+        background: $color-button-disabled;
+        color: $color-button;
+        &:hover {
+            transform: scale(1);
+        }
+    }
 }
 
 .button-center {

@@ -401,9 +401,12 @@ section {
   width: 100%;
   max-width: 1200px;
   z-index: 5;
-  transform: translate(-100%, 100%);
+  transform: translate(-100%, 100%) scale(0.5);
 }
 .footer-container.-animate {
+  transform: translate(0, 0) scale(1);
+}
+.footer-container.-animate .footer-boulder, .footer-container.-animate .footer-old-man, .footer-container.-animate .footer-doggers {
   transform: translate(0, 0);
 }
 
@@ -423,24 +426,46 @@ section {
 }
 
 .footer-boulder {
+  transition: all 1.4s;
+  transition-delay: .4s;
   position: relative;
   top: -200px;
   max-width: 357px;
   width: 40%;
+  transform: translate(-100%, 100%) scale(0.5);
 }
 
 .footer-old-man {
+  transition: all 1.4s;
+  transition-delay: .5s;
   position: relative;
   top: -100px;
   max-width: 238px;
   width: 30%;
+  transform: translate(-100%, 100%) scale(0.5);
 }
 
 .footer-doggers {
+  display: inline-block;
+  transition: all 1.4s;
+  transition-delay: .6s;
   position: relative;
   top: -50px;
   max-width: 157px;
   width: 16%;
+  height: 300px;
+  transform: translate(-100%, 100%) scale(0.5);
+}
+.footer-doggers img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.footer-doggers img.-floof2 {
+  display: none;
+}
+.footer-doggers img.-floof3 {
+  display: none;
 }
 
 .footer-background {
@@ -1137,15 +1162,15 @@ html.-static, body.-static {
 }
 
 .section-sharing {
-  top: 45%;
+  top: 48%;
 }
 
 .section-friends {
-  top: 82%;
+  top: 85%;
 }
 
 .section-secure {
-  top: 118%;
+  top: 123%;
 }
 
 .section-image {
@@ -1375,6 +1400,13 @@ button, .button {
 }
 button:hover, .button:hover {
   transform: scale(1.05);
+}
+button.-disabled, .button.-disabled {
+  background: #a9adb6;
+  color: #ffffff;
+}
+button.-disabled:hover, .button.-disabled:hover {
+  transform: scale(1);
 }
 
 .button-center {

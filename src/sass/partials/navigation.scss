@@ -143,9 +143,12 @@
     width: 100%;
     max-width: 1200px;
     z-index: 5;
-    transform: translate(-100%,100%);
+    transform: translate(-100%,100%) scale(.5);
     &.-animate {
-        transform: translate(0,0);
+        transform: translate(0,0) scale(1);
+        .footer-boulder, .footer-old-man, .footer-doggers {
+            transform: translate(0,0);
+        }
     }
 }
 
@@ -165,24 +168,48 @@
 }
 
 .footer-boulder {
+    transition: all 1.4s;
+    transition-delay: .4s;
     position: relative;
     top: -200px;
     max-width: 357px;
     width: 40%;
+    transform: translate(-100%,100%) scale(.5);
 }
 
 .footer-old-man {
+    transition: all 1.4s;
+    transition-delay: .5s;
     position: relative;
     top: -100px;
     max-width: 238px;
     width: 30%;
+    transform: translate(-100%,100%) scale(.5);
 }
 
 .footer-doggers {
+    display: inline-block;
+    transition: all 1.4s;
+    transition-delay: .6s;
     position: relative;
     top: -50px;
     max-width: 157px;
     width: 16%;
+    height: 300px;
+
+    transform: translate(-100%,100%) scale(.5);
+    img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        &.-floof1 {}
+        &.-floof2 {
+            display: none;
+        }
+        &.-floof3 {
+            display: none;
+        } 
+    }
 }
 
 .footer-background {

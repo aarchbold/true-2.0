@@ -94,6 +94,19 @@ initHero = debounce(function() {
     },5000)
 },250);
 
+$(function() {
+  window.scroll({
+    top: 0, 
+    left: 0, 
+    behavior: 'smooth' 
+   });
+
+   
+});
+
+// $(window).unload(function() {
+//   $('body').scrollTop(0);
+// });
 
 $(window).on('load', function (e) {
   // executes when complete page is fully loaded, including all frames, objects and images
