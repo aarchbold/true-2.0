@@ -144,9 +144,8 @@ html, body {
         opacity: 1;
         img {
             // opacity: 1;
-            // transform: translateY(0);
-            animation: headerzoom $hero-sunrise-timing;
-            animation-fill-mode: forwards;
+            transform: scale(1) translateY(0);
+            transition: all $hero-sunrise-timing;
         }
         h1 {
             animation: headerswoop $hero-sunrise-timing;
@@ -336,7 +335,7 @@ html, body {
 }
 .main-site__hills4 {
     position: absolute;
-    top: 25%;
+    top: 27%;
     z-index: 6;
 }
 
@@ -380,7 +379,7 @@ html, body {
 }
 
 .section-sharing, .section-friends, .section-secure {
-    scroll-snap-align: start;
+    transition-timing-function: ease-out;
     // transition: transform 0.75s ease-in-out;
     position: absolute;
     // left: 50%;
@@ -512,6 +511,19 @@ html, body {
 
 
 @media (max-width: 1200px) {
+    .hero-stage__header {
+        top: 36%;
+        h1 {
+            font-size: 55px;
+        }
+        p {
+            font-size: 20px;
+        }
+        img {
+            width: 200px;
+            transform: scale(1.5) translateY(60px);
+        }
+    }
     .section-image {
         width: 42%;
     }
@@ -524,6 +536,12 @@ html, body {
         }
         p {
             font-size: 20px;
+        }
+        img {
+            width: 180px;
+        }
+        .section-image {
+            width: 38%;
         }
     }
     .card-outer {
@@ -555,16 +573,39 @@ html, body {
     }
 }
 
+@media (max-width: 1000px) {
+    .hero-stage__header {
+        top: 32%;
+        h1 {
+            font-size: 44px;
+        }
+        // p {
+        //     font-size: 20px;
+        // }
+        img {
+            width: 180px;
+            transform: scale(1.3) translateY(40px);
+        }
+        // .section-image {
+        //     width: 38%;
+        // }
+    }
+}
+
 @media (max-width: 800px) {
     .main-site__shine {
         display: none;
     }
     .hero-stage__header {
+        top: 26%;
         h1 {
-            font-size: 40px;
+            font-size: 36px;
         }
         p {
             font-size: 18px;
+        }
+        img {
+            width: 160px;
         }
     }
     .section-image {
@@ -593,11 +634,17 @@ html, body {
         padding-top: 100px;
     }
     .hero-stage__header {
+        top: 20%;
+        max-width: 80%;
+        width: 80%;
         h1 {
             font-size: 30px;
         }
         p {
             font-size: 18px;
+        }
+        img {
+            width: 120px;
         }
     }
     .card-outer {
