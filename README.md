@@ -2,7 +2,7 @@
 Marketing site for the True 2.0 landing page
 
 ## To Deploy
-To deploy this code, simply grab the files inside the "site" directory. the "site" directory contains all compiled files that are production ready.
+To deploy this landing page, simply grab the files inside the "site" directory. the "site" directory contains all compiled files that are production ready.
 
 If you need to make edits to files, see below.
 
