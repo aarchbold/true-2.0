@@ -1204,6 +1204,7 @@ html.-static, body.-static {
 }
 .section-image .video video {
   width: 100%;
+  border-radius: 14%;
 }
 
 .section-footer {
