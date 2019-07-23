@@ -17,12 +17,25 @@ var handleWaitlist = function() {
     $formSubmit.click(function(e) {
         e.preventDefault();
         if (!$formSubmit.hasClass('-disabled')) {
-            console.log($modal);
-            $modal.fadeIn();
-            // do the waitlist functionality
-            setTimeout(function() {
-                $modalSpinner.fadeOut();
-            },2000)
+            $.ajax({
+                url: '/ajaxController/postWaitingList',
+                type: 'POST',
+                data: {email: $formInput.val()},
+                dataType: 'json',
+                cache: false,
+                beforeSend: function() {
+                    $modal.fadeIn();
+                },
+                success: function(data) {
+                },
+                error: function(xhr, ajaxOptions, thrownError) { // if error occured
+                },
+                complete: function() {
+                    setTimeout(function() {
+                        $modalSpinner.fadeOut();
+                    },2000)
+                }
+            });
         }
     })
 

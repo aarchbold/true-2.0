@@ -19,7 +19,7 @@
 
 .card-outer {
     position: relative;
-    width: 50%;
+    width: 55%;
     background-color: $color-bg-card;
     box-sizing: border-box;
     padding: 50px 50px;
@@ -27,7 +27,7 @@
     border-radius: 100px;
     margin-top: 20px;
     &.-right {
-        margin-left: 50%;
+        margin-left: 45%;
     }
     h2 {
         text-align: center;
@@ -43,6 +43,76 @@
     }
 }
 
+@media (max-width: 1200px) {
+    .card-outer {
+        h2 {
+            font-size: 32px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+    .section-image {
+        width: 38% !important;
+    }
+}
+
+@media (max-width: 1000px) {
+    .card-outer {
+        h2 {
+            font-size: 32px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+    .section-image {
+        width: 42% !important;
+    }
+}
+
+@media (max-width: 850px) {
+    .card-outer {
+        h2 {
+            font-size: 32px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+    .section-image {
+        width: 46% !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .card-outer {
+        width: 60%;
+        &.-right {
+            margin-left: 40%;
+        }
+        h2 {
+            font-size: 26px;
+            margin-bottom: 24px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 24px;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .card-outer {
+        width: 75%;
+        z-index: 1;
+        padding: 30px;
+        border-radius: 60px;
+        &.-right {
+            margin-left: 25%;
+        }
+    }
+}
 
 
 @media (max-width: 520px) {

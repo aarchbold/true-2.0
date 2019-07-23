@@ -25,24 +25,24 @@ var wagthedog = function() {
         setTimeout(function() {
             $dogs.hide();
             $($dogs[0]).show();
-        },400);
-        setTimeout(function() {
-            $dogs.hide();
-            $($dogs[1]).show();
         },500);
         setTimeout(function() {
             $dogs.hide();
-            $($dogs[2]).show();
+            $($dogs[1]).show();
         },600);
         setTimeout(function() {
             $dogs.hide();
-            $($dogs[1]).show();
+            $($dogs[2]).show();
         },700);
         setTimeout(function() {
             $dogs.hide();
-            $($dogs[0]).show();
+            $($dogs[1]).show();
         },800);
-    },8000);
+        setTimeout(function() {
+            $dogs.hide();
+            $($dogs[0]).show();
+        },900);
+    },800);
 
 
 
