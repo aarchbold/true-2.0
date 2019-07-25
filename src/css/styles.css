@@ -314,6 +314,7 @@ section {
 }
 .navigation-inner.-compact {
   padding: 10px 20px;
+  background-color: white;
 }
 .navigation-inner.-compact .topnav-links {
   top: 26px;
@@ -393,7 +394,7 @@ section {
 }
 
 .footer-container {
-  transition: all 1.2s;
+  transition: all .8s;
   transition-delay: .3s;
   position: absolute;
   bottom: -50px;
@@ -923,7 +924,7 @@ html.-static, body.-static {
 }
 .hero-stage {
   transition: all 0.1s;
-  position: fixed;
+  position: absolute;
   top: 0px;
   left: 0px;
   overflow: hidden;

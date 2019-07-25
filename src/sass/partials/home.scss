@@ -58,7 +58,7 @@ html, body {
 }
 .hero-stage {
     transition: all 0.1s;
-    position: fixed;
+    position: absolute;
     top: 0px;
     left: 0px;
     overflow: hidden;
