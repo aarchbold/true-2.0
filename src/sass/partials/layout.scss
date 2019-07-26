@@ -104,12 +104,14 @@
 
 @media (max-width: 640px) {
     .card-outer {
-        width: 75%;
+        width: 90%;
         z-index: 1;
         padding: 30px;
         border-radius: 60px;
+        margin-left: auto;
+        margin-right: auto;
         &.-right {
-            margin-left: 25%;
+            margin-left: auto;
         }
     }
 }
