@@ -376,8 +376,8 @@ html, body {
 
 .section-sharing, .section-friends, .section-secure {
     // transition-timing-function: ease-out;
-    transition-delay: 0.2s;
-    transition: transform 0.15s ease-out;
+    // transition-delay: 0.2s;
+    // transition: transform 0.15s ease-out;
     position: absolute;
     // left: 50%;
     margin-left: auto;
@@ -608,6 +608,15 @@ html, body {
             left: -35px;
         }
     }
+    .section-sharing {
+        top: 25%;
+    }
+    .section-friends {
+        top: 56%;
+    }
+    .section-secure {
+        top: 86%;
+    }
 }
 
 @media (max-width: 640px) {
@@ -639,10 +648,10 @@ html, body {
         top: 31%;
     }
     .section-friends {
-        top: 68%;
+        top: 56%;
     }
     .section-secure {
-        top: 105%;
+        top: 86%;
     }
     .main-site__balloon1 {
         top: 5%;

@@ -644,7 +644,7 @@ section {
 }
 @media (max-width: 800px) {
   .footer-inner {
-    padding: 0 40px 0px 40px;
+    padding: 0 40px 100px 40px;
   }
 
   .footer-boulder {
@@ -665,7 +665,11 @@ section {
   }
 
   .footer-container {
-    bottom: 0;
+    bottom: -100px;
+  }
+
+  .footer-background {
+    min-width: 800px;
   }
 
   .footer-social__links {
@@ -1222,8 +1226,6 @@ html.-static, body.-static {
 }
 
 .section-sharing, .section-friends, .section-secure {
-  transition-delay: 0.2s;
-  transition: transform 0.15s ease-out;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
@@ -1444,6 +1446,18 @@ html.-static, body.-static {
   .section-image.-left {
     left: -35px;
   }
+
+  .section-sharing {
+    top: 25%;
+  }
+
+  .section-friends {
+    top: 56%;
+  }
+
+  .section-secure {
+    top: 86%;
+  }
 }
 @media (max-width: 640px) {
   .main-site__container {
@@ -1478,11 +1492,11 @@ html.-static, body.-static {
   }
 
   .section-friends {
-    top: 68%;
+    top: 56%;
   }
 
   .section-secure {
-    top: 105%;
+    top: 86%;
   }
 
   .main-site__balloon1 {
@@ -1562,7 +1576,7 @@ button.-disabled:hover, .button.-disabled:hover {
   transform: scale(1.05);
 }
 .button-social.-facebook {
-  background-color: #1b76c9;
+  background-color: #1877f2;
 }
 .button-social.-facebook img {
   width: 20px;

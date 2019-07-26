@@ -384,7 +384,7 @@
 
 @media (max-width: 800px) {
     .footer-inner {
-        padding: 0 40px 0px 40px;
+        padding: 0 40px 100px 40px;
     }
     .footer-boulder {
         top: -67px;
@@ -401,10 +401,10 @@
         max-width: 11%;
     }
     .footer-container {
-        bottom: 0;
+        bottom: -100px;
     }
-    .footer-cast {
-        // top: 20px;
+    .footer-background {
+        min-width: 800px;
     }
     .footer-social__links {
         margin-bottom: 40px;
