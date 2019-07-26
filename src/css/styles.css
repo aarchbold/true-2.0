@@ -1501,15 +1501,12 @@ html.-static, body.-static {
     position: relative;
     top: 0;
     margin-bottom: 0;
-    background-color: #155648;
   }
 
   .section-secure {
     position: relative;
     top: 0;
     margin-bottom: 0;
-    background-color: #155648;
-    padding-bottom: 700px !important;
   }
 
   .main-site__balloon1 {
@@ -1527,6 +1524,7 @@ html.-static, body.-static {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.01), #123a31 20%);
   }
 
   .main-site__background {
@@ -1542,7 +1540,7 @@ html.-static, body.-static {
   }
 
   .section-footer {
-    min-height: 2436px !important;
+    min-height: 830px !important;
   }
 
   .footer-waterfall {

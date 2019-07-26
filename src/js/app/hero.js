@@ -117,4 +117,8 @@ $(window).on('load', function (e) {
   if ($(window).width() > 800) {
     $('[data-scroll-speed]').moveIt();
   }
+  if ($(window).width() < 640) {
+    // move footer
+    $('.section-footer').appendTo('.section-starts');
+  }
 })

@@ -665,14 +665,11 @@ html, body {
         position: relative;
         top: 0;
         margin-bottom: 0;
-        background-color: #155648;
     }
     .section-secure {
         position: relative;
         top: 0;
         margin-bottom: 0;
-        background-color: #155648;
-        padding-bottom: 700px !important;
     }
     .main-site__balloon1 {
         top: 5%;
@@ -687,6 +684,7 @@ html, body {
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
+        background: linear-gradient(rgba(255, 255, 255, 0.01), #123a31 20%);
     }
     .main-site__background {
         display: none;
@@ -698,7 +696,7 @@ html, body {
         transform: translate(0,0);
     }
     .section-footer {
-        min-height: 2436px !important;
+        min-height: 830px !important;
     }
     .footer-waterfall {
         display: none;
