@@ -18,7 +18,7 @@ var handleWaitlist = function() {
         e.preventDefault();
         if (!$formSubmit.hasClass('-disabled')) {
             $.ajax({
-                url: '/ajaxController/postWaitingList',
+                url: 'https://us-central1-trueappco-website.cloudfunctions.net/waitlist',
                 type: 'POST',
                 data: {email: $formInput.val()},
                 dataType: 'json',
@@ -33,7 +33,8 @@ var handleWaitlist = function() {
                 complete: function() {
                     setTimeout(function() {
                         $modalSpinner.fadeOut();
-                    },2000)
+                        $formInput.val('');
+                    },1000)
                 }
             });
         }
