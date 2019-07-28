@@ -699,16 +699,19 @@ section {
 
   .footer-boulder {
     top: 40px;
+    transform: translate(0, 0);
   }
 
   .footer-old-man {
     top: -30px;
     left: 145px;
+    transform: translate(0, 0);
   }
 
   .footer-doggers {
     top: 72px;
     left: 230px;
+    transform: translate(0, 0);
   }
 
   .footer-subheader {
@@ -776,6 +779,11 @@ section {
   box-sizing: border-box;
 }
 
+.card-inner {
+  position: relative;
+  z-index: 1;
+}
+
 .card-outer {
   position: relative;
   width: 55%;
@@ -841,6 +849,8 @@ section {
 @media (max-width: 800px) {
   .card-outer {
     width: 60%;
+    position: relative;
+    top: -50px;
   }
   .card-outer.-right {
     margin-left: 40%;

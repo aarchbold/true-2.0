@@ -17,6 +17,11 @@
     box-sizing: border-box;
 }
 
+.card-inner {
+    position: relative;
+    z-index: 1;
+}
+
 .card-outer {
     position: relative;
     width: 55%;
@@ -25,7 +30,18 @@
     padding: 50px 50px;
     box-shadow: $card-box-shadow;
     border-radius: 100px;
+    // border-radius: 50% / 10%;
     margin-top: 20px;
+    // &:after {
+    //     content: "";
+    //     position: absolute;
+    //     top: 10%;
+    //     bottom: 10%;
+    //     right: -5%;
+    //     left: -5%;
+    //     background: inherit;
+    //     border-radius: 5% / 50%;
+    // }
     &.-right {
         margin-left: 45%;
     }
@@ -88,6 +104,8 @@
 @media (max-width: 800px) {
     .card-outer {
         width: 60%;
+        position: relative;
+        top: -50px;
         &.-right {
             margin-left: 40%;
         }
