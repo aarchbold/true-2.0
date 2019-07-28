@@ -708,6 +708,7 @@ html, body {
 
 @media (max-width: 520px) {
     .hero-stage__header {
+        top: 25%;
         // padding: 22% 10%;
     }
     .section-sharing {
@@ -719,12 +720,18 @@ html, body {
     .section-secure {
         top: 125%;
     }
+    .main-site__container {
+        padding-top: 200px;
+    }
+    .main-site__mountains {
+        top: 7.8%;
+    }
 }
 
 @media (max-width: 500px) {
     .hero-stage__header {
         h1 {
-            font-size: 24px;
+            font-size: 32px;
         }
     }
     .main-site__balloon1 {
