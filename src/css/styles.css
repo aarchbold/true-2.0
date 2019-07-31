@@ -394,8 +394,8 @@ section {
 }
 
 .footer-container {
-  transition: all .8s;
-  transition-delay: .3s;
+  transition: all 1s;
+  transition-delay: 1.2s;
   position: absolute;
   bottom: -50px;
   width: 100%;
@@ -487,7 +487,7 @@ section {
   padding-right: 20%;
   font-size: 20px;
   font-family: TruenoBold, sans-serif;
-  opacity: 0.6;
+  opacity: 1;
   margin-bottom: 20px;
   line-height: 1.3;
 }
@@ -496,7 +496,7 @@ section {
   padding-right: 20%;
   font-size: 20px;
   font-family: TruenoBold, sans-serif;
-  opacity: 0.6;
+  opacity: 1;
   margin-bottom: 40px;
 }
 
@@ -522,6 +522,7 @@ section {
   font-size: 30px;
   font-family: TruenoBold, sans-serif;
   margin-bottom: 12px;
+  opacity: 0.6;
 }
 
 .footer-social__description {
@@ -677,6 +678,11 @@ section {
   }
 }
 @media (max-width: 640px) {
+  .footer-container {
+    transition-delay: 0.5s;
+    transform: translate(0, 100%) scale(1);
+  }
+
   .navigation-inner img {
     width: 75px;
   }
@@ -802,6 +808,7 @@ section {
   font-size: 38px;
   font-family: TruenoBlack, sans-serif;
   margin-bottom: 40px;
+  line-height: 1.2;
 }
 .card-outer p {
   font-size: 19px;
@@ -886,12 +893,12 @@ section {
     padding: 24px !important;
   }
   .card-outer h2 {
-    font-size: 22px !important;
+    font-size: 24px !important;
     margin-bottom: 20px !important;
     line-height: 1.3;
   }
   .card-outer p {
-    font-size: 15px !important;
+    font-size: 18px !important;
     line-height: 1.2;
   }
 }
@@ -900,12 +907,12 @@ section {
     padding: 24px !important;
   }
   .card-outer h2 {
-    font-size: 20px !important;
+    font-size: 24px !important;
     margin-bottom: 20px !important;
     line-height: 1.2;
   }
   .card-outer p {
-    font-size: 14px !important;
+    font-size: 16px !important;
     line-height: 1.2;
   }
 }
@@ -945,7 +952,7 @@ html.-static, body.-static {
   left: 0px;
   overflow: hidden;
   width: 100%;
-  height: 660px;
+  height: 18%;
   opacity: 1;
   transform: scale(1);
   background: url("../images/ui/backgrounds/bg-sky-box.png") 50% 50% no-repeat;
@@ -1009,7 +1016,7 @@ html.-static, body.-static {
 .hero-stage__header img {
   opacity: 1;
   margin-bottom: 10px;
-  transform: scale(1.7) translateY(80px);
+  transform: scale(1.4) translateY(80px);
 }
 .hero-stage__header h1 {
   opacity: 0;
@@ -1375,6 +1382,10 @@ html.-static, body.-static {
   }
 }
 @media (max-width: 1200px) {
+  .hero-stage {
+    height: 660px;
+  }
+
   .hero-stage__header {
     top: 36%;
   }
@@ -1385,20 +1396,11 @@ html.-static, body.-static {
     font-size: 20px;
   }
   .hero-stage__header img {
-    width: 200px;
+    width: 280px;
     transform: scale(1.5) translateY(60px);
   }
 }
 @media (max-width: 1000px) {
-  .hero-stage__header h1 {
-    font-size: 50px;
-  }
-  .hero-stage__header p {
-    font-size: 20px;
-  }
-  .hero-stage__header img {
-    width: 180px;
-  }
   .hero-stage__header .section-image {
     width: 38%;
   }
@@ -1431,7 +1433,7 @@ html.-static, body.-static {
     font-size: 44px;
   }
   .hero-stage__header img {
-    width: 180px;
+    width: 240px;
     transform: scale(1.3) translateY(40px);
   }
 }
@@ -1450,7 +1452,7 @@ html.-static, body.-static {
     font-size: 18px;
   }
   .hero-stage__header img {
-    width: 160px;
+    width: 200px;
   }
 
   .section-image.-left {
@@ -1486,7 +1488,7 @@ html.-static, body.-static {
     font-size: 18px;
   }
   .hero-stage__header img {
-    width: 120px;
+    width: 190px;
   }
 
   .section-image {
@@ -1543,10 +1545,6 @@ html.-static, body.-static {
 
   .main-site__background--mobile {
     display: block;
-  }
-
-  .footer-container {
-    transform: translate(0, 0);
   }
 
   .section-footer {

@@ -1,52 +1,51 @@
 var wagthedog = function() {
+    var wagcounter = 0
+    var tailrotations = 0;
+    var waglimit = 6;
     $dogs = $('.footer-doggers img');
     $dogs.hide();
     $($dogs[0]).show();
+
+    function tailwag1() {
+        var tail1 = setInterval(function() {
+            tailrotations++;
+            // loop through the dogs and show 1 at a time
+            setTimeout(function() {
+                $dogs.hide();
+                $($dogs[0]).show();
+            },120);
+            setTimeout(function() {
+                $dogs.hide();
+                $($dogs[1]).show();
+            },240);
+            setTimeout(function() {
+                $dogs.hide();
+                $($dogs[2]).show();
+            },360);
+            setTimeout(function() {
+                $dogs.hide();
+                $($dogs[1]).show();
+            },480);
+            setTimeout(function() {
+                $dogs.hide();
+                $($dogs[0]).show();
+            },600);
     
+            if (tailrotations >= waglimit)
+            {
+                clearInterval(tail1);
+                tailrotations = 0;
+            }
+        },525);
+    }
 
+    tailwag1();
     setInterval(function() {
-        // loop through the dogs and show 1 at a time
-        setTimeout(function() {
-            $dogs.hide();
-            $($dogs[0]).show();
-        },200);
-        setTimeout(function() {
-            $dogs.hide();
-            $($dogs[1]).show();
-        },400);
-        setTimeout(function() {
-            $dogs.hide();
-            $($dogs[2]).show();
-        },600);
-        setTimeout(function() {
-            $dogs.hide();
-            $($dogs[1]).show();
-        },800);
-        setTimeout(function() {
-            $dogs.hide();
-            $($dogs[0]).show();
-        },1000);
-        setTimeout(function() {
-            $dogs.hide();
-            $($dogs[1]).show();
-        },1200);
-        setTimeout(function() {
-            $dogs.hide();
-            $($dogs[2]).show();
-        },1400);
-        setTimeout(function() {
-            $dogs.hide();
-            $($dogs[1]).show();
-        },1600);
-        setTimeout(function() {
-            $dogs.hide();
-            $($dogs[0]).show();
-        },1800);
-    },6000);
-
-
-
-    console.log($dogs[0])
+        wagcounter++;
+        waglimit = wagcounter % 2 ? 6 : 2;
+        tailwag1();
+    }, 6000);
+    
 }
 
 
@@ -70,7 +69,7 @@ var getWindowOptions = function() {
 
 var shareOnFacebook = function() {
     var fbBtn = $('.facebook-share');
-    var title = encodeURIComponent('Just joined the waitlist for a private social network called True. Check it out. #DeleteFacebook #BeTrue');
+    var title = encodeURIComponent('Check out this new social network I just found—you can make private threads with your favorite people (like me 😄). Sign up so we can be the first to try it:');
     var shareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + location.href + '&title=' + title;
     fbBtn.href = shareUrl; // 1
 
@@ -83,7 +82,7 @@ var shareOnFacebook = function() {
 
 var shareOnTwitter = function() {
     var tweetBtn = $('.twitter-share');
-    var title = encodeURIComponent('Just joined the waitlist for a private social network called True 🎉 Check it out. #DeleteFacebook #BeTrue');
+    var title = encodeURIComponent('Check out this new social network I just found—you can make private threads with your favorite people (like me 😄). Sign up so we can be the first to try it:');
     var shareUrl = 'https://twitter.com/intent/tweet?text=' + title + '&url=' + location.href;
     tweetBtn.href = shareUrl; // 1
 
@@ -116,6 +115,11 @@ $(function() {
             scrollTop: ($('#joinUs').offset().top - 100)
         },1000);
     })
+
+    // slow down video playback
+    var $firstVideo = $('#firstVideo');
+    $firstVideo[0].playbackRate = 0.65;
+    $firstVideo[0].play();
 
     shareOnFacebook();
     shareOnTwitter();
@@ -345,7 +349,8 @@ var handleWaitlist = function() {
                 },
                 error: function(xhr, ajaxOptions, thrownError) { // if error occured
                 },
-                complete: function() {
+                complete: function(data) {
+                    console.log(data.responseJSON);
                     setTimeout(function() {
                         $modalSpinner.fadeOut();
                         $formInput.val('');

@@ -15,7 +15,7 @@ var getWindowOptions = function() {
 
 var shareOnFacebook = function() {
     var fbBtn = $('.facebook-share');
-    var title = encodeURIComponent('Just joined the waitlist for a private social network called True. Check it out. #DeleteFacebook #BeTrue');
+    var title = encodeURIComponent('Check out this new social network I just found—you can make private threads with your favorite people (like me 😄). Sign up so we can be the first to try it:');
     var shareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + location.href + '&title=' + title;
     fbBtn.href = shareUrl; // 1
 
@@ -28,7 +28,7 @@ var shareOnFacebook = function() {
 
 var shareOnTwitter = function() {
     var tweetBtn = $('.twitter-share');
-    var title = encodeURIComponent('Just joined the waitlist for a private social network called True 🎉 Check it out. #DeleteFacebook #BeTrue');
+    var title = encodeURIComponent('Check out this new social network I just found—you can make private threads with your favorite people (like me 😄). Sign up so we can be the first to try it:');
     var shareUrl = 'https://twitter.com/intent/tweet?text=' + title + '&url=' + location.href;
     tweetBtn.href = shareUrl; // 1
 
@@ -61,6 +61,11 @@ $(function() {
             scrollTop: ($('#joinUs').offset().top - 100)
         },1000);
     })
+
+    // slow down video playback
+    var $firstVideo = $('#firstVideo');
+    $firstVideo[0].playbackRate = 0.65;
+    $firstVideo[0].play();
 
     shareOnFacebook();
     shareOnTwitter();

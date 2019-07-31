@@ -30,7 +30,8 @@ var handleWaitlist = function() {
                 },
                 error: function(xhr, ajaxOptions, thrownError) { // if error occured
                 },
-                complete: function() {
+                complete: function(data) {
+                    console.log(data.responseJSON);
                     setTimeout(function() {
                         $modalSpinner.fadeOut();
                         $formInput.val('');
