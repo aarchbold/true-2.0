@@ -233,6 +233,7 @@
     opacity: 1;
     margin-bottom: 20px;
     line-height: 1.3;
+    opacity: .6;
 }
 
 .footer-hashtag {
@@ -241,19 +242,25 @@
     font-family: TruenoBold, sans-serif;
     opacity: 1;
     margin-bottom: 40px;
+    opacity: .6;
 }
 
 .footer-input {
     margin-bottom: 100px;
     input {
         font-size: 20px;
-        border-radius: 25px;
-        padding: 15px 30px;
+        border-radius: 25px 0 0 25px;
+        padding: 15px 20px;
         border: none;
-        width: 40%;
+        width: 32%;
+        margin-right: 2px;
         box-sizing: border-box;
-        margin-right: 10px;
+        margin-right: 0;
         font-family: TruenoRegular, sans-serif;
+        &#trueEmail {
+            border-radius: 0 25px 25px 0;
+            margin-right: 10px;
+        }
     }
 }
 
@@ -434,6 +441,11 @@
     .footer-input {
         input {
             width: 66%;
+            border-radius: 25px !important;
+            &#trueName {
+                border-radius:25px;
+                margin-bottom:6px;
+            }
         }
     }
     .footer-boulder {
