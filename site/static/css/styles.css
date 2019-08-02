@@ -328,6 +328,9 @@ section {
 
 .section-footer {
   position: relative;
+  background-color: #103a31;
+  height: 1800px;
+  overflow: hidden;
 }
 
 .footer-waterfall__mist {
@@ -421,8 +424,8 @@ section {
 .footer-container {
   -webkit-transition: all 1s;
   transition: all 1s;
-  -webkit-transition-delay: 1.2s;
-  transition-delay: 1.2s;
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
   position: absolute;
   bottom: -50px;
   width: 100%;
@@ -535,7 +538,7 @@ section {
   opacity: 1;
   margin-bottom: 20px;
   line-height: 1.3;
-  opacity: .6;
+  opacity: .8;
 }
 
 .footer-hashtag {
@@ -544,18 +547,18 @@ section {
   font-family: TruenoBold, sans-serif;
   opacity: 1;
   margin-bottom: 40px;
-  opacity: .6;
+  opacity: .8;
 }
 
 .footer-input {
-  margin-bottom: 100px;
+  margin-bottom: 220px;
 }
 .footer-input input {
   font-size: 20px;
   border-radius: 25px 0 0 25px;
-  padding: 15px 20px;
+  padding: 15px 18px;
   border: none;
-  width: 32%;
+  width: 24%;
   margin-right: 2px;
   box-sizing: border-box;
   margin-right: 0;
@@ -564,6 +567,10 @@ section {
 .footer-input input#trueEmail {
   border-radius: 0 25px 25px 0;
   margin-right: 10px;
+}
+.footer-input input#trueLastName {
+  border-radius: 0;
+  margin-right: 0;
 }
 
 .footer-social {
@@ -678,6 +685,15 @@ section {
     transform: translateY(150%) scale(0.7);
   }
 }
+@media (max-width: 1200px) {
+  .section-footer {
+    height: 1600px;
+  }
+
+  .footer-input {
+    margin-bottom: 200px;
+  }
+}
 @media (max-width: 1100px) {
   .footer-doggers {
     max-width: 13%;
@@ -702,11 +718,11 @@ section {
   }
 
   .footer-input {
-    margin-bottom: 60px;
+    margin-bottom: 160px;
   }
   .footer-input input {
     font-size: 16px;
-    padding: 12px 22px;
+    padding: 12px 14px;
   }
 
   .footer-inner {
@@ -737,7 +753,7 @@ section {
   }
 
   .section-footer {
-    min-height: 1200px !important;
+    height: 1300px;
   }
 }
 @media (max-width: 800px) {
@@ -773,11 +789,29 @@ section {
   .footer-social__links {
     margin-bottom: 40px;
   }
+
+  .section-footer {
+    height: 1200px;
+  }
+
+  .footer-input {
+    margin-bottom: 60px;
+  }
+  .footer-input input {
+    width: 66%;
+    border-radius: 25px !important;
+  }
+  .footer-input input#trueFirstName, .footer-input input#trueLastName {
+    border-radius: 25px;
+    margin-bottom: 6px;
+  }
 }
 @media (max-width: 640px) {
   .footer-container {
-    -webkit-transition-delay: 0.5s;
-    transition-delay: 0.5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
     -webkit-transform: translate(0, 100%) scale(1);
     -ms-transform: translate(0, 100%) scale(1);
     transform: translate(0, 100%) scale(1);
@@ -799,13 +833,8 @@ section {
     padding-right: 0;
   }
 
-  .footer-input input {
-    width: 66%;
-    border-radius: 25px !important;
-  }
-  .footer-input input#trueName {
-    border-radius: 25px;
-    margin-bottom: 6px;
+  .footer-input {
+    margin-bottom: 60px;
   }
 
   .footer-boulder {
@@ -833,6 +862,10 @@ section {
 
   .footer-subheader {
     padding-right: 0;
+  }
+
+  .section-footer {
+    height: 900px;
   }
 }
 @media (max-width: 520px) {
@@ -863,10 +896,14 @@ section {
   .footer-input input {
     width: 55%;
   }
+
+  .section-footer {
+    height: 700px;
+  }
 }
 @media (max-width: 361px) {
   .section-footer {
-    min-height: 1170px !important;
+    height: 760px;
   }
 
   .footer-boulder {
@@ -926,7 +963,7 @@ section {
   font-family: TruenoSemiBold, sans-serif;
   line-height: 1.4;
   margin-bottom: 40px;
-  opacity: 0.75;
+  opacity: 1;
 }
 
 @media (max-width: 1200px) {
@@ -1551,12 +1588,6 @@ html.-static, body.-static {
   border-radius: 25px;
 }
 
-.section-footer {
-  background-color: #103a31;
-  min-height: 1600px;
-  overflow: hidden;
-}
-
 .house-scene {
   position: absolute;
   top: 52%;
@@ -1823,7 +1854,7 @@ html.-static, body.-static {
 
   .section-starts {
     position: absolute;
-    top: 22%;
+    top: 26%;
     z-index: 1000;
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -1840,10 +1871,6 @@ html.-static, body.-static {
 
   .main-site__background--mobile {
     display: block;
-  }
-
-  .section-footer {
-    min-height: 830px !important;
   }
 
   .footer-waterfall {
@@ -1975,7 +2002,6 @@ button.-disabled:hover, .button.-disabled:hover {
 
 .button-block__modal {
   display: block;
-  width: auto;
   float: none;
   margin: 0;
   padding: 15px 20px !important;
@@ -1985,7 +2011,8 @@ button.-disabled:hover, .button.-disabled:hover {
   text-decoration: none;
   margin-bottom: 10px;
   color: #ffffff;
-  height: auto;
+  width: auto !important;
+  height: auto !important;
 }
 
 @media (max-width: 800px) {
@@ -2228,4 +2255,17 @@ button.-disabled:hover, .button.-disabled:hover {
 .modal-social__ctas {
   max-width: 300px;
   margin: 0 auto 30px;
+}
+
+@media (max-width: 540px) {
+  .modal-waitlist__inner {
+    padding: 20px 35px;
+  }
+  .modal-waitlist__inner h2 {
+    font-size: 28px;
+    margin-bottom: 18px;
+  }
+  .modal-waitlist__inner p {
+    font-size: 16px;
+  }
 }

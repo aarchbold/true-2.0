@@ -247,7 +247,9 @@ $(window).on('load', function (e) {
   // fade out the preload spinner.
   $('.preloader-shim').addClass('-animate');
 
-  initHero();    
+  initHero(); 
+
+
   if ($(window).width() > 800) {
     $('[data-scroll-speed]').moveIt();
   }
@@ -255,6 +257,16 @@ $(window).on('load', function (e) {
     // move footer
     $('.section-footer').appendTo('.section-starts');
   }
+
+  $(window).resize(function() {
+    if ($(window).width() > 800) {
+      window.location.reload();
+    }
+    if ($(window).width() < 640) {
+      // move footer
+      window.location.reload();
+    }
+  });
 })
 
 var getWindowOptions = function() {
@@ -275,7 +287,7 @@ var getWindowOptions = function() {
 var shareOnFacebook = function(inviteCode) {
     var url = [location.protocol, '//', location.host, location.pathname].join('');
     var fbBtn = $('.facebook-share');
-    var title = encodeURIComponent('Check out this new social network I just found—you can make private threads with your favorite people (like me 😄). Sign up so we can be the first to try it:');
+    var title = encodeURIComponent('Just signed up to try this new app, check it out. #DeleteFacebook #BeTrue');
     var shareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + url + inviteCode + '&title=' + title;
     fbBtn.href = shareUrl; // 1
 
@@ -289,7 +301,7 @@ var shareOnFacebook = function(inviteCode) {
 var shareOnTwitter = function(inviteCode) {
     var url = [location.protocol, '//', location.host, location.pathname].join('');
     var tweetBtn = $('.twitter-share');
-    var title = encodeURIComponent('Check out this new social network I just found—you can make private threads with your favorite people (like me 😄). Sign up so we can be the first to try it:');
+    var title = encodeURIComponent('Just signed up to try this new app, check it out. #DeleteFacebook #BeTrue');
     var shareUrl = 'https://twitter.com/intent/tweet?text=' + title + '&url=' + url + inviteCode;
     tweetBtn.href = shareUrl; // 1
 
@@ -319,7 +331,7 @@ var initEmailShare = function(inviteCode) {
     var $button = $('.button-send-email');
     var url = [location.protocol, '//', location.host, location.pathname].join('');
 
-    $button.attr('href','mailto:?subject=Sign up to try True with me&body=Hi, I just signed up to try this new social network called True. It lets you make private threads with your favorite people (like me 😄). Sign up so we can try it together: '+url+inviteCode)
+    $button.attr('href','mailto:?subject=Sign up to try True with me&body=Hi, sign up to try this new app with me '+url+inviteCode)
 }
 
 function getParameterByName(name, url) {
@@ -335,22 +347,40 @@ function getParameterByName(name, url) {
 var handleWaitlist = function() {
     var $modal = $('.modal-waitlist');
     var referrerCode = getParameterByName('inviteCode') || null;
+    var showModal = getParameterByName('showModal') || false;
     var $closeModal = $('#closeOverlay');
     var $modalSpinner = $('.modal-waitlist__preloader');
-    var $formName = $('.footer-input #trueName');
+    var $formFirstName = $('.footer-input #trueFirstName');
+    var $formLastName = $('.footer-input #trueLastName');
     var $formInput = $('.footer-input #trueEmail');
     var $formSubmit = $('.footer-input .footer-signup');
     var emailPattern = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
 
+    if (showModal) {
+        $modal.fadeIn();
+        $modalSpinner.fadeOut();
+        shareOnFacebook('?inviteCode='+referrerCode);
+        shareOnTwitter('?inviteCode='+referrerCode);
+        initCopyToClip('?inviteCode='+referrerCode);
+        initEmailShare('?inviteCode='+referrerCode);
+    }
+
     $formInput.keyup(function() {
-        if ($formName.val() !== '' && emailPattern.test($formInput.val())) {
+        if ($formLastName.val() !== '' && $formFirstName.val() !== '' && emailPattern.test($formInput.val())) {
             $formSubmit.removeClass('-disabled')
         } else {
             $formSubmit.addClass('-disabled')
         }
     })
-    $formName.keyup(function() {
-        if ($formName.val() !== '' && emailPattern.test($formInput.val())) {
+    $formFirstName.keyup(function() {
+        if ($formLastName.val() !== '' && $formFirstName.val() !== '' && emailPattern.test($formInput.val())) {
+            $formSubmit.removeClass('-disabled')
+        } else {
+            $formSubmit.addClass('-disabled')
+        }
+    })
+    $formLastName.keyup(function() {
+        if ($formLastName.val() !== '' && $formFirstName.val() !== '' && emailPattern.test($formInput.val())) {
             $formSubmit.removeClass('-disabled')
         } else {
             $formSubmit.addClass('-disabled')
@@ -360,7 +390,8 @@ var handleWaitlist = function() {
     $formSubmit.click(function(e) {
         var postData = {
             email: $formInput.val(),
-            full_name: $formName.val(),
+            first_name: $formFirstName.val(),
+            last_name: $formLastName.val(),
             referrer_code: referrerCode
         }
         e.preventDefault();
@@ -390,7 +421,8 @@ var handleWaitlist = function() {
                     initEmailShare(inviteCode);
                     $modalSpinner.fadeOut();
                     $formInput.val('');
-                    $formName.val('');
+                    $formFirstName.val('');
+                    $formLastName.val('');
                 }
             });
         }

@@ -75,3 +75,16 @@
     max-width: 300px;
     margin: 0 auto 30px;
 }
+
+@media (max-width: 540px) {
+    .modal-waitlist__inner {
+        padding: 20px 35px;
+        h2 {
+            font-size: 28px;
+            margin-bottom: 18px;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+}

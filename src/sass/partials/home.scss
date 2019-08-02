@@ -457,12 +457,6 @@ html, body {
     }
 }
 
-.section-footer {
-    background-color: $color-bg-footer;
-    min-height: 1600px;
-    overflow: hidden;
-}
-
 .house-scene {
     position: absolute;
     top: 52%;
@@ -673,7 +667,7 @@ html, body {
     }
     .section-starts {
         position: absolute;
-        top: 22%;
+        top: 26%;
         z-index: 1000;
         left: 50%;
         transform: translateX(-50%);
@@ -685,9 +679,6 @@ html, body {
     }
     .main-site__background--mobile {
         display: block;
-    }
-    .section-footer {
-        min-height: 830px !important;
     }
     .footer-waterfall {
         display: none;

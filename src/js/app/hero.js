@@ -113,7 +113,9 @@ $(window).on('load', function (e) {
   // fade out the preload spinner.
   $('.preloader-shim').addClass('-animate');
 
-  initHero();    
+  initHero(); 
+
+
   if ($(window).width() > 800) {
     $('[data-scroll-speed]').moveIt();
   }
@@ -121,4 +123,14 @@ $(window).on('load', function (e) {
     // move footer
     $('.section-footer').appendTo('.section-starts');
   }
+
+  $(window).resize(function() {
+    if ($(window).width() > 800) {
+      window.location.reload();
+    }
+    if ($(window).width() < 640) {
+      // move footer
+      window.location.reload();
+    }
+  });
 })
