@@ -249,6 +249,7 @@ $(window).on('load', function (e) {
 
   initHero(); 
 
+  var ogWidth = $(window).width();
 
   if ($(window).width() > 800) {
     $('[data-scroll-speed]').moveIt();
@@ -257,15 +258,36 @@ $(window).on('load', function (e) {
     // move footer
     $('.section-footer').appendTo('.section-starts');
   }
+  
+  var resizeTimeout;
+  $(window).resize(function(){
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(function(){    
+          if (ogWidth < 800 && $(window).width() > 800) {
+            // init the parallax if the site starts at mobile and resizes to not mobile
+            $('[data-scroll-speed]').moveIt();
+          }
+          if (ogWidth < 640 && $(window).width() > 640) {
+            // check if the footer has been moved.
+            $('.section-footer').appendTo('#ogFooterPosition');
+          } else if (ogWidth > 640 && $(window).width() < 640) {
+            $('.section-footer').appendTo('.section-starts');
+          } else if (ogWidth < 640 && $(window).width() < 640) {
+            $('.section-footer').appendTo('.section-starts');
+          } else {
+            $('.section-footer').appendTo('#ogFooterPosition');
+          }
+      }, 500);
+  });
 
   $(window).resize(function() {
-    if ($(window).width() > 800) {
-      window.location.reload();
-    }
-    if ($(window).width() < 640) {
-      // move footer
-      window.location.reload();
-    }
+    // if ($(window).width() > 800) {
+    //   window.location.reload();
+    // }
+    // if ($(window).width() < 640) {
+    //   // move footer
+    //   window.location.reload();
+    // }
   });
 })
 
