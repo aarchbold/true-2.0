@@ -1,3 +1,48 @@
+$.fn.flappyBird = function() {
+    var $context = $(this);
+    var $birdCage = $('.animated-bird__inner',$context);
+
+    $birdCage.each(function(i,e) {
+        console.log($(e));
+        var $birds = $('img',$(e));
+        $birds.hide();
+        
+        setInterval(function() {
+            setTimeout(function() {
+                $birds.hide();
+                $($birds[0]).show();
+            },200);
+            setTimeout(function() {
+                $birds.hide();
+                $($birds[1]).show();
+            },400);
+            setTimeout(function() {
+                $birds.hide();
+                $($birds[2]).show();
+            },600);
+        },600);
+        console.log($birds);
+    });
+
+    // $birds = $('img',$context);
+    // $birds.hide();
+
+    // setInterval(function() {
+    //     setTimeout(function() {
+    //         $birds.hide();
+    //         $($birds[0]).show();
+    //     },200);
+    //     setTimeout(function() {
+    //         $birds.hide();
+    //         $($birds[1]).show();
+    //     },400);
+    //     setTimeout(function() {
+    //         $birds.hide();
+    //         $($birds[2]).show();
+    //     },600);
+    // },600);
+}
+
 var wagthedog = function() {
     var wagcounter = 0
     var tailrotations = 0;
@@ -51,4 +96,5 @@ var wagthedog = function() {
 
 $(function() {
     wagthedog();
+    $('.animated-bird__container').flappyBird();
 });

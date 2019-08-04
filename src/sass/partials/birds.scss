@@ -7,35 +7,66 @@
 .animated-bird {
     // transition: left 1s;
     position: absolute;
-    background: url('../images/ui/scenery/bird1.png') 50% 50% no-repeat;
+    //background: url('../images/ui/scenery/bird1.png') 50% 50% no-repeat;
     background-size: cover;
     z-index: 10;
     &.bird1,&.bird3 {
         top: 22%;
-        left: -100px;
+        left: -200px;
         width: 50px;
         height: 50px;
         // transform: translateX(-200px);
         &.-animate {
-            animation: movebird 12s linear infinite, flapper .3s linear infinite;
+            animation: movebird 12s linear infinite;
+        }
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 130px;
         }
     }
     &.bird3 {
         top: 50%;
     }
     &.bird2,&.bird4 {
-        top: 25%;
-        left: -100px;
+        top: 35%;
+        left: -200px;
         width: 30px;
         height: 30px;
         // transform: translateX(-200px);
         z-index: 6;
         &.-animate {
-            animation: movebird 18s linear infinite, flapper .3s linear infinite;
+            animation-delay: 1s;
+            animation: movebird 16s linear infinite;
+        }
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 90px;
         }
     }
     &.bird4 {
-        top: 66%;
+        top: 70%;
+    }
+}
+
+.animated-bird__inner {
+    position: relative;
+    animation: birdbounce .6s ease-in-out infinite;
+}
+
+@keyframes birdbounce
+{
+    0% {
+        transform: translateY(2px)
+    }
+    50% {
+        transform: translateY(-2px)
+    }
+    100% {
+        transform: translateY(2px)
     }
 }
 
@@ -44,31 +75,19 @@
 @keyframes movebird
 {
     0% {
-        left: -100px;
-        // transform: translateX(-200px);
+        left: -200px;
+        transform: translateY(100px);
     }
 
     30% {
-        transform: translateY(-130%);
+        //transform: translateY(-30%);
     }
     60% {
-        transform: translateY(10%);
+        //transform: translateY(10%);
     }
     100% {
         left: 120%;
-        transform: translateY(0);
+        transform: translateY(-100px);
         //transform: translateX(200%);
     }
-}
-@keyframes flapper
-{
-    0% {
-        background-image: url('../images/ui/scenery/bird1.png');
-    }
-    50% {
-        background-image: url('../images/ui/scenery/bird2.png');
-    }
-    // 100% {
-    //     background-image: url('../images/ui/scenery/bird1.png');
-    // }
 }

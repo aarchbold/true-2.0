@@ -2155,89 +2155,108 @@ button.-disabled:hover, .button.-disabled:hover {
 */
 .animated-bird {
   position: absolute;
-  background: url("../images/ui/scenery/bird1.png") 50% 50% no-repeat;
   background-size: cover;
   z-index: 10;
 }
 .animated-bird.bird1, .animated-bird.bird3 {
   top: 22%;
-  left: -100px;
+  left: -200px;
   width: 50px;
   height: 50px;
 }
 .animated-bird.bird1.-animate, .animated-bird.bird3.-animate {
-  -webkit-animation: movebird 12s linear infinite, flapper .3s linear infinite;
-  animation: movebird 12s linear infinite, flapper .3s linear infinite;
+  -webkit-animation: movebird 12s linear infinite;
+  animation: movebird 12s linear infinite;
+}
+.animated-bird.bird1 img, .animated-bird.bird3 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 130px;
 }
 .animated-bird.bird3 {
   top: 50%;
 }
 .animated-bird.bird2, .animated-bird.bird4 {
-  top: 25%;
-  left: -100px;
+  top: 35%;
+  left: -200px;
   width: 30px;
   height: 30px;
   z-index: 6;
 }
 .animated-bird.bird2.-animate, .animated-bird.bird4.-animate {
-  -webkit-animation: movebird 18s linear infinite, flapper .3s linear infinite;
-  animation: movebird 18s linear infinite, flapper .3s linear infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation: movebird 16s linear infinite;
+  animation: movebird 16s linear infinite;
+}
+.animated-bird.bird2 img, .animated-bird.bird4 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
 }
 .animated-bird.bird4 {
-  top: 66%;
+  top: 70%;
 }
 
+.animated-bird__inner {
+  position: relative;
+  -webkit-animation: birdbounce .6s ease-in-out infinite;
+  animation: birdbounce .6s ease-in-out infinite;
+}
+
+@-webkit-keyframes birdbounce {
+  0% {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+  50% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  100% {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+}
+
+@keyframes birdbounce {
+  0% {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+  50% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  100% {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+}
 @-webkit-keyframes movebird {
   0% {
-    left: -100px;
-  }
-  30% {
-    -webkit-transform: translateY(-130%);
-    transform: translateY(-130%);
-  }
-  60% {
-    -webkit-transform: translateY(10%);
-    transform: translateY(10%);
+    left: -200px;
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
   }
   100% {
     left: 120%;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
   }
 }
-
 @keyframes movebird {
   0% {
-    left: -100px;
-  }
-  30% {
-    -webkit-transform: translateY(-130%);
-    transform: translateY(-130%);
-  }
-  60% {
-    -webkit-transform: translateY(10%);
-    transform: translateY(10%);
+    left: -200px;
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
   }
   100% {
     left: 120%;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-@-webkit-keyframes flapper {
-  0% {
-    background-image: url("../images/ui/scenery/bird1.png");
-  }
-  50% {
-    background-image: url("../images/ui/scenery/bird2.png");
-  }
-}
-@keyframes flapper {
-  0% {
-    background-image: url("../images/ui/scenery/bird1.png");
-  }
-  50% {
-    background-image: url("../images/ui/scenery/bird2.png");
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
   }
 }
 /* modal styles
