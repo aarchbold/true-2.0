@@ -323,7 +323,7 @@ var shareOnFacebook = function(inviteCode) {
 var shareOnTwitter = function(inviteCode) {
     var url = [location.protocol, '//', location.host, location.pathname].join('');
     var tweetBtn = $('.twitter-share');
-    var title = encodeURIComponent('Just signed up to try this new app, check it out. #DeleteFacebook #BeTrue');
+    var title = encodeURIComponent('Just signed up for True, looks so fun! Try it with me 😎');
     var shareUrl = 'https://twitter.com/intent/tweet?text=' + title + '&url=' + url + inviteCode;
     tweetBtn.href = shareUrl; // 1
 
@@ -353,7 +353,7 @@ var initEmailShare = function(inviteCode) {
     var $button = $('.button-send-email');
     var url = [location.protocol, '//', location.host, location.pathname].join('');
 
-    $button.attr('href','mailto:?subject=Sign up to try True with me&body=Hi, sign up to try this new app with me '+url+inviteCode)
+    $button.attr('href','mailto:?subject=Sign up to try True with me&body=Hey! Sign up for True so we can share stuff together 🎉 '+url+inviteCode)
 }
 
 function getParameterByName(name, url) {
@@ -386,6 +386,16 @@ var handleWaitlist = function() {
         initCopyToClip('?inviteCode='+referrerCode);
         initEmailShare('?inviteCode='+referrerCode);
     }
+
+    $formInput.on('click', function(){
+        $(window).off('resize');
+    });
+    $formFirstName.on('click', function(){
+        $(window).off('resize');
+    });
+    $formLastName.on('click', function(){
+        $(window).off('resize');
+    });
 
     $formInput.keyup(function() {
         if ($formLastName.val() !== '' && $formFirstName.val() !== '' && emailPattern.test($formInput.val())) {

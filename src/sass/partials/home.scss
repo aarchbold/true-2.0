@@ -139,6 +139,7 @@ html, body {
         // transition: all $hero-sunrise-timing;
         opacity: 0;
         transform: translateY(350px);
+        text-shadow: 0px 2px 4px rgba(155,155,155,0.74);
     }
     &.-animate {
         opacity: 1;
