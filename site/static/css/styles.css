@@ -2208,31 +2208,31 @@ button.-disabled:hover, .button.-disabled:hover {
 
 @-webkit-keyframes birdbounce {
   0% {
-    -webkit-transform: translateY(2px);
-    transform: translateY(2px);
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
   }
   50% {
     -webkit-transform: translateY(-2px);
     transform: translateY(-2px);
   }
   100% {
-    -webkit-transform: translateY(2px);
-    transform: translateY(2px);
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
   }
 }
 
 @keyframes birdbounce {
   0% {
-    -webkit-transform: translateY(2px);
-    transform: translateY(2px);
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
   }
   50% {
     -webkit-transform: translateY(-2px);
     transform: translateY(-2px);
   }
   100% {
-    -webkit-transform: translateY(2px);
-    transform: translateY(2px);
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
   }
 }
 @-webkit-keyframes movebird {

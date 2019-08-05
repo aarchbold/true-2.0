@@ -1889,13 +1889,13 @@ button.-disabled:hover, .button.-disabled:hover {
 
 @keyframes birdbounce {
   0% {
-    transform: translateY(2px);
+    transform: translateY(1px);
   }
   50% {
     transform: translateY(-2px);
   }
   100% {
-    transform: translateY(2px);
+    transform: translateY(1px);
   }
 }
 @keyframes movebird {
