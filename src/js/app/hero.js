@@ -57,12 +57,18 @@ initHero = debounce(function() {
         // $heroClouds.addClass('-animate');
     }
     startHeaderTextAnimation = function() {
-        $header.addClass('-animate');
+        if (!$header.hasClass('-fixed')) {
+          $header.addClass('-animate');
+        }
     }
 
     window.addEventListener('scroll', function(){
       var scrollTop = $window.scrollTop();
-      if (scrollTop > 20) {
+      if (scrollTop > 10) {
+        $header.addClass('-fixed');
+        $header.removeClass('-animate');
+      } 
+      if (scrollTop > 200) {
         $header.addClass('-fade');
         $nav.addClass('-show');
       } else {
@@ -99,9 +105,7 @@ $(function() {
     top: 0, 
     left: 0, 
     behavior: 'smooth' 
-   });
-
-   
+  });  
 });
 
 // $(window).unload(function() {
@@ -109,9 +113,25 @@ $(function() {
 // });
 
 $(window).on('load', function (e) {
-  // executes when complete page is fully loaded, including all frames, objects and images
+  
+
+  
+  
+   // executes when complete page is fully loaded, including all frames, objects and images
   // fade out the preload spinner.
   $('.preloader-shim').addClass('-animate');
+  
+  
+  // setTimeout(function() {
+  //   $('body').removeClass('-static');
+  //   window.scroll({
+  //     top: 0, 
+  //     left: 0, 
+  //     behavior: 'smooth' 
+  //   });  
+  // },4500) 
+
+
 
   initHero(); 
 

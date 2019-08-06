@@ -270,6 +270,11 @@ section {
   margin: 0 auto;
 }
 
+@media (max-width: 800px) {
+  [data-scroll-speed] {
+    transform: translateY(0) !important;
+  }
+}
 @media (max-width: 650px) {
   .page-h1 {
     font-size: 50px;
@@ -506,7 +511,7 @@ section {
 }
 
 .footer-input {
-  margin-bottom: 220px;
+  margin-bottom: 100px;
 }
 .footer-input input {
   font-size: 20px;
@@ -548,7 +553,7 @@ section {
 }
 
 .footer-social__links {
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 .footer-social__links:after {
   content: '';
@@ -560,7 +565,7 @@ section {
   font-size: 16px;
   font-family: TruenoRegular, sans-serif;
   margin-bottom: 20px;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 .footer-legal a {
   color: white;
@@ -607,7 +612,7 @@ section {
   }
 
   .footer-input {
-    margin-bottom: 180px;
+    margin-bottom: 120px;
   }
 }
 @media (max-width: 1100px) {
@@ -634,7 +639,7 @@ section {
   }
 
   .footer-input {
-    margin-bottom: 160px;
+    margin-bottom: 60px;
   }
   .footer-input input {
     font-size: 16px;
@@ -703,7 +708,7 @@ section {
   }
 
   .footer-social__links {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .section-footer {
@@ -711,7 +716,7 @@ section {
   }
 
   .footer-input {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
   .footer-input input {
     width: 66%;
@@ -721,6 +726,14 @@ section {
     border-radius: 25px;
     margin-bottom: 6px;
     width: 72%;
+  }
+
+  .footer-header {
+    font-size: 30px;
+  }
+
+  .footer-subheader, .footer-hashtag {
+    font-size: 18px;
   }
 }
 @media (max-width: 640px) {
@@ -734,14 +747,6 @@ section {
     width: 75px;
   }
 
-  .footer-header {
-    font-size: 30px;
-  }
-
-  .footer-subheader, .footer-hashtag {
-    font-size: 18px;
-  }
-
   .footer-background {
     min-width: 800px;
   }
@@ -752,10 +757,16 @@ section {
 
   .footer-header {
     padding-right: 0;
+    margin-bottom: 12px;
+  }
+
+  .footer-subheader, .footer-hashtag {
+    font-size: 16px;
+    padding-right: 0;
   }
 
   .footer-input {
-    margin-bottom: 60px;
+    margin-bottom: 10px;
   }
 
   .footer-boulder {
@@ -846,6 +857,10 @@ section {
     top: 20px;
     left: 230px;
     transform: translate(0, 0);
+  }
+
+  .footer-legal {
+    font-size: 14px;
   }
 }
 @media (max-width: 376px) {
@@ -955,11 +970,6 @@ section {
   }
 }
 @media (max-width: 800px) {
-  .card-outer {
-    width: 60%;
-    position: relative;
-    top: -50px;
-  }
   .card-outer.-right {
     margin-left: 40%;
   }
@@ -974,6 +984,8 @@ section {
 }
 @media (max-width: 640px) {
   .card-outer {
+    position: relative;
+    top: -50px;
     width: 90%;
     z-index: 1;
     padding: 30px;
@@ -1134,6 +1146,17 @@ html.-static, body.-static {
 .hero-stage__header.-animate h1 {
   animation: headerswoop 1.8s;
   animation-fill-mode: forwards;
+}
+.hero-stage__header.-fixed {
+  opacity: 1;
+}
+.hero-stage__header.-fixed img {
+  transform: scale(1) translateY(0) !important;
+  transition: all 0s !important;
+}
+.hero-stage__header.-fixed h1 {
+  transform: translateY(0) scale(1) !important;
+  opacity: 1 !important;
 }
 .hero-stage__header.-fade {
   opacity: 0;
@@ -1566,6 +1589,10 @@ html.-static, body.-static {
   .section-secure {
     top: 86%;
   }
+
+  .section-sharing, .section-friends, .section-secure {
+    transform: translateY(0) !important;
+  }
 }
 @media (max-width: 640px) {
   .main-site__container {
@@ -1760,6 +1787,52 @@ button.-disabled:hover, .button.-disabled:hover {
   transform: translate(-50%, -50%);
 }
 
+.button-social__mini {
+  transition: all 0.4s;
+  position: relative;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: block;
+  float: left;
+  background-color: black;
+  margin-right: 12px;
+}
+.button-social__mini img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 20px;
+}
+.button-social__mini.-facebook {
+  background-color: #1877f2;
+}
+.button-social__mini.-twitter {
+  background-color: #49caf1;
+}
+.button-social__mini.-twitter img {
+  height: 18px;
+}
+.button-social__mini.-linkedin {
+  background-color: #0077B5;
+}
+.button-social__mini.-linkedin img {
+  height: 28px;
+}
+.button-social__mini.-instagram {
+  background-color: #833AB4;
+}
+.button-social__mini.-instagram img {
+  height: 22px;
+}
+.button-social__mini.-angellist img {
+  height: 26px;
+}
+.button-social__mini:hover {
+  transform: scale(1.05);
+}
+
 .button-block__modal {
   display: block;
   float: none;
@@ -1776,6 +1849,12 @@ button.-disabled:hover, .button.-disabled:hover {
 }
 
 @media (max-width: 800px) {
+  .button-social__mini {
+    width: 38px;
+    height: 38px;
+    margin-right: 4px;
+  }
+
   button, .button {
     font-size: 16px;
     padding: 14px 30px !important;

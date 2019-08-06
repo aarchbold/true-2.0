@@ -76,6 +76,12 @@ section {
     margin: 0 auto;
 }
 
+@media (max-width: 800px) {
+    [data-scroll-speed] {
+        transform: translateY(0) !important;
+    }
+}
+
 @media (max-width: 650px) {
     .page-h1 {
         font-size: 50px;

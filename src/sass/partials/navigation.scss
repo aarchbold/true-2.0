@@ -249,8 +249,7 @@
 }
 
 .footer-input {
-    // margin-bottom: 100px;
-    margin-bottom: 220px;
+    margin-bottom: 100px;
     input {
         font-size: 20px;
         border-radius: 25px 0 0 25px;
@@ -292,7 +291,7 @@
 }
 
 .footer-social__links {
-    margin-bottom: 100px;
+    margin-bottom: 20px;
     &:after {
         content: '';
         clear: both;
@@ -304,7 +303,7 @@
     font-size: 16px;
     font-family: TruenoRegular, sans-serif;
     margin-bottom: 20px;
-    line-height: 1.3;
+    line-height: 1.4;
     a {
         color: white;
     }
@@ -354,7 +353,7 @@
         height: 1600px;
     }
     .footer-input {
-        margin-bottom: 180px;
+        margin-bottom: 120px;
     }
 }
 
@@ -379,7 +378,7 @@
         font-size: 18px;
     }
     .footer-input {
-        margin-bottom: 160px;
+        margin-bottom: 60px;
         input {
             font-size: 16px;
             padding: 12px 14px;
@@ -438,13 +437,13 @@
         min-width: 800px;
     }
     .footer-social__links {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
     .section-footer {
         height: 1200px;
     }
     .footer-input {
-        margin-bottom: 60px;
+        margin-bottom: 20px;
         input {
             width: 66%;
             border-radius: 25px !important;
@@ -454,6 +453,12 @@
                 width: 72%;
             }
         }
+    }
+    .footer-header {
+        font-size: 30px;
+    }
+    .footer-subheader, .footer-hashtag {
+        font-size: 18px;
     }
 }
 
@@ -468,12 +473,6 @@
             width: 75px;
         }
     }
-    .footer-header {
-        font-size: 30px;
-    }
-    .footer-subheader, .footer-hashtag {
-        font-size: 18px;
-    }
     .footer-background {
         min-width: 800px;
     }
@@ -482,9 +481,14 @@
     }
     .footer-header {
         padding-right: 0;
+        margin-bottom: 12px;
+    }
+    .footer-subheader, .footer-hashtag {
+        font-size: 16px;
+        padding-right: 0;
     }
     .footer-input {
-        margin-bottom: 60px;
+        margin-bottom: 10px;
     }
     .footer-boulder {
         top: 0px;
@@ -562,6 +566,9 @@
         top: 20px;
         left: 230px;
         transform: translate(0,0);
+    }
+    .footer-legal {
+        font-size: 14px;
     }
 }
 

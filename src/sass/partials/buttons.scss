@@ -70,6 +70,54 @@ button, .button {
     }
 }
 
+.button-social__mini {
+    transition: all 0.4s;
+    position: relative;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: block;
+    float: left;
+    background-color: black;
+    margin-right: 12px;
+    img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        height: 20px;
+    }
+    &.-facebook {
+        background-color: $color-bg-facebook;
+    }
+    &.-twitter {
+        background-color: $color-bg-twitter;
+        img {
+            height: 18px;
+        }
+    }
+    &.-linkedin {
+        background-color: $color-bg-linkedin;
+        img {
+            height: 28px;
+        }
+    }
+    &.-instagram {
+        background-color: $color-bg-instagram;
+        img {
+            height: 22px;
+        }
+    }
+    &.-angellist {
+        img {
+            height: 26px;
+        }
+    }
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
 
 .button-block__modal {
     display: block;
@@ -88,6 +136,11 @@ button, .button {
 }
 
 @media (max-width: 800px) {
+    .button-social__mini {
+        width: 38px;
+        height: 38px;
+        margin-right: 4px;
+    }
     button, .button {
         font-size: 16px;
         padding: 14px 30px !important;
