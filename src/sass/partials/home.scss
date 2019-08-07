@@ -630,6 +630,92 @@ html, body {
     }
 }
 
+.mobile-waterfall__gradiient {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#123a31 20%,rgba(255, 255, 255, 0.01));
+    z-index: 1;
+}
+
+.mobile-waterfall {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    height: 83.9%;
+    width: 100%;
+}
+
+.footer-waterfall__animation--mobile {
+    display: none;
+    position: absolute;
+    left: 33%;
+    width: 48%;
+    bottom: 0;
+    height: 83.9%;
+    z-index: 4;
+    overflow: hidden;
+    .waterfall-drop {
+        &.-drop1 {
+            left: -1%;
+            animation: mobilewaterfall 2.9s linear infinite;
+            animation-delay: 1s;
+        }
+        &.-drop2 {
+            left: -2%;
+            animation: mobilewaterfall 3s linear infinite;
+            animation-delay: 1.2s;
+        }
+        &.-drop3 {
+            left: 0;
+            animation: mobilewaterfall 3.1s linear infinite;
+            animation-delay: 1.4s;
+        }
+        &.-drop4 {
+            left: 0;
+            animation: mobilewaterfall 3s linear infinite;
+            animation-delay: 1.6s;
+        }
+        &.-drop5 {
+            left: 1%;
+            animation: mobilewaterfall 2.8s linear infinite;
+            animation-delay: 1.8s;
+        }
+        &.-drop6 {
+            left: 2%;
+            animation: mobilewaterfall 3s linear infinite;
+            animation-delay: 2s;
+        }
+        &.-drop7 {
+            left: 1%;
+            animation: mobilewaterfall 2.6s linear infinite;
+            animation-delay: 2.2s;
+        }
+        &.-drop8 {
+            left: 0%;
+            animation: mobilewaterfall 2.6s linear infinite;
+            animation-delay: 2.4s;
+        }
+    }
+}
+
+@keyframes mobilewaterfall
+{
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(350%) scale(.6);
+    }
+}
+
 @media (max-width: 640px) {
     .main-site__container {
         padding-top: 100px;
@@ -688,7 +774,6 @@ html, body {
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
-        background: linear-gradient(rgba(255, 255, 255, 0.01), #123a31 20%);
     }
     .main-site__background {
         display: none;
@@ -701,6 +786,9 @@ html, body {
     }
     .footer-waterfall__animation {
         display: none;
+    }
+    .mobile-waterfall, .mobile-waterfall__gradiient, .footer-waterfall__animation--mobile {
+        display: block;
     }
 }
 

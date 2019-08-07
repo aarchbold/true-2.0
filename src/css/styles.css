@@ -343,7 +343,7 @@ section {
   display: block;
 }
 
-.footer-waterfall__animation {
+.footer-waterfall__animation, .footer-waterfall__animation--mobile {
   position: absolute;
   left: 43.9%;
   width: 46.4%;
@@ -351,7 +351,7 @@ section {
   z-index: 4;
   overflow: hidden;
 }
-.footer-waterfall__animation .waterfall-drop {
+.footer-waterfall__animation .waterfall-drop, .footer-waterfall__animation--mobile .waterfall-drop {
   position: absolute;
   top: 0;
   width: 100%;
@@ -360,42 +360,42 @@ section {
   background-size: cover;
   transform: translateY(-100%);
 }
-.footer-waterfall__animation .waterfall-drop.-drop1 {
+.footer-waterfall__animation .waterfall-drop.-drop1, .footer-waterfall__animation--mobile .waterfall-drop.-drop1 {
   left: -1%;
   animation: waterfall 1.9s linear infinite;
   animation-delay: 1s;
 }
-.footer-waterfall__animation .waterfall-drop.-drop2 {
+.footer-waterfall__animation .waterfall-drop.-drop2, .footer-waterfall__animation--mobile .waterfall-drop.-drop2 {
   left: -2%;
   animation: waterfall 2s linear infinite;
   animation-delay: 1.2s;
 }
-.footer-waterfall__animation .waterfall-drop.-drop3 {
+.footer-waterfall__animation .waterfall-drop.-drop3, .footer-waterfall__animation--mobile .waterfall-drop.-drop3 {
   left: 0;
   animation: waterfall 2.1s linear infinite;
   animation-delay: 1.4s;
 }
-.footer-waterfall__animation .waterfall-drop.-drop4 {
+.footer-waterfall__animation .waterfall-drop.-drop4, .footer-waterfall__animation--mobile .waterfall-drop.-drop4 {
   left: 0;
   animation: waterfall 2s linear infinite;
   animation-delay: 1.6s;
 }
-.footer-waterfall__animation .waterfall-drop.-drop5 {
+.footer-waterfall__animation .waterfall-drop.-drop5, .footer-waterfall__animation--mobile .waterfall-drop.-drop5 {
   left: 1%;
   animation: waterfall 1.8s linear infinite;
   animation-delay: 1.8s;
 }
-.footer-waterfall__animation .waterfall-drop.-drop6 {
+.footer-waterfall__animation .waterfall-drop.-drop6, .footer-waterfall__animation--mobile .waterfall-drop.-drop6 {
   left: 2%;
   animation: waterfall 2s linear infinite;
   animation-delay: 2s;
 }
-.footer-waterfall__animation .waterfall-drop.-drop7 {
+.footer-waterfall__animation .waterfall-drop.-drop7, .footer-waterfall__animation--mobile .waterfall-drop.-drop7 {
   left: 1%;
   animation: waterfall 1.6s linear infinite;
   animation-delay: 2.2s;
 }
-.footer-waterfall__animation .waterfall-drop.-drop8 {
+.footer-waterfall__animation .waterfall-drop.-drop8, .footer-waterfall__animation--mobile .waterfall-drop.-drop8 {
   left: 0%;
   animation: waterfall 1.6s linear infinite;
   animation-delay: 2.4s;
@@ -511,7 +511,7 @@ section {
 }
 
 .footer-input {
-  margin-bottom: 100px;
+  margin-bottom: 140px;
 }
 .footer-input input {
   font-size: 20px;
@@ -639,7 +639,7 @@ section {
   }
 
   .footer-input {
-    margin-bottom: 60px;
+    margin-bottom: 120px;
   }
   .footer-input input {
     font-size: 16px;
@@ -753,6 +753,7 @@ section {
 
   .section-footer {
     overflow: hidden;
+    background-color: transparent;
   }
 
   .footer-header {
@@ -1594,6 +1595,88 @@ html.-static, body.-static {
     transform: translateY(0) !important;
   }
 }
+.mobile-waterfall__gradiient {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(#123a31 20%, rgba(255, 255, 255, 0.01));
+  z-index: 1;
+}
+
+.mobile-waterfall {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  height: 83.9%;
+  width: 100%;
+}
+
+.footer-waterfall__animation--mobile {
+  display: none;
+  position: absolute;
+  left: 33%;
+  width: 48%;
+  bottom: 0;
+  height: 83.9%;
+  z-index: 4;
+  overflow: hidden;
+}
+.footer-waterfall__animation--mobile .waterfall-drop.-drop1 {
+  left: -1%;
+  animation: mobilewaterfall 2.9s linear infinite;
+  animation-delay: 1s;
+}
+.footer-waterfall__animation--mobile .waterfall-drop.-drop2 {
+  left: -2%;
+  animation: mobilewaterfall 3s linear infinite;
+  animation-delay: 1.2s;
+}
+.footer-waterfall__animation--mobile .waterfall-drop.-drop3 {
+  left: 0;
+  animation: mobilewaterfall 3.1s linear infinite;
+  animation-delay: 1.4s;
+}
+.footer-waterfall__animation--mobile .waterfall-drop.-drop4 {
+  left: 0;
+  animation: mobilewaterfall 3s linear infinite;
+  animation-delay: 1.6s;
+}
+.footer-waterfall__animation--mobile .waterfall-drop.-drop5 {
+  left: 1%;
+  animation: mobilewaterfall 2.8s linear infinite;
+  animation-delay: 1.8s;
+}
+.footer-waterfall__animation--mobile .waterfall-drop.-drop6 {
+  left: 2%;
+  animation: mobilewaterfall 3s linear infinite;
+  animation-delay: 2s;
+}
+.footer-waterfall__animation--mobile .waterfall-drop.-drop7 {
+  left: 1%;
+  animation: mobilewaterfall 2.6s linear infinite;
+  animation-delay: 2.2s;
+}
+.footer-waterfall__animation--mobile .waterfall-drop.-drop8 {
+  left: 0%;
+  animation: mobilewaterfall 2.6s linear infinite;
+  animation-delay: 2.4s;
+}
+
+@keyframes mobilewaterfall {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(350%) scale(0.6);
+  }
+}
 @media (max-width: 640px) {
   .main-site__container {
     padding-top: 100px;
@@ -1659,7 +1742,6 @@ html.-static, body.-static {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    background: linear-gradient(rgba(255, 255, 255, 0.01), #123a31 20%);
   }
 
   .main-site__background {
@@ -1676,6 +1758,10 @@ html.-static, body.-static {
 
   .footer-waterfall__animation {
     display: none;
+  }
+
+  .mobile-waterfall, .mobile-waterfall__gradiient, .footer-waterfall__animation--mobile {
+    display: block;
   }
 }
 @media (max-width: 520px) {

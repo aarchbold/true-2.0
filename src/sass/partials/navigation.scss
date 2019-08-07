@@ -65,7 +65,7 @@
     display: block;
 }
 
-.footer-waterfall__animation {
+.footer-waterfall__animation, .footer-waterfall__animation--mobile {
     position: absolute;
     left: 43.9%;
     width: 46.4%;
@@ -249,7 +249,7 @@
 }
 
 .footer-input {
-    margin-bottom: 100px;
+    margin-bottom: 140px;
     input {
         font-size: 20px;
         border-radius: 25px 0 0 25px;
@@ -378,7 +378,7 @@
         font-size: 18px;
     }
     .footer-input {
-        margin-bottom: 60px;
+        margin-bottom: 120px;
         input {
             font-size: 16px;
             padding: 12px 14px;
@@ -478,6 +478,7 @@
     }
     .section-footer {
         overflow: hidden;
+        background-color: transparent;
     }
     .footer-header {
         padding-right: 0;

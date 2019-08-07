@@ -244,10 +244,10 @@ initHero = debounce(function() {
 
     window.addEventListener('scroll', function(){
       var scrollTop = $window.scrollTop();
-      if (scrollTop > 10) {
-        $header.addClass('-fixed');
-        $header.removeClass('-animate');
-      } 
+      // if (scrollTop > 10) {
+      //   $header.addClass('-fixed');
+      //   $header.removeClass('-animate');
+      // } 
       if (scrollTop > 200) {
         $header.addClass('-fade');
         $nav.addClass('-show');
