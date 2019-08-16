@@ -1298,7 +1298,7 @@ html.-static, body.-static {
   -webkit-transform: translateY(350px);
   -ms-transform: translateY(350px);
   transform: translateY(350px);
-  text-shadow: 0px 2px 4px rgba(155, 155, 155, 0.74);
+  text-shadow: 1px 1px 1px rgba(155, 155, 155, 0.74);
 }
 .hero-stage__header.-animate {
   opacity: 1;
@@ -1564,7 +1564,7 @@ html.-static, body.-static {
 
 .main-site__hills3 {
   position: absolute;
-  top: 10%;
+  top: 12%;
   z-index: 5;
 }
 
