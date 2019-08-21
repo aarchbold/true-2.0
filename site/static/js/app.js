@@ -397,7 +397,7 @@ var shareOnFacebook = function(inviteCode) {
 var shareOnTwitter = function(inviteCode) {
     var url = [location.protocol, '//', location.host, location.pathname].join('');
     var tweetBtn = $('.twitter-share');
-    var title = encodeURIComponent('Just signed up for True, looks so fun! Try it with me 😎');
+    var title = encodeURIComponent('Y\'all I just signed up for True, try it with me 😎');
     var shareUrl = 'https://twitter.com/intent/tweet?text=' + title + '&url=' + url + inviteCode;
     tweetBtn.href = shareUrl; // 1
 
@@ -427,7 +427,7 @@ var initEmailShare = function(inviteCode) {
     var $button = $('.button-send-email');
     var url = [location.protocol, '//', location.host, location.pathname].join('');
 
-    $button.attr('href','mailto:?subject=Sign up to try True with me&body=Hey! Sign up for True so we can share stuff together 🎉 '+url+inviteCode)
+    $button.attr('href','mailto:?subject=Hey, just signed up for True 👏&body=True is a new way to share privately with friends, would love for you to try it with me 😁 '+url+inviteCode)
 }
 
 function getParameterByName(name, url) {
@@ -453,12 +453,15 @@ var handleWaitlist = function() {
     var emailPattern = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
 
     if (showModal) {
+        $('#emailModal').show();
         $modal.fadeIn();
         $modalSpinner.fadeOut();
         shareOnFacebook('?inviteCode='+referrerCode);
         shareOnTwitter('?inviteCode='+referrerCode);
         initCopyToClip('?inviteCode='+referrerCode);
         initEmailShare('?inviteCode='+referrerCode);
+    } else {
+        $('#inviteModal').show();
     }
 
     $formInput.on('click', function(){
@@ -509,6 +512,8 @@ var handleWaitlist = function() {
                 dataType: 'json',
                 cache: false,
                 beforeSend: function() {
+                    $('#emailModal').hide();
+                    $('#inviteModal').show();
                     $modal.fadeIn();
                 },
                 success: function(data) {

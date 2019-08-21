@@ -76,6 +76,10 @@
     margin: 0 auto 30px;
 }
 
+#emailModal, #inviteModal {
+    display: none;
+}
+
 @media (max-width: 540px) {
     .modal-waitlist__inner {
         padding: 20px 35px;
