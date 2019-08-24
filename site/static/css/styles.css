@@ -2508,7 +2508,7 @@ button.-disabled:hover, .button.-disabled:hover {
   font-family: TruenoBlack, sans-serif;
   font-size: 34px;
   line-height: 1.2;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 .modal-waitlist__inner p {
   font-family: TruenoBold, sans-serif;
