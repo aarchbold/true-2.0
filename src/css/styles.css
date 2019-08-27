@@ -2098,7 +2098,7 @@ button.-disabled:hover, .button.-disabled:hover {
   background-color: white;
   border-radius: 40px;
   border: 2px solid #095274;
-  padding: 40px 50px;
+  padding: 40px 40px;
   box-sizing: border-box;
   text-align: center;
 }

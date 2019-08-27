@@ -3,7 +3,7 @@
     <head>
         @@include('../includes/header.html', {
             "title": "True",
-            "description": "True is a safe, happy place to share your life without fear of surveillance."
+            "description": "True is a private sharing network for real friends."
         })
     </head>
     <body>
@@ -205,7 +205,6 @@
                             <a href="#" class="button footer-signup -disabled">Sign Up</a>
                         </div>
 
-                        <input id="clipboardCopy" type="text" value="" />
                         <!-- <div class="footer-social">
                             <div class="footer-social__header">Share True so your friends can get on the waitlist too.</div>
                         </div>
@@ -278,5 +277,16 @@
             ga('send', 'pageview');
         </script>
         <!-- End Google Analytics -->
+        <script>
+            window.fbAsyncInit = function() {
+                FB.init({
+                appId            : '661381354365929',
+                autoLogAppEvents : true,
+                xfbml            : true,
+                version          : 'v4.0'
+                });
+            };
+        </script>
+        <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
     </body>
 </html>

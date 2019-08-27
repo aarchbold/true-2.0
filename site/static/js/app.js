@@ -383,14 +383,20 @@ var getWindowOptions = function() {
 var shareOnFacebook = function(inviteCode) {
     var url = [location.protocol, '//', location.host, location.pathname].join('');
     var fbBtn = $('.facebook-share');
-    var title = encodeURIComponent('Just signed up to try this new app, check it out. #DeleteFacebook #BeTrue');
-    var shareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + url + inviteCode + '&title=' + title;
+    var title = 'Just signed up to try this new app, check it out. #DeleteFacebook #BeTrue';
+    var shareUrl = url + inviteCode + '&title=' + title;
     fbBtn.href = shareUrl; // 1
 
     fbBtn.click(function(e) {
-        e.preventDefault();
-        var win = window.open(shareUrl, 'ShareOnFb', getWindowOptions());
-        win.opener = null; // 2
+        // e.preventDefault();
+        // var win = window.open(shareUrl, 'ShareOnFb', getWindowOptions());
+        // win.opener = null; // 2
+
+        FB.ui({
+            method: 'share',
+            href: shareUrl,
+            quote: title,
+        }, function(response){});
     });
 }
 
@@ -417,11 +423,19 @@ var initCopyToClip = function(inviteCode) {
 
     $button.click(function(e) {
         e.preventDefault();
-        $input.select();
-        document.execCommand('copy');
+        // $input.select();
         $button.text('Link Copied!');
+        $input.focus();
+        setTimeout(function() {
+            $input[0].setSelectionRange(0, 9999);
+        }, 1);
+        setTimeout(function() {
+            document.execCommand('copy');
+        }, 100);
     });
 }
+
+
 
 var initEmailShare = function(inviteCode) {
     var $button = $('.button-send-email');

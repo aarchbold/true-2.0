@@ -6,19 +6,20 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>True</title>
 <meta property="og:title" content="True">
-<meta property="og:description" content="True is a safe, happy place to share your life without fear of surveillance.">
-<meta name="description" content="True is a safe, happy place to share your life without fear of surveillance.">
+<meta property="og:description" content="True is a private sharing network for real friends.">
+<meta name="description" content="True is a private sharing network for real friends.">
 <!-- <meta property="og:image" content="https://truetokensale.com/static/images/logos/logo-share-true.png"> -->
 <meta property="og:image" content="https://trueappco-website.firebaseapp.com/static/images/ui/logos/share-true.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="True">
-<script src="static/js/vendors.js?cache=1566623435369"></script>
-<link rel="stylesheet" href="static/css/styles.css?cache=1566623435369">
+<script src="static/js/vendors.js?cache=1566876526818"></script>
+<link rel="stylesheet" href="static/css/styles.css?cache=1566876526818">
 <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
 
     </head>
     <body>
         <div class="modal-waitlist">
+    <input id="clipboardCopy" type="text" value="" contenteditable="true" readonly="false" />
     <div class="modal-waitlist__inner">
         <div class="modal-waitlist__preloader">
             <div class="modal-waitlist__preloader--inner">
@@ -34,7 +35,7 @@
         <div id="inviteModal">
             <h2>Congrats, you're<br />on the list. 🙌</h2>
             <!-- <p>You're on the waitlist. We just sent you an exclusive link to share with three friends. When they sign up to try True, you get bumped up the list.</p> -->
-            <p>Wanna get a super early sneak peek? Share this link with three friends and when they sign up you'll be one of the first 1,000 people to get True. 🌟</p>
+            <p>Wanna get a super early sneak peek? Share this link with 3 friends and when they sign up you'll be one of the first 1,000 people to try True.</p>
         </div>
         <div class="modal-social__ctas">
             <a id="copyUrl" href="#" class="button button-block__modal button-weblink">Copy Link</a>
@@ -252,7 +253,6 @@
                             <a href="#" class="button footer-signup -disabled">Sign Up</a>
                         </div>
 
-                        <input id="clipboardCopy" type="text" value="" />
                         <!-- <div class="footer-social">
                             <div class="footer-social__header">Share True so your friends can get on the waitlist too.</div>
                         </div>
@@ -319,7 +319,7 @@
     
         </div> -->
         </div>
-        <script src="static/js/app.js?cache=1566623435369"></script>
+        <script src="static/js/app.js?cache=1566876526818"></script>
         <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0087/6974.js" async="async"></script>
         <!-- Google Analytics -->
         <script>
@@ -332,5 +332,16 @@
             ga('send', 'pageview');
         </script>
         <!-- End Google Analytics -->
+        <script>
+            window.fbAsyncInit = function() {
+                FB.init({
+                appId            : '661381354365929',
+                autoLogAppEvents : true,
+                xfbml            : true,
+                version          : 'v4.0'
+                });
+            };
+        </script>
+        <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
     </body>
 </html>
