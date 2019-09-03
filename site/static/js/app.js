@@ -383,7 +383,8 @@ var getWindowOptions = function() {
 var shareOnFacebook = function(inviteCode) {
     var url = [location.protocol, '//', location.host, location.pathname].join('');
     var fbBtn = $('.facebook-share');
-    var title = 'Just signed up to try this new app, check it out. #DeleteFacebook #BeTrue';
+    // var title = 'Just signed up to try this new app, check it out. #DeleteFacebook #BeTrue';
+    var title = 'Just signed up to try this new app, check it out.';
     var shareUrl = url + inviteCode + '&title=' + title;
     fbBtn.href = shareUrl; // 1
 
@@ -395,7 +396,8 @@ var shareOnFacebook = function(inviteCode) {
         FB.ui({
             method: 'share',
             href: shareUrl,
-            quote: title,
+            // hashtag: '#BeTrue',
+            // quote: title,
         }, function(response){});
     });
 }
