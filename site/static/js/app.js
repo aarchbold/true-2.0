@@ -289,11 +289,16 @@ initHero = debounce(function() {
 },250);
 
 $(function() {
-  window.scroll({
-    top: 0, 
-    left: 0, 
-    behavior: 'smooth' 
-  });  
+  if (window.location.hash !== '#waitlist') {
+    window.scroll({
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth' 
+    });  
+  }
+  if (window.location.hash === '#waitlist') {
+    $('.footer-container').addClass('-animate');
+  }
 });
 
 // $(window).unload(function() {
@@ -301,10 +306,14 @@ $(function() {
 // });
 
 $(window).on('load', function (e) {
-  
 
   
-  
+  if (window.location.hash === '#waitlist') {
+    $('.footer-container').addClass('-animate');
+    $(window).animate({
+        scrollTop: ($('#joinUs').offset().top - 100)
+    },100);
+  }
    // executes when complete page is fully loaded, including all frames, objects and images
   // fade out the preload spinner.
   $('.preloader-shim').addClass('-animate');
@@ -354,15 +363,6 @@ $(window).on('load', function (e) {
       }, 500);
   });
 
-  $(window).resize(function() {
-    // if ($(window).width() > 800) {
-    //   window.location.reload();
-    // }
-    // if ($(window).width() < 640) {
-    //   // move footer
-    //   window.location.reload();
-    // }
-  });
 })
 
 var getWindowOptions = function() {
