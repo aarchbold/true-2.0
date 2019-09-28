@@ -155,7 +155,7 @@ var handleWaitlist = function() {
         e.preventDefault();
         if (!$formSubmit.hasClass('-disabled')) {
             $.ajax({
-                url: 'https://us-central1-trueappco-website.cloudfunctions.net/waitlist',
+                url: 'https://us-central1-trytruecom-website.cloudfunctions.net/waitlist',
                 type: 'POST',
                 data: postData,
                 dataType: 'json',

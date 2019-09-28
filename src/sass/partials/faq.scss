@@ -1,0 +1,24 @@
+/* FAQ styles
+*/
+
+// vars
+
+// properties
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-header {
+    padding-top: 100px;
+}
+
+.faq-header__h1 {
+    text-align: center;
+    font-size: 35px;
+    font-family: TruenoBold, sans-serif;
+}
+
+.faq-header__img {
+    width: 100%;
+}

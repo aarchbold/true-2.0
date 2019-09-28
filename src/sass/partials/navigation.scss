@@ -5,7 +5,7 @@
 // topnav
 .topnav-container {
     transition: all 0.5s;
-    opacity: 0;
+    opacity: 1;
     position: absolute;
     width: 100%;
     &.-show {
@@ -17,14 +17,13 @@
     position: absolute;
     transition: all 0.5s;
     right: 30px;
-    top: 32px;
+    top: 15px;
     width: 80%;
     text-align: right;
     a {
         transition: all 0.3s;
-        font-family: TruenoBold, sans-serif;
+        font-family: TruenoRegular, sans-serif;
         display: inline-block;
-        padding-left: 40px;
         text-decoration: none;
         &:hover {
             transform: scale(1.1);
@@ -34,14 +33,14 @@
 
 .navigation-inner {
     transition: all 0.5s;
-    padding: 20px;
+    padding: 15px 20px;
     width: 100%;
     box-sizing: border-box;
     &.-compact {
-        padding: 10px 20px;
-        background-color: white;
+        padding: 15px 20px;
+        // background-color: white;
         .topnav-links {
-            top: 26px;
+            top: 15px;
         }
     }
 }

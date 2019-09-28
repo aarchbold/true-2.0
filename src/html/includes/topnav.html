@@ -1,10 +1,11 @@
-<nav style="position: fixed;z-index:9;width: 100%;">
+<nav style="position: fixed;z-index:10;width: 100%;">
     <div class="topnav-container">
         <div class="navigation-inner">
-            <img src="static/images/ui/logos/logo-true__large.png" width="76" />
+            <a href="#" class="button-nav -home"><img src="static/images/icons/icon-home.svg" width="20" /></a>
             <div class="topnav-links">
-                <a href="#">NORTH STARS</a>
-                <a href="#">ABOUT US</a>
+                <a @@if (section === 'faq') {class="button-nav -selected"} @@if (section !== 'faq') {class="button-nav"} href="faq.html">FAQ</a>
+                <a href="#" class="button-nav">BLOG</a>
+                <a @@if (section === 'home') {class="button-nav -selected"} @@if (section !== 'home') {class="button-nav"} href="index.html" >TRY TRUE</a>
             </div>
         </div>
     </div>

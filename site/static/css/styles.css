@@ -287,7 +287,7 @@ section {
 .topnav-container {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   width: 100%;
 }
@@ -300,16 +300,15 @@ section {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   right: 30px;
-  top: 32px;
+  top: 15px;
   width: 80%;
   text-align: right;
 }
 .topnav-links a {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  font-family: TruenoBold, sans-serif;
+  font-family: TruenoRegular, sans-serif;
   display: inline-block;
-  padding-left: 40px;
   text-decoration: none;
 }
 .topnav-links a:hover {
@@ -321,16 +320,15 @@ section {
 .navigation-inner {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  padding: 20px;
+  padding: 15px 20px;
   width: 100%;
   box-sizing: border-box;
 }
 .navigation-inner.-compact {
-  padding: 10px 20px;
-  background-color: white;
+  padding: 15px 20px;
 }
 .navigation-inner.-compact .topnav-links {
-  top: 26px;
+  top: 15px;
 }
 
 .section-footer {
@@ -2164,6 +2162,42 @@ button.-disabled:hover, .button.-disabled:hover {
   transform: scale(1);
 }
 
+.button-nav {
+  background-color: #ffffff;
+  border: 1px solid #D2D2D2;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  margin-left: 10px;
+  color: #1E1E1E;
+}
+.button-nav:hover {
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+}
+.button-nav.-selected {
+  color: #ffffff;
+  background-color: #175A66;
+  border: 1px solid #175A66;
+}
+.button-nav.-home {
+  position: relative;
+  display: block;
+  width: 42px;
+  height: 42px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.button-nav.-home img {
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 .button-center {
   text-align: center;
 }
@@ -2563,4 +2597,24 @@ button.-disabled:hover, .button.-disabled:hover {
   .modal-waitlist__inner p {
     font-size: 16px;
   }
+}
+/* FAQ styles
+*/
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-header {
+  padding-top: 100px;
+}
+
+.faq-header__h1 {
+  text-align: center;
+  font-size: 35px;
+  font-family: TruenoBold, sans-serif;
+}
+
+.faq-header__img {
+  width: 100%;
 }

@@ -256,13 +256,13 @@ initHero = debounce(function() {
       //   $header.addClass('-fixed');
       //   $header.removeClass('-animate');
       // } 
-      if (scrollTop > 200) {
-        $header.addClass('-fade');
-        $nav.addClass('-show');
-      } else {
-        $header.removeClass('-fade');
-        $nav.removeClass('-show');
-      }
+      // if (scrollTop > 200) {
+      //   $header.addClass('-fade');
+      //   $nav.addClass('-show');
+      // } else {
+      //   $header.removeClass('-fade');
+      //   $nav.removeClass('-show');
+      // }
       if (scrollTop > 800) {
         $navInner.addClass('-compact');
         $heroContainer.addClass('-animate');
@@ -522,7 +522,7 @@ var handleWaitlist = function() {
         e.preventDefault();
         if (!$formSubmit.hasClass('-disabled')) {
             $.ajax({
-                url: 'https://us-central1-trueappco-website.cloudfunctions.net/waitlist',
+                url: 'https://us-central1-trytruecom-website.cloudfunctions.net/waitlist',
                 type: 'POST',
                 data: postData,
                 dataType: 'json',
