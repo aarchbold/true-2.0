@@ -22,6 +22,12 @@ button, .button {
             transform: scale(1);
         }
     }
+    &.-small {
+        padding: 12px 30px !important;
+        font-size: 14px;
+        font-family: TruenoRegular;
+        border-radius: 15px;
+    }
 }
 
 .button-nav {
