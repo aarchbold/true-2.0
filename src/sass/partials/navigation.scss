@@ -37,10 +37,10 @@
     width: 100%;
     box-sizing: border-box;
     &.-compact {
-        padding: 15px 20px;
-        // background-color: white;
+        padding: 10px 20px;
+        background-color: white;
         .topnav-links {
-            top: 15px;
+            top: 10px;
         }
     }
 }
@@ -525,6 +525,15 @@
             box-sizing: border-box;
             text-align: center;
         }
+    }
+    .navigation-inner {
+        padding: 14px 0px;
+    }
+    .topnav-links {
+        right: 5px;
+    }
+    .navigation-inner.-compact {
+        padding: 10px 0px;
     }
 }
 
