@@ -76,8 +76,59 @@
     margin: 0 auto 30px;
 }
 
-#emailModal, #inviteModal {
+.modal-contact__ctas {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#emailModal, #inviteModal, #pressModal, #contactPreloader, #successModal, #investorsModal {
     display: none;
+}
+
+.modal-form {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    &:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    input, textarea {
+        font-size: 18px;
+        border: 1px solid black;
+        border-radius: 20px 0 0 20px;
+        padding: 12px 14px;
+        width: 48%;
+        margin-right: 2px;
+        box-sizing: border-box;
+        margin-right: 0;
+        font-family: TruenoRegular, sans-serif;
+        margin-bottom: 3px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        outline: none;
+        &:focus {
+            border: 1px solid $color-bg-button;
+        }
+        &.-right {
+            border-radius: 0 20px 20px 0;
+        }
+        &#trueEmail {
+            border-radius: 20px;
+            margin-right: 10px;
+            width: 72%;
+        }
+        &#trueLastName {
+            border-radius: 0 25px 25px 0;
+            margin-right: 0;
+        }
+    }
+    textarea {
+        border-radius: 25px;
+        width: 97%;
+        padding: 12px 14px;
+        height: 100px;
+    }
 }
 
 @media (max-width: 540px) {

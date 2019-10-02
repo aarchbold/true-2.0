@@ -1,0 +1,43 @@
+<div class="modal-waitlist">
+    <div class="modal-waitlist__inner">
+        <div id="contactPreloader" class="modal-waitlist__preloader">
+            <div class="modal-waitlist__preloader--inner">
+                <p>Submitting form...</p>
+                <img src="static/images/ui/backgrounds/ajax-loader.gif" />
+            </div>
+        </div>
+        <div id="pressModal">
+            <h2>Press</h2>
+            <div class="modal-form">
+                <input id="pressFirstName" type="text" placeholder="First Name" />
+                <input id="pressLastName" class="-right" type="text" placeholder="Last Name" />
+                <input id="pressEmail" type="email" placeholder="Email" />
+                <input id="pressOutlet" class="-right" type="text" placeholder="Media Outlet" />
+                <textarea id="pressComments" placeholder="What do you need?"></textarea>
+            </div>
+            <div class="modal-contact__ctas">
+                <a id="submitPress" href="#" class="button button-modal -disabled">Submit</a>
+                <a id="closeOverlay" href="#" class="button button-close">Cancel</a>
+            </div>
+        </div>
+        <div id="investorsModal">
+            <h2>Investors</h2>
+            <div class="modal-form">
+                <input id="investorsFirstName" type="text" placeholder="First Name" />
+                <input id="investorsLastName" class="-right" type="text" placeholder="Last Name" />
+                <input id="investorsEmail" type="email" placeholder="Email" />
+                <input id="investorsFirm" class="-right" type="text" placeholder="Firm" />
+            </div>
+            <div class="modal-contact__ctas">
+                <a id="submitInvestors" href="#" class="button button-modal -disabled">Submit</a>
+                <a id="closeOverlay" href="#" class="button button-close">Cancel</a>
+            </div>
+        </div>
+        <div id="successModal">
+            <h2>You're all set. We'll be in touch.</h2>
+            <div class="modal-contact__ctas">
+                <a id="successClose" href="#" class="button button-close">Close</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -79,6 +79,12 @@ button, .button {
     background-color: $color-button-disabled;
 }
 
+.button-modal {
+    padding: 15px 30px !important;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
 .button-social {
     transition: all 0.4s;
     float: left;
