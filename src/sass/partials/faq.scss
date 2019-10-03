@@ -149,6 +149,7 @@
     line-height: 1.3;
     padding: 20px 0;
     color: #9B9C9B;
+    min-height: 105px;
 }
 
 .faq-more__item--content {
@@ -228,6 +229,12 @@
     }
 }
 
+@media (max-width: 650px) {
+    .faq-questions__item-anwser {
+        height: auto !important;
+    }
+}
+
 @media (max-width: 361px) {
     .faq-more__row {
         max-width: 640px;
@@ -237,3 +244,4 @@
         box-sizing: border-box;
     }
 }
+
