@@ -126,6 +126,22 @@ button, .button {
     float: left;
     background-color: black;
     margin-right: 12px;
+    &.-modal {
+        width: 30px;
+        height: 30px;
+        border-radius: 10px;
+        margin-right: 5px;
+        &.-linkedin {
+            img {
+                height: 20px;
+            }
+        }
+        &.-angellist {
+            img {
+                height: 22px;
+            }
+        }
+    }
     img {
         position: absolute;
         left: 50%;

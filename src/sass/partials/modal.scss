@@ -140,6 +140,12 @@
     }
 }
 
+.modal-social__links {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
 @media (max-width: 540px) {
     .modal-waitlist__inner {
         padding: 20px 20px;
