@@ -1,11 +1,13 @@
 <nav style="position: fixed;z-index:10;width: 100%;">
     <div class="topnav-container">
         <div class="navigation-inner">
-            <a href="index.html" class="button-nav -home"><img src="static/images/icons/icon-home.svg" width="20" /></a>
+            @@if (section !== 'home') {
+                <a href="index.html" class="button-nav -home"><img src="static/images/icons/icon-home.svg" width="20" /></a>
+            }
             <div class="topnav-links">
                 <a @@if (section === 'faq') {class="button-nav -selected"} @@if (section !== 'faq') {class="button-nav"} href="faq.html">FAQ</a>
                 <!-- <a href="#" class="button-nav">BLOG</a> -->
-                <a @@if (section === 'home') {class="button-nav -selected"} @@if (section !== 'home') {class="button-nav"} href="index.html#waitlist" >TRY TRUE</a>
+                <a @@if (section === 'home') {class="button-nav -selected go-to-footer"} @@if (section !== 'home') {class="button-nav"} href="index.html#waitlist" >TRY TRUE</a>
             </div>
         </div>
     </div>

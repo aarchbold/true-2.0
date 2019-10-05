@@ -81,7 +81,7 @@ var handleContact = function() {
                 complete: function(data) {
                     console.log(data);
                     $success.show();
-                    $('#investorsModal').hide();
+                    $submitInvestors.hide();
                     $spinner.hide();
                 }
             });
@@ -144,7 +144,7 @@ var handleContact = function() {
                 complete: function(data) {
                     console.log(data);
                     $success.show();
-                    $('#pressModal').hide();
+                    $submitPress.hide();
                     $spinner.hide();
                 }
             });
@@ -171,6 +171,7 @@ var handleContact = function() {
     $pressOpen.click(function(e) {
         e.preventDefault(e);
         $success.hide();
+        $submitPress.show();
         $('#investorsModal').hide();
         $('#pressModal').show();
         $modal.fadeIn();
@@ -178,6 +179,7 @@ var handleContact = function() {
     $investorsOpen.click(function(e) {
         e.preventDefault(e);
         $success.hide();
+        $submitInvestors.show();
         $('#pressModal').hide();
         $('#investorsModal').show();
         $modal.fadeIn();

@@ -20,9 +20,9 @@ $.fn.handleFAQ = function() {
     $questions.each(function(i,e) {
         $('.faq-questions__item-question',$(this)).click(function() {
             if ($('.faq-questions__item-control',$(this)).hasClass('-open')) {
-                $('.faq-questions__item-anwser',$(this).parent()).slideUp(100);
+                $('.faq-questions__item-anwser',$(this).parent()).slideUp(500);
             } else {
-                $('.faq-questions__item-anwser',$(this).parent()).slideDown(250);
+                $('.faq-questions__item-anwser',$(this).parent()).slideDown(500);
             }
             $('.faq-questions__item-control',$(this)).toggleClass('-open');
         })
