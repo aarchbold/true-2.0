@@ -11,7 +11,6 @@ function setAnserHeights() {
     // get height of the answers
     setTimeout(function() {
         $answers.each(function(i,e) {
-            console.log($(e).height())
             $(e).height($(e).outerHeight());
             $(e).hide();
         })
@@ -52,10 +51,11 @@ $(window).on('load', function(){
 });
 
 var resizeTimeout;
+var width = $(window).width();
 $(window).resize(function(){
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(function(){    
-        if ($('.faq-questions').length > 0) {
+        if ($('.faq-questions').length > 0 && $(window).width() != width) {
             setAnserHeights();
             resetFAQ();
             // $('.faq-questions').unbind();
