@@ -231,7 +231,7 @@
 
 @media (max-width: 650px) {
     .faq-questions__item-anwser {
-        height: auto !important;
+        min-height: auto !important;
     }
 }
 

@@ -176,6 +176,7 @@
         width: 97%;
         padding: 12px 14px;
         height: 100px;
+        resize: none;
     }
 }
 
@@ -195,10 +196,10 @@
 
 @media (max-width: 540px) {
     .modal-waitlist__inner {
-        padding: 20px 20px;
+        padding: 40px 20px;
         h2 {
             font-size: 28px;
-            margin-bottom: 18px;
+            margin-bottom: 10px;
         }
         h3 {
             font-size: 20px;
@@ -210,11 +211,13 @@
         }
     }
     .modal-form {
-        margin-top: 20px;
         margin-bottom: 20px;
-        input, textarea {
+        input, textarea, .-right {
             font-size: 14px;
             padding: 10px 12px;
+            width: 97%;
+            border-radius: 20px !important;
+            margin-bottom: 5px;
         }
     }
 }

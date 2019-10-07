@@ -1,6 +1,13 @@
 function setAnserHeights() {
     var $answers = $('.faq-questions__item-anwser');
 
+    $('.faq-questions').css('opacity',0);
+
+    $answers.each(function(i,e) {
+        $(e).css('display','block');
+        $(e).css('height','auto');
+    })
+
     // get height of the answers
     setTimeout(function() {
         $answers.each(function(i,e) {
@@ -8,7 +15,14 @@ function setAnserHeights() {
             $(e).height($(e).outerHeight());
             $(e).hide();
         })
+        $('.faq-questions').css('opacity',1);
     },10)
+}
+
+function resetFAQ() {
+    $('.faq-questions__item-control').each(function(i,e) {
+        $(e).removeClass('-open');
+    })
 }
 
 $.fn.handleFAQ = function() {
@@ -37,6 +51,14 @@ $(window).on('load', function(){
     }
 });
 
-$(window).on('resize', function(){
-    // setAnserHeights();
+var resizeTimeout;
+$(window).resize(function(){
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(function(){    
+        if ($('.faq-questions').length > 0) {
+            setAnserHeights();
+            resetFAQ();
+            // $('.faq-questions').unbind();
+        }
+    }, 200);
 });
