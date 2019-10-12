@@ -95,6 +95,8 @@ var wagthedog = function() {
 
 
 $(function() {
-    wagthedog();
-    $('.animated-bird__container').flappyBird();
+    if ($('body').hasClass('true-home')) {
+        wagthedog();
+        $('.animated-bird__container').flappyBird();
+    }
 });

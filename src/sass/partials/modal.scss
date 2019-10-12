@@ -140,9 +140,9 @@
     input, textarea {
         font-size: 18px;
         border: 1px solid #0A5174;
-        border-radius: 20px 0 0 20px;
+        border-radius: 20px;
         padding: 12px 14px;
-        width: 48%;
+        width: 97%;
         margin-right: 2px;
         box-sizing: border-box;
         margin-right: 0;
@@ -155,6 +155,13 @@
             border: 1px solid $color-bg-button;
         }
         &.-right {
+            // border-radius: 0 20px 20px 0;
+        }
+        &#pressFirstName, &#pressLastName, &#investorsFirstName, &#investorsLastName {
+            width: 48%;
+            border-radius: 20px 0 0 20px;
+        }
+        &#pressLastName, &#investorsLastName {
             border-radius: 0 20px 20px 0;
         }
         &#trueEmail {
@@ -194,6 +201,14 @@
     z-index: 100
 }
 
+.modal-success__message {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+}
+
 @media (max-width: 540px) {
     .modal-waitlist__inner {
         padding: 40px 20px;
@@ -213,10 +228,9 @@
     .modal-form {
         margin-bottom: 20px;
         input, textarea, .-right {
-            font-size: 14px;
+            font-size: 16px;
             padding: 10px 12px;
             width: 97%;
-            border-radius: 20px !important;
             margin-bottom: 5px;
         }
     }

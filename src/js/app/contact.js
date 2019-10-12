@@ -61,6 +61,31 @@ var handleContact = function() {
         validateInvestorsForm(); 
     })
 
+    $investorsFirstName.on('click', function(){
+        $(window).off('resize');
+        setTimeout(function() {
+            $investorsFirstName.focus()
+        },100)
+    });
+    $investorsLastName.on('click', function(){
+        $(window).off('resize');
+        setTimeout(function() {
+            $investorsLastName.focus()
+        },100)
+    });
+    $investorsEmail.on('click', function(){
+        $(window).off('resize');
+        setTimeout(function() {
+            $investorsEmail.focus()
+        },100)
+    });
+    $investorsFirm.on('click', function(){
+        $(window).off('resize');
+        setTimeout(function() {
+            $investorsFirm.focus()
+        },100)
+    });
+
     $submitInvestors.click(function(e) {
         var postData = {
             email: $investorsEmail.val(),
@@ -131,6 +156,37 @@ var handleContact = function() {
     $pressComments.keyup(function() {
         validatePressForm(); 
     })
+
+    $pressFirstName.on('click', function(){
+        $(window).off('resize');
+        setTimeout(function() {
+            $pressFirstName.focus()
+        },100)
+    });
+    $pressLastName.on('click', function(){
+        $(window).off('resize');
+        setTimeout(function() {
+            $pressLastName.focus()
+        },100)
+    });
+    $pressEmail.on('click', function(){
+        $(window).off('resize');
+        setTimeout(function() {
+            $pressEmail.focus()
+        },100)
+    });
+    $pressOutlet.on('click', function(){
+        $(window).off('resize');
+        setTimeout(function() {
+            $pressOutlet.focus()
+        },100)
+    });
+    $pressComments.on('click', function(){
+        $(window).off('resize');
+        setTimeout(function() {
+            $pressComments.focus()
+        },100)
+    });
 
     $submitPress.click(function(e) {
         var postData = {
@@ -205,5 +261,7 @@ var handleContact = function() {
 
 
 $(function() {
-    handleContact();
+    if ($('body').hasClass('true-FAQ')) {
+        handleContact();
+    }
 });

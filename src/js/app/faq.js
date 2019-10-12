@@ -42,23 +42,45 @@ $.fn.handleFAQ = function() {
     })
 }
 
-
-$(window).on('load', function(){
-    if ($('.faq-questions').length > 0) {
-        setAnserHeights();
-        $('.faq-questions').handleFAQ();
-    }
-});
-
-var resizeTimeout;
-var width = $(window).width();
-$(window).resize(function(){
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(function(){    
-        if ($('.faq-questions').length > 0 && $(window).width() != width) {
+if ($('body').hasClass('true-FAQ')) {
+    $(window).on('load', function(){
+        if ($('.faq-questions').length > 0) {
             setAnserHeights();
-            resetFAQ();
-            // $('.faq-questions').unbind();
+            $('.faq-questions').handleFAQ();
         }
-    }, 200);
-});
+
+        // do the deep links
+        if (window.location.hash === '#trueStory' || 
+            window.location.hash === '#trueTrust' || 
+            window.location.hash === '#trueDifference' || 
+            window.location.hash === '#trueCost') {
+            let faqItem = $(window.location.hash);
+            //$('.faq-questions__item-question'
+            console.log(faqItem);
+            setTimeout(function() {
+                $(window).animate({
+                    scrollTop: (faqItem.offset().top - 60)
+                },200, function() {
+                    setTimeout(function() {
+                        $('.faq-questions__item-question',faqItem).click();
+                        console.log($('.faq-questions__item-question',faqItem));
+                    },200)
+                });
+            },200)
+        }
+    });
+    
+    var resizeTimeout;
+    var width = $(window).width();
+    $(window).resize(function(){
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(function(){    
+            if ($('.faq-questions').length > 0 && $(window).width() != width) {
+                setAnserHeights();
+                resetFAQ();
+                // $('.faq-questions').unbind();
+            }
+        }, 200);
+    });
+
+}

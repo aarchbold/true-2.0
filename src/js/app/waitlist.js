@@ -201,5 +201,7 @@ var handleWaitlist = function() {
 
 
 $(function() {
-    handleWaitlist();
+    if ($('body').hasClass('true-home')) {
+        handleWaitlist();
+    }
 });
