@@ -2,12 +2,12 @@
     <div class="topnav-container">
         <div class="navigation-inner">
             @@if (section !== 'home') {
-                <a href="index.html" class="button-nav -home"><img src="static/images/icons/icon-home.svg" width="20" /></a>
+                <a href="/index.html" class="button-nav -home"><img src="/static/images/icons/icon-home.svg" width="20" /></a>
             }
             <div class="topnav-links">
-                <a @@if (section === 'faq') {class="button-nav -selected"} @@if (section !== 'faq') {class="button-nav"} href="faq.html">FAQ</a>
-                <!-- <a href="#" class="button-nav">BLOG</a> -->
-                <a @@if (section === 'home') {class="button-nav -selected go-to-footer"} @@if (section !== 'home') {class="button-nav"} href="index.html#waitlist" >TRY TRUE</a>
+                <a @@if (section === 'blog') {class="button-nav -selected"} @@if (section !== 'blog') {class="button-nav"} href="/blog/">BLOG</a>
+                <a @@if (section === 'faq') {class="button-nav -selected"} @@if (section !== 'faq') {class="button-nav"} href="/faq.html">FAQ</a>
+                <a @@if (section === 'home') {class="button-nav -selected go-to-footer"} @@if (section !== 'home') {class="button-nav"} href="/index.html#waitlist" >TRY TRUE</a>
             </div>
         </div>
     </div>
