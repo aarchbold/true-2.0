@@ -2,6 +2,8 @@
 */
 
 // vars
+$hero-height: 400px;
+$hero-height-privacy: 260px;
 
 // properties
 .blog-home {
@@ -141,6 +143,105 @@
 .blog-author__date {
     padding-top: 5px;
     font-size: 14px;
+}
+.blog-hero__container {
+    overflow: auto;
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 0 20px;
+}
+.blog-hero {
+    position: relative;
+    width: 100%;
+    margin: 100px auto 50px;
+    padding: 0 20px 0 50%;
+    min-height: $hero-height;
+    box-sizing: border-box;
+    &:after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+    &.-privacy {
+        min-height: $hero-height-privacy;
+    }
+}
+
+.blog-hero__title {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    width: 50%;
+    padding-right: 40px;
+    box-sizing: border-box;
+    text-align: left;
+    line-height: 1.2;
+    transform: translateY(-50%);
+    h1 {
+        font-size: 45px;
+        font-family: TruenoBlack, sans-serif;
+        color: #535353;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 25px;
+        font-family: TruenoRegular, sans-serif;
+        color: #535353;
+    }
+}
+
+.blog-hero__image {
+    float: left;
+    width: 100%;
+    height: $hero-height;
+    background-position: 50% 50%;
+    background-size: cover;
+    &.-privacy {
+        height: $hero-height-privacy;
+    }
+}
+
+.blog-post__container {
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 20px 20px 100px;
+}
+
+.blog-post__inner {
+    border-top: 1px solid #808080;
+    margin: 0 20px;
+    padding: 40px 0;
+    font-size: 18px;
+    font-family: TruenoRegular, sans-serif;
+    line-height: 1.4;
+    color: #535353;
+    strong {
+        font-family: TruenoBold, sans-serif;
+    }
+    h1, h2 {
+        font-size: 20px;
+        font-family: TruenoBold, sans-serif;
+    }
+    h2 {
+        padding-bottom: 30px;
+    }
+    p {
+        padding-bottom: 30px;
+    }
+    ol {
+        padding: 0 20px 30px;
+        list-style-type: decimal;
+    }
+    ul {
+        padding: 0 20px 30px;
+        list-style-type: disc;
+        li {
+            padding: 4px 0;
+        }
+        ul {
+            padding: 10px 20px 10px;
+        }
+    }
 }
 
 @media (max-width: 850px) {
