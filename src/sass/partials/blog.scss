@@ -201,16 +201,37 @@ $hero-height-privacy: 260px;
     }
 }
 
-.blog-post__container {
+.blog-post__container, .legal__container {
     margin: 0 auto;
     max-width: 1100px;
     padding: 20px 20px 100px;
 }
 
-.blog-post__inner {
+.legal__container {
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 260px;
+}
+
+.legal-nav {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 240px;
+    text-align: left;
+    a {
+        display: block;
+        font-size: 18px;
+        font-family: TruenoBold, sans-serif;
+        text-decoration: none;
+        margin-bottom: 20px;
+    }
+}
+
+.blog-post__inner, .legal__inner {
     border-top: 1px solid #808080;
     margin: 0 20px;
-    padding: 40px 0;
+    padding: 10px 0 40px;
     font-size: 18px;
     font-family: TruenoRegular, sans-serif;
     line-height: 1.4;
@@ -219,10 +240,12 @@ $hero-height-privacy: 260px;
         font-family: TruenoBold, sans-serif;
     }
     h1, h2 {
-        font-size: 20px;
+        font-size: 30px;
         font-family: TruenoBold, sans-serif;
+        padding-bottom: 30px;
     }
     h2 {
+        font-size: 20px;
         padding-bottom: 30px;
     }
     p {
@@ -244,6 +267,10 @@ $hero-height-privacy: 260px;
     }
 }
 
+.legal__inner {
+    border: none;
+}
+
 @media (max-width: 850px) {
     .blog-feature__image, .blog-feature__content {
         width: 50%;
@@ -263,6 +290,41 @@ $hero-height-privacy: 260px;
     }
     .blog-list__item {
         width: 50%;
+    }
+    .blog-hero__image {
+        &.-privacy {
+            display: none;
+        }
+    }
+    .blog-hero.-privacy {
+        min-height: auto;
+        padding: 0;
+        min-height: auto;
+        margin-bottom: 0;
+        padding-top: 60px;
+    }
+    .blog-hero__title {
+        width: 100%;
+        padding-top: 30px;
+        left: 0;
+        padding-right: 0px;
+        position: relative;
+        top: 0;
+        transform: translateX(0);
+        h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+    }
+    .blog-post__container {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .blog-hero__container {
+        overflow: visible;
+    }
+    .blog-hero {
+        margin-top: 0;
     }
 }
 
