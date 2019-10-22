@@ -6,7 +6,7 @@
             "description": "We’ll never share, sell or give your information to anyone outside True for the purpose of making money. You own your personal information and control how it’s accessed and used."
         })
     </head>
-    <body class="true-FAQ" style="overflow: auto;">
+    <body class="true-legal" style="overflow: auto;">
         @@include('../../includes/contact.html')
         <div data-section-name="home" class="scroll-me page-outer">
             @@include('../../includes/topnav.html', {
@@ -24,10 +24,10 @@
             <p>We’ll never share, sell or give your information to anyone outside True for the purpose of making money. You own your personal information and control how it’s accessed and used.</p>
         </div>
 
-        <div class="legal__container">
+        <div id="privacy" class="legal__container">
             <div class="legal-nav">
-                <a href="#" class="-selected">Privacy Policy</a>
-                <a href="#">Terms &amp; Conditions</a>
+                <a href="#" class="-selected" data-target="privacy">Privacy Policy</a>
+                <a href="#" data-target="terms">Terms &amp; Conditions</a>
             </div>
             <div class="legal__inner">
                 <h1>Privacy Policy</h1>
@@ -184,7 +184,22 @@
                 <p>This Privacy Policy may change in the future. If it does, we’ll let you know either by changing the date at the top of the Privacy Policy that appears on our website and app; by sending you an in-app notification; or by adding a statement to our website.</p>
                 
             </div>
-        </div>  
+        </div>
+
+        <div id="terms" class="legal__container">
+            <div class="legal-nav">
+                <a href="#" class="-selected" data-target="privacy">Privacy Policy</a>
+                <a href="#" data-target="terms">Terms &amp; Conditions</a>
+            </div>
+            <div class="legal__inner">
+                <h1>Terms & Conditions</h1>
+                <h2>Updated October 15, 2019</h2>
+                <p>True is private sharing for real friends. We’re deeply committed to giving you a safe, happy place to share — a place where you’re never forced to sell your personal infor-mation to stay connected with people you love. </p>
+                <p>Your trust is extremely important to us. That’s why we’ve attempted to write this privacy policy with as little legal jargon as possible. If something is still unclear, shoot us an email. We’ll be happy to answer any questions.</p>
+                <p>If you’re in the U.S., all the information you need is in the first few pages of the docu-ment. If you’re in the EU, be sure to have a look at our GDPR section, too.</p>
+                <p><strong>Our privacy policy in a nutshell:</strong> We’ll never share, sell or give your information to anyone outside True for the purpose of making money. You own your personal informa-tion and control how it’s accessed and used.</p>
+            </div>
+        </div>
         
         
         <div class="faq-footer">
