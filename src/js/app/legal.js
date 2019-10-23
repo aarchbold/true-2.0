@@ -1,6 +1,5 @@
 $.fn.handleLegalNav = function() {
-    var $context = $(this),
-    $items = $('a', $context);
+    $items = $('.legal-nav a');
 
     $items.click(function(e) {
         e.preventDefault();
@@ -20,5 +19,13 @@ $.fn.handleLegalNav = function() {
 if ($('body').hasClass('true-legal')) {
     $(window).on('load', function(){
         $('.true-legal').handleLegalNav();
+
+        if (window.location.hash === '#section=terms') {
+            $(window).animate({
+                scrollTop: ($('#terms').offset().top - 80)
+            },400);
+            $('a[data-target="privacy"]').removeClass('-selected');
+            $('a[data-target="terms"]').addClass('-selected');
+        }
     });
 }

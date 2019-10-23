@@ -105,6 +105,7 @@ $(function() {
 });
 
 $(window).on('load', function (e) {
+  initHero(); 
   if ($('body').hasClass('true-home')) {
     if (window.location.hash === '#waitlist') {
       $('.footer-container').addClass('-animate');
@@ -126,7 +127,7 @@ $(window).on('load', function (e) {
     // fade out the preload spinner.
     $('.preloader-shim').addClass('-animate');
     
-    initHero(); 
+    
 
     var ogWidth = $(window).width();
 

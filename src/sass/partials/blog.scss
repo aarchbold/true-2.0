@@ -289,6 +289,12 @@ $hero-height-privacy: 260px;
         font-size: 22px;
         padding: 0 20px 30px 60px;
         list-style-type: decimal;
+        li {
+            padding: 4px 0;
+        }
+        ol {
+            padding: 10px 20px 30px 60px;
+        }
     }
     ul {
         font-size: 22px;
