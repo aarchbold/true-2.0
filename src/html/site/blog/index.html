@@ -23,26 +23,10 @@
         
         <div class="blog-home">
             <div class="blog-feature">
-                <div class="blog-feature__image">
-                    <a href="page.html" class="blog-feature__image--inner"  style="background-image: url(/static/images/ui/placeholder/blog.jpg);"></a>
-                </div>
-                <div class="blog-feature__content">
-                    <div class="blog-feature__header">
-                        Article headling goes here. Article headling goes here. 
-                    </div>
-                    <div class="blog-feature__description">
-                        Article description here. Article description here.
-                    </div>
-                    <div class="blog-author">
-                        <div class="blog-author__thumbnail">
-                            <a href="page.html"><img src="/static/images/ui/placeholder/profile.png" /></a>
-                        </div>
-                        <div class="blog-author__name"><a href="#">Errol Morris</a></div>
-                        <div class="blog-author__date">May 6 - 4 min read</div>
-                    </div>
-                </div>
+                @@include('../../templates/blogFeature.html')
                 <div class="blog-list">
-                    <div class="blog-list__row">
+                    @@include('../../templates/blog.html')
+                    <!-- <div class="blog-list__row">
                         <div class="blog-list__item">
                             <div class="blog-list__item--inner">
                                 <div class="blog-list__item--image" style="background-image: url(/static/images/ui/placeholder/blog.jpg);">
@@ -123,7 +107,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

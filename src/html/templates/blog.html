@@ -1,0 +1,63 @@
+
+<div id="blogHome" class="blog-list__row">
+</div>
+
+<script id="posts-template" type="text/x-handlebars-template">
+    {{#each posts}}
+        {{#if @index}}
+        <div class="blog-list__item">
+            <div class="blog-list__item--inner">
+                <div class="blog-list__item--image" style="background-image: url({{this.articleImg}});">
+                    <a href="#"></a>
+                </div>
+                <div class="blog-list__item--title">{{this.articleHeadline}}</div>
+                <div class="blog-list__item--description">{{this.articleExcerpt}}</div>
+                <div class="blog-author">
+                    <div class="blog-author__thumbnail">
+                        <a href="page.html"><img src="{{this.authorImg}}" /></a>
+                    </div>
+                    <div class="blog-author__name"><a href="#">{{this.authorName}}</a></div>
+                    <div class="blog-author__date">{{this.articleDate}}</div>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+    {{/each}}
+</script>
+
+<script type="text/javascript">
+    var postObj = {
+        authorName: '',
+        authorImg: '',
+        articleDate: '',
+        articleId: '',
+        articleHeadline: '',
+        articleExcerpt: '',
+        articleImg: ''
+    }
+
+    var posts = [];
+
+    $.get('https://us-central1-trytruecom-website.cloudfunctions.net/getWordPressPosts', function(response){
+        var responseData = JSON.stringify(response.data);
+        var responseJSON = JSON.parse(responseData);
+        $.each(responseJSON, function(i,e) {
+            postObj.authorName = e._embedded.author[0].name;
+            postObj.authorImg = e._embedded.author[0].avatar_urls[96];
+            postObj.articleDate = moment(e.date).format("MMM DD, YYYY");
+            postObj.articleId = e.id;
+            postObj.articleHeadline = e.title.rendered.replace('&nbsp;',' ');
+            postObj.articleExcerpt = e.excerpt.rendered.replace(/<\/?[^>]+>/gi, '').substring(0, 60) + '...';
+            postObj.articleImg = e.jetpack_featured_media_url;
+            posts.push(postObj);
+            postObj = {};
+        });
+        console.log(posts);
+        var data = {
+            posts: posts
+        };
+        var template = Handlebars.compile(document.getElementById('posts-template').innerHTML);
+        var postsData = template(data);
+        document.getElementById('blogHome').innerHTML += postsData;
+    });
+</script>

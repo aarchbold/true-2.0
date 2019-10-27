@@ -1,0 +1,81 @@
+
+<div id="blogFeature">
+</div>
+
+<script id="posts-feature-template" type="text/x-handlebars-template">
+        
+    {{#each posts}}
+        {{#unless @index}}
+        <div class="blog-feature__image">
+            <a href="page.html" class="blog-feature__image--inner"  style="background-image: url({{this.articleImg}});"></a>
+        </div>
+        <div class="blog-feature__content">
+            <div class="blog-feature__header">
+                {{this.articleHeadline}}
+            </div>
+            <div class="blog-feature__description">
+                {{this.articleExcerpt}}
+            </div>
+            <div class="blog-author">
+                <div class="blog-author__thumbnail">
+                    <a href="page.html"><img src="{{this.authorImg}}" /></a>
+                </div>
+                <div class="blog-author__name"><a href="#">{{this.authorName}}</a></div>
+                <div class="blog-author__date">{{this.articleDate}}</div>
+            </div>
+        </div>
+        <!-- <div class="blog-list__item">
+            <div class="blog-list__item--inner">
+                <div class="blog-list__item--image" style="background-image: url({{this.articleImg}});">
+                    <a href="#"></a>
+                </div>
+                <div class="blog-list__item--title">{{this.articleHeadline}}</div>
+                <div class="blog-list__item--description">{{this.articleExcerpt}}</div>
+                <div class="blog-author">
+                    <div class="blog-author__thumbnail">
+                        <a href="page.html"><img src="{{this.authorImg}}" /></a>
+                    </div>
+                    <div class="blog-author__name"><a href="#">{{this.authorName}}</a></div>
+                    <div class="blog-author__date">{{this.articleDate}}</div>
+                </div>
+            </div>
+        </div> -->
+        {{/unless}}
+    {{/each}}
+</script>
+
+<script type="text/javascript">
+    var featureObj = {
+        authorName: '',
+        authorImg: '',
+        articleDate: '',
+        articleId: '',
+        articleHeadline: '',
+        articleExcerpt: '',
+        articleImg: ''
+    }
+
+    var featurePost = [];
+
+    $.get('https://us-central1-trytruecom-website.cloudfunctions.net/getWordPressPosts', function(response){
+        var featureData = JSON.stringify(response.data);
+        var featureJSON = JSON.parse(featureData);
+        $.each(featureJSON, function(i,e) {
+            featureObj.authorName = e._embedded.author[0].name;
+            featureObj.authorImg = e._embedded.author[0].avatar_urls[96];
+            featureObj.articleDate = moment(e.date).format("MMM DD, YYYY");
+            featureObj.articleId = e.id;
+            featureObj.articleHeadline = e.title.rendered.replace('&nbsp;',' ');
+            featureObj.articleExcerpt = e.excerpt.rendered.replace(/<\/?[^>]+>/gi, '').substring(0, 140) + '...';
+            featureObj.articleImg = e.jetpack_featured_media_url;
+            featurePost.push(featureObj);
+            featureObj = {};
+        });
+        var featureData = {
+            posts: featurePost
+        };
+        var template = Handlebars.compile(document.getElementById('posts-feature-template').innerHTML);
+        var featureData = template(featureData);
+        document.getElementById('blogFeature').innerHTML += featureData;
+    });
+</script>
