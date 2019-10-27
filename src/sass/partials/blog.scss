@@ -9,6 +9,14 @@ $hero-height-privacy: 260px;
 // properties
 // legal styles
 
+#privacy, #terms {
+    display: none;
+}
+
+.legal__outer {
+    min-height: 500px;
+}
+
 .legal-header {
     text-align: center;
     color: #747474;
@@ -17,6 +25,7 @@ $hero-height-privacy: 260px;
     margin: 0 auto 60px;
     padding: 0 15px;
     h2 {
+        color: #414141;
         font-size: 34px;
         font-family: TruenoExtraBold, sans-serif;
         margin-bottom: 10px;
@@ -226,7 +235,7 @@ $hero-height-privacy: 260px;
 
 .blog-post__container, .legal__container {
     margin: 0 auto;
-    max-width: 1100px;
+    max-width: 1000px;
     padding: 20px 20px 100px;
 }
 
@@ -237,9 +246,6 @@ $hero-height-privacy: 260px;
 }
 
 .legal-nav {
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 100%;
     text-align: center;
     a {
@@ -282,11 +288,11 @@ $hero-height-privacy: 260px;
         padding-bottom: 30px;
     }
     p {
-        font-size: 22px;
+        font-size: 16px;
         padding-bottom: 30px;
     }
     ol {
-        font-size: 22px;
+        font-size: 16px;
         padding: 0 20px 30px 60px;
         list-style-type: decimal;
         li {
@@ -297,7 +303,7 @@ $hero-height-privacy: 260px;
         }
     }
     ul {
-        font-size: 22px;
+        font-size: 16px;
         padding: 0 20px 30px 60px;
         list-style-type: disc;
         li {
