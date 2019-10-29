@@ -151,6 +151,9 @@ button, .button {
     }
     &.-facebook {
         background-color: $color-bg-facebook;
+        img {
+            height: 16px;
+        }
     }
     &.-twitter {
         background-color: $color-bg-twitter;

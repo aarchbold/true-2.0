@@ -7,20 +7,20 @@
     {{#each posts}}
         {{#unless @index}}
         <div class="blog-feature__image">
-            <a href="page.html" class="blog-feature__image--inner"  style="background-image: url({{this.articleImg}});"></a>
+            <a href="page.html?id={{articleId}}" class="blog-feature__image--inner"  style="background-image: url({{this.articleImg}});"></a>
         </div>
         <div class="blog-feature__content">
             <div class="blog-feature__header">
-                {{this.articleHeadline}}
+                <a href="page.html?id={{articleId}}">{{this.articleHeadline}}</a>
             </div>
             <div class="blog-feature__description">
-                {{this.articleExcerpt}}
+                {{{this.articleExcerpt}}}
             </div>
             <div class="blog-author">
                 <div class="blog-author__thumbnail">
-                    <a href="page.html"><img src="{{this.authorImg}}" /></a>
+                    <a href="page.html?id={{articleId}}"><img src="{{this.authorImg}}" /></a>
                 </div>
-                <div class="blog-author__name"><a href="#">{{this.authorName}}</a></div>
+                <div class="blog-author__name">{{this.authorName}}</div>
                 <div class="blog-author__date">{{this.articleDate}}</div>
             </div>
         </div>
@@ -77,5 +77,6 @@
         var template = Handlebars.compile(document.getElementById('posts-feature-template').innerHTML);
         var featureData = template(featureData);
         document.getElementById('blogFeature').innerHTML += featureData;
+        $('.blog-loader').hide();
     });
 </script>

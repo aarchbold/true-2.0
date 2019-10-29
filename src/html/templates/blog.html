@@ -8,15 +8,15 @@
         <div class="blog-list__item">
             <div class="blog-list__item--inner">
                 <div class="blog-list__item--image" style="background-image: url({{this.articleImg}});">
-                    <a href="#"></a>
+                    <a href="page.html?id={{articleId}}"></a>
                 </div>
-                <div class="blog-list__item--title">{{this.articleHeadline}}</div>
-                <div class="blog-list__item--description">{{this.articleExcerpt}}</div>
+                <div class="blog-list__item--title"><a href="page.html?id={{articleId}}">{{this.articleHeadline}}</a></div>
+                <div class="blog-list__item--description">{{{this.articleExcerpt}}}</div>
                 <div class="blog-author">
                     <div class="blog-author__thumbnail">
-                        <a href="page.html"><img src="{{this.authorImg}}" /></a>
+                        <a href="page.html?id={{articleId}}"><img src="{{this.authorImg}}" /></a>
                     </div>
-                    <div class="blog-author__name"><a href="#">{{this.authorName}}</a></div>
+                    <div class="blog-author__name">{{this.authorName}}</div>
                     <div class="blog-author__date">{{this.articleDate}}</div>
                 </div>
             </div>

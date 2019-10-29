@@ -1,0 +1,68 @@
+
+<div id="blogDetail">
+</div>
+
+<script id="blog-detail-template" type="text/x-handlebars-template">
+       
+    <div class="blog-hero__container">
+        <div class="blog-hero">
+            <div class="blog-hero__title">
+                <h1>{{post.articleHeadline}}</h1>
+                <p>{{{post.articleExcerpt}}}</p>
+            </div>
+            <div class="blog-hero__image" style="background-image: url({{post.articleImg}});">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-post__container">
+        <div class="blog-post__info">
+            <div class="blog-post__info--author">
+                <img src="../static/images/ui/logos/logo-true__large.png" width="50">
+                By {{post.authorName}}, {{post.articleDate}}
+            </div>
+            <div class="blog-post__info--social">
+                <a href="https://angel.co/company/true" target="_blank" class="button-social__mini -modal -facebook">
+                    <img src="../static/images/ui/logos/logo-facebook.png" />
+                </a>
+                <a href="https://angel.co/company/true" target="_blank" class="button-social__mini -modal -angellist">
+                    <img src="../static/images/ui/logos/logo-angellist.png" />
+                </a>
+                <a href="https://www.linkedin.com/company/trytrueapp/about/" target="_blank" class="button-social__mini -modal -linkedin">
+                    <img src="../static/images/ui/logos/logo-linkedin.png" />
+                </a>
+            </div>
+        </div>
+        <div class="blog-post__inner">
+            {{{post.articleBody}}}
+        </div>
+    </div>
+</script>
+
+<script type="text/javascript">
+    $(function() {
+        var postId = getParam('id');
+        $.get('https://us-central1-trytruecom-website.cloudfunctions.net/getWordPressPostById?id='+postId, function(response){
+            var blogDetailData = JSON.stringify(response.data);
+            var blogDetailJSON = JSON.parse(blogDetailData);
+            console.log(blogDetailJSON)
+            var postObj = {
+                authorName: blogDetailJSON._embedded.author[0].name,
+                articleDate: moment(blogDetailJSON.date).format("MMM DD, YYYY"),
+                articleHeadline: blogDetailJSON.title.rendered.replace('&nbsp;',' '),
+                articleExcerpt: blogDetailJSON.excerpt.rendered.replace(/<\/?[^>]+>/gi, '').substring(0, 140) + '...',
+                articleImg: blogDetailJSON.jetpack_featured_media_url,
+                articleBody: blogDetailJSON.content.rendered
+                //articleBody: $.parseHTML(blogDetailJSON.content.rendered)
+            }
+            var blogDetailData = {
+                post: postObj
+            };
+            var template = Handlebars.compile(document.getElementById('blog-detail-template').innerHTML);
+            var blogData = template(blogDetailData);
+            document.getElementById('blogDetail').innerHTML += blogData;
+            $('.blog-loader').hide();
+        });
+    });
+</script>

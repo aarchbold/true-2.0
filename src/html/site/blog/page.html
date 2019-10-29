@@ -6,44 +6,20 @@
             "description": "True is private sharing for real friends."
         })
     </head>
-    <body class="true-FAQ" style="overflow: auto;">
+    <body class="true-blog" style="overflow: auto;">
         @@include('../../includes/contact.html')
         <div data-section-name="home" class="scroll-me page-outer">
             @@include('../../includes/topnav.html', {
                 "section": "blog"
             })
         </div>
-        <div class="blog-hero__container">
-            <div class="blog-hero">
-                <div class="blog-hero__title">
-                    <h1>Article Title Goes Here. Article Title Here</h1>
-                    <p>Article sub title here. Article sub title here.</p>
-                </div>
-                <div class="blog-hero__image" style="background-image: url(/static/images/ui/placeholder/blog.jpg);">
-
-                </div>
+        <div class="blog-post__outer">
+            <div class="blog-loader">
+                Loading blog content...<br /><br />
+                <img src="../static/images/ui/backgrounds/ajax-loader.gif" />
             </div>
+            @@include('../../templates/blogDetail.html')
         </div>
-
-        <div class="blog-post__container">
-            <div class="blog-post__inner">
-                <h1>Privacy Policy</h1>
-                <h2>Updated October 15, 2019</h2>
-                <p>True is private sharing for real friends. We’re deeply committed to giving you a safe, happy place to share — a place where you’re never forced to sell your personal infor-mation to stay connected with people you love. </p>
-                <p>Your trust is extremely important to us. That’s why we’ve attempted to write this privacy policy with as little legal jargon as possible. If something is still unclear, shoot us an email. We’ll be happy to answer any questions.</p>
-                <p>If you’re in the U.S., all the information you need is in the first few pages of the docu-ment. If you’re in the EU, be sure to have a look at our GDPR section, too.</p>
-                <p><strong>Our privacy policy in a nutshell:</strong> We’ll never share, sell or give your information to anyone outside True for the purpose of making money. You own your personal informa-tion and control how it’s accessed and used.</p>
-                
-                <h2>I)Information We Collect</h2>
-                <p>True collects three types of information:</p>
-                <ol>
-                    <li>Information you give us</li>
-                    <li>Information we get when you use True</li>
-                    <li>Information we get from our service providers</li>
-                </ol>
-                <p>Here’s a little more detail.</p>
-            </div>
-        </div>  
         
         <div class="faq-footer">
             <div class="faq-footer__header">
