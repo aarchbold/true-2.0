@@ -41,9 +41,11 @@
     $.get('https://us-central1-trytruecom-website.cloudfunctions.net/getWordPressPosts', function(response){
         var responseData = JSON.stringify(response.data);
         var responseJSON = JSON.parse(responseData);
+
         $.each(responseJSON, function(i,e) {
+            console.log(e);
             postObj.authorName = e._embedded.author[0].name;
-            postObj.authorImg = e._embedded.author[0].avatar_urls[96];
+            postObj.authorImg = e._embedded.author[0].avatar_urls ? e._embedded.author[0].avatar_urls[96] : '../static/images/ui/logos/logo-blog-trueicon.png';
             postObj.articleDate = moment(e.date).format("MMM DD, YYYY");
             postObj.articleId = e.id;
             postObj.articleHeadline = e.title.rendered.replace('&nbsp;',' ');

@@ -62,7 +62,7 @@
         var featureJSON = JSON.parse(featureData);
         $.each(featureJSON, function(i,e) {
             featureObj.authorName = e._embedded.author[0].name;
-            featureObj.authorImg = e._embedded.author[0].avatar_urls[96];
+            featureObj.authorImg = e._embedded.author[0].avatar_urls ? e._embedded.author[0].avatar_urls[96] : '../static/images/ui/logos/logo-blog-trueicon.png';
             featureObj.articleDate = moment(e.date).format("MMM DD, YYYY");
             featureObj.articleId = e.id;
             featureObj.articleHeadline = e.title.rendered.replace('&nbsp;',' ');
