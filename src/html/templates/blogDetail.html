@@ -23,14 +23,14 @@
                 By {{post.authorName}}, {{post.articleDate}}
             </div>
             <div class="blog-post__info--social">
-                <a href="https://angel.co/company/true" target="_blank" class="button-social__mini -modal -facebook">
-                    <img src="../static/images/ui/logos/logo-facebook.png" />
+                <a href="#" target="_blank" class="twitter">
+                    <img src="../static/images/ui/logos/logo-share-twitter.png" />
                 </a>
-                <a href="https://angel.co/company/true" target="_blank" class="button-social__mini -modal -angellist">
-                    <img src="../static/images/ui/logos/logo-angellist.png" />
+                <a href="#" target="_blank" class="linkedin">
+                    <img src="../static/images/ui/logos/logo-share-linkedin.png" />
                 </a>
-                <a href="https://www.linkedin.com/company/trytrueapp/about/" target="_blank" class="button-social__mini -modal -linkedin">
-                    <img src="../static/images/ui/logos/logo-linkedin.png" />
+                <a href="#" target="_blank" class="reddit">
+                    <img src="../static/images/ui/logos/logo-share-reddit.png" />
                 </a>
             </div>
         </div>
@@ -63,6 +63,63 @@
             var blogData = template(blogDetailData);
             document.getElementById('blogDetail').innerHTML += blogData;
             $('.blog-loader').hide();
+
+
+            var getMax = function() {
+		        return $(document).height() - $(window).height();
+	        }
+
+            var getValue = function() {
+                return $(window).scrollTop();
+            }
+
+            if ('max' in document.createElement('progress')) {
+                var progressBar = $('progress');
+                
+                progressBar.attr({
+                    max: getMax()
+                });
+
+                $(document).on('scroll', function() {
+                    progressBar.attr({
+                        value: getValue()
+                    });
+                });
+
+                $(window).resize(function() {
+                    
+                    progressBar.attr({
+                        max: getMax(),
+                        value: getValue()
+                    });
+                });
+
+            } else {
+
+                var progressBar = $('.progress-bar'),
+                    max = getMax(),
+                    value, width;
+
+                var getWidth = function() {
+                    
+                    value = getValue();
+                    width = (value / max) * 100;
+                    width = width + '%';
+                    return width;
+                }
+
+                var setWidth = function() {
+                    progressBar.css({
+                        width: getWidth()
+                    });
+                }
+
+                $(document).on('scroll', setWidth);
+                $(window).on('resize', function() {
+                    max = getMax();
+                    setWidth();
+                });
+            }
         });
     });
 </script>
