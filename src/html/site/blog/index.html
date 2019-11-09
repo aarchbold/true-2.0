@@ -6,7 +6,7 @@
             "description": "True is private sharing for real friends."
         })
     </head>
-    <body class="true-FAQ">
+    <body class="true-blog blog-body-loader">
         @@include('../../includes/contact.html')
         <div data-section-name="home" class="scroll-me page-outer">
             @@include('../../includes/topnav.html', {
@@ -23,8 +23,10 @@
         
         <div class="blog-home">
             <div class="blog-loader">
-                Loading blog content...<br /><br />
-                <img src="../static/images/ui/backgrounds/ajax-loader.gif" />
+                <div class="blog-loader__inner">
+                    Just a sec...<br /><br />
+                    <img src="../static/images/ui/backgrounds/ajax-loader.gif" />
+                </div>
             </div>
             <div class="blog-feature">
                 @@include('../../templates/blogFeature.html')

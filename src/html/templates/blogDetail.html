@@ -64,6 +64,11 @@
             document.getElementById('blogDetail').innerHTML += blogData;
             $('.blog-loader').hide();
 
+            // Set meta tags
+            $('meta[name=description]').attr('content', postObj.articleExcerpt);
+            document.title = postObj.articleHeadline + ' - True Blog';
+            $('meta[property="og:title"]').attr('content', postObj.articleHeadline);
+            $('meta[property="og:description"]').attr('content', postObj.articleExcerpt);
 
             var getMax = function() {
 		        return $(document).height() - $(window).height();
