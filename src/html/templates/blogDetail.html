@@ -29,7 +29,7 @@
                 <a href="#" target="_blank" class="linkedin linkedin-share">
                     <img src="../static/images/ui/logos/logo-share-linkedin.png" />
                 </a>
-                <a href="#" target="_blank" class="reddit">
+                <a href="#" target="_blank" class="reddit reddit-share">
                     <img src="../static/images/ui/logos/logo-share-reddit.png" />
                 </a>
             </div>
@@ -69,8 +69,10 @@
             document.title = postObj.articleHeadline + ' - True Blog';
             $('meta[property="og:title"]').attr('content', postObj.articleHeadline);
             $('meta[property="og:description"]').attr('content', postObj.articleExcerpt);
-            shareBlogOnTwitter(postObj.articleHeadline);
+            $('meta[property="og:image"]').attr('content', postObj.articleImg);
+            shareBlogOnTwitter('True Blog - ' + postObj.articleHeadline);
             shareBlogOnLinkedIn(postObj.articleHeadline);
+            shareBlogOnReddit('True Blog - ' + postObj.articleHeadline);
 
 
             var getMax = function() {
