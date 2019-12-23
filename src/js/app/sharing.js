@@ -13,7 +13,7 @@ var shareBlogOnTwitter = function(message) {
 }
 
 var shareBlogOnLinkedIn = function(message) {
-    var url = window.location.href;
+    var url = escape(window.location.href);
     var linkedInBtn = $('.linkedin-share');
     var title = message;
     var shareUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
