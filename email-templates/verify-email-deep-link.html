@@ -1,0 +1,129 @@
+<!DOCTYPE html><html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+    <title>Reporting</title>
+
+    <style type="text/css">
+        div,
+        p,
+        a,
+        li,
+        td {
+            -webkit-text-size-adjust: none;
+        }
+
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        html {
+            width: 100%;
+            background-color: #F5F8FA;
+        }
+
+        @media only screen and (max-width: 600px) {
+            body {
+                width: auto!important;
+            }
+            .outer-table {
+                width: 100%!important;
+            }
+            .table-header {
+                font-size: 30px !important;
+            }
+            .table-body {
+                font-size: 22px !important;
+            }
+            .table-footer {
+                font-size: 14px !important;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {}
+    
+    </style>
+
+</head>
+
+<body>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#f5f8fa">
+        <tr>
+            <td width="100%" align="center">
+                <table width="700" class="outer-table" style="border-top: 6px solid #4C8BFF" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>
+                            <img width="100%" alt="report" src="https://marketing-image-production.s3.amazonaws.com/uploads/de1042ed354302e9b9e6db467e0d33a4bc387ed36d385b05f3b3b3cee27204a6e66d64433acef4b822196e35a653d5770384305c5038cb841a06f74e86c7deb9.png">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" bgcolor="#ffffff">
+                            <table width="90%">
+                                <tr>
+                                    <td class="table-header" align="center" style="text-align: center; font-family: Verdana,-apple-system,BlinkMacSystemFont; font-size: 46px; color: #1A1A1A; line-height: 40px;">
+                                        <br>Verify your email
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-body" align="center" style="text-align: center; font-family: Verdana,-apple-system,BlinkMacSystemFont; font-size: 30px; color: #1A1A1A; line-height: 40px;">
+                                        <br>We just want to make sure this account belongs to you. Tap this button to let us know:
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-body" align="center" style="text-align: center; font-family: Verdana,-apple-system,BlinkMacSystemFont; font-size: 30px; color: #1A1A1A; line-height: 40px;">
+                                        <br><a style="color:white;text-decoration:none;background-color:#4C8BFF;display:inline-block;padding:4px 50px;border-radius:25px;font-size:24px;font-weight:bold;text-transform: uppercase;" href="{{deepLink}}">Verify</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-body" align="center" style="text-align: center; font-family: Verdana,-apple-system,BlinkMacSystemFont; font-size: 30px; color: #1A1A1A; line-height: 40px;">
+                                        <br>Or enter this code in the app:
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-body" align="center" style="text-align: center; font-family: Verdana,-apple-system,BlinkMacSystemFont; font-size: 30px; font-weight:bold; color: #1A1A1A; line-height: 40px;">
+                                        <br>{{token}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-body" align="center" style="text-align: center; font-family: Verdana,-apple-system,BlinkMacSystemFont; font-size: 30px; color: #1A1A1A; line-height: 40px;">
+                                        <br>See you soon!
+                                        <br><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-footer" align="center" style="border-top: 1px solid #888888; text-align: center; font-family: Verdana,-apple-system,BlinkMacSystemFont; font-size: 16px; color: #888888; line-height: 20px;">
+                                        <br>Didn't sign up for True? Click <a href="[%not_me_link%]" style="text-decoration: none;color: #1A1A1A;">here</a> to report this message.
+                                        <br><br><br>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table width="700" class="outer-table" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="table-footer" align="center" style="text-align: center; font-family: Verdana,-apple-system,BlinkMacSystemFont; font-size: 16px; color: #1A1A1A; line-height:20px;">
+                                        <br><br>Copyright 2020, Hello Mobile Inc.<br>
+                                        support@trytrue.com
+                                        <br><br><br>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    
+</body>
+</html>
