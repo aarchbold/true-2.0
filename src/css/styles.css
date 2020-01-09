@@ -1777,6 +1777,22 @@ html.-static, body.-static {
   .mobile-waterfall, .mobile-waterfall__gradiient, .footer-waterfall__animation--mobile {
     display: block;
   }
+
+  .main-site__hills1 {
+    top: 7%;
+  }
+
+  .main-site__hills2 {
+    top: 9.5%;
+  }
+
+  .main-site__hills3 {
+    top: 10%;
+  }
+
+  .main-site__hills4 {
+    top: 19%;
+  }
 }
 @media (max-width: 520px) {
   .hero-stage__header {
