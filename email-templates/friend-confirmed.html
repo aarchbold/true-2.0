@@ -49,8 +49,8 @@
                 color: white !important;
             }
 
-            .thread-message a {
-                color: #4B5579 !important;
+            .profile-link a {
+                color: #0381FF !important;
             }
     
             .footer-table a {
@@ -66,8 +66,8 @@
                 position: relative;
                 border-radius: 0 0 30px 30px;
                 background-color: #ffffff;
-                padding-top:20px;
-                padding-bottom: 40px;
+                padding-top:40px;
+                padding-bottom: 80px;
             }
     
             .main-cta {
@@ -76,26 +76,10 @@
                 text-decoration:none;
                 background-color:#4C8BFF;
                 display:inline-block;
-                padding:18px 20px;
+                padding:18px 40px;
                 border-radius:30px;
                 font-size:20px;
-                min-width: 180px;
                 font-weight:600;text-transform: uppercase;
-            }
-            .token-container {
-                font-family: Trueno, Verdana,-apple-system,BlinkMacSystemFont;
-                color:#555F86;
-                text-decoration:none;
-                background-color:#E9EDEF;
-                display:inline-block;
-                padding:18px 20px;
-                border-radius:30px;
-                font-size:20px;
-                min-width: 180px;
-                font-weight:600;text-transform: uppercase;
-            }
-            .table-body a.token-container {
-                color:#555F86 !important;
             }
             .table-footer {
                 padding-top: 0px;
@@ -125,9 +109,6 @@
                 .outer-table, .footer-table {
                     margin: 0;
                 }
-                .logo-table {
-                    background-position: 50% -80px !important;
-                }
                 .table-header {
                     font-size: 30px !important;
                 }
@@ -144,20 +125,10 @@
                     font-size: 14px !important;
                 }
                 .main-cta {
-                    padding:18px 20px;
+                    padding:18px 50px;
                 }
                 .main-content {
-                    padding-top: 0;
-                    padding-bottom: 40px;
-                }
-                .true-logo {
-                    width: 140px;
-                }
-                .logo-spacer {
-                    height: 100px !important;
-                }
-                .content-spacer {
-                    height: 10px !important;
+                    padding-bottom: 60px;
                 }
             }
     
@@ -175,7 +146,7 @@
                     width: 80px !important;
                     height: 80px !important;
                 }
-                .table-cta td {
+                .table-cta {
                     font-size: 20px !important;
                     line-height: 29px !important;
                 }
@@ -184,8 +155,14 @@
                     font-size: 12px !important;
                 }
                 .main-cta {
-                    padding:16px 20px;
+                    padding:16px 40px;
                     font-size:18px;
+                }
+                .true-logo {
+                    width: 140px;
+                }
+                .logo-spacer {
+                    height: 22px !important;
                 }
             }
         
@@ -197,17 +174,10 @@
         <table class="main-table" width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
                 <td width="100%" align="center">
-                    <table width="700" style="overflow: hidden; max-height: 0; width: 0; display: none; line-height: 0; visibility: hidden;" class="mobile-table" border="0" cellpadding="0" cellspacing="0">
-                        <tr>
-                            <td style="font-family: Trueno, Verdana,-apple-system,BlinkMacSystemFont; font-size: 18px; color: #0B0B0B; line-height: 30px;padding: 10px 10px 12px 10px;">
-                                We received your report
-                            </td>
-                        </tr>
-                    </table>
                     <table width="700" class="outer-table" border="0" cellpadding="0" cellspacing="0">
                         <tr>
                             <td>
-                                <table width="100%" class="logo-table" style="background-image:url(https://trytrue.com/static/images/email/background-no-logo.jpg);background-repeat: no-repeat;background-color:#298584;background-position:50% 100%;border-radius: 30px 30px 0 0;" border="0" cellpadding="0" cellspacing="0">
+                                <table width="100%" style="background-image:url(https://trytrue.com/static/images/email/background-no-logo.jpg);background-repeat: no-repeat;background-color:#298584;background-position:50% 100%;border-radius: 30px 30px 0 0;" border="0" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td>
                                             <img src="https://trytrue.com/static/images/email/p.png" width="100%" height="50" border="0" />
@@ -220,7 +190,12 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <img class="logo-spacer" src="https://trytrue.com/static/images/email/p.png" width="1" height="160" border="0" />
+                                            <img class="logo-spacer" src="https://trytrue.com/static/images/email/p.png" width="1" height="65" border="0" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <img style="border-radius: 20px;box-shadow:0px 3px 9px 0px rgba(0,0,0,0.3);" src="{{friend_profile_img}}" width="100" height="100" border="0" />
                                         </td>
                                     </tr>
                                 </table>
@@ -231,32 +206,31 @@
                                 <div class="main-content">
                                     <table width="90%">
                                         <tr>
-                                            <td class="table-header" align="center" style="text-align: center; font-family: Trueno, Verdana,-apple-system,BlinkMacSystemFont; font-weight: 600; font-size: 44px; color: #555F85; line-height: 1;">
-                                                Thanks for reporting
-                                            </td>
-                                        </tr>
-                                        <tr>
                                             <td class="table-body" align="center" style="font-family: Trueno, Verdana,-apple-system,BlinkMacSystemFont; font-size: 23px; font-weight: 300;color: #555F85; line-height: 32px;">
                                                 <table class="table-cta">
                                                     <tr>
-                                                        <td><img class="content-spacer" style="display:block;" src="https://trytrue.com/static/images/email/p.png" width="1" height="30" border="0" /></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="thread-message" align="center" style="font-size: 23px;">
-                                                            We’ll review it within 24 hours. If the content violates our <a style="font-weight: 600;color: #4B5579;" href="https://trytrue.com/terms/">Terms of Service</a>, we’ll remove it.
+                                                        <td align="center" style="font-size: 23px;">
+                                                            You and <strong style="font-weight: 600">{{friend_full_name}}</strong> are now friends
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td><img style="display:block;" src="https://trytrue.com/static/images/email/p.png" width="1" height="30" border="0" /></td>
+                                                        <td><img style="display:block;" src="https://trytrue.com/static/images/email/p.png" width="1" height="20" border="0" /></td>
                                                     </tr>
                                                 </table>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="table-footer" align="center" style="border-top: 1px solid #D8D8D8; text-align: center; font-family: Verdana,-apple-system,BlinkMacSystemFont; font-size: 16px; color: #4B5579; line-height: 26px;padding: 25px 0;">
-                                                Cheers,<br>
-                                                The True Team
+                                            <td class="table-tap" align="center" style="opacity: 0.6;text-align: center; font-family: Trueno, Verdana,-apple-system,BlinkMacSystemFont; font-size: 14px; color: #555F86; line-height: 30px;padding-bottom: 10px;">
+                                                (Tap from your📱)
                                             </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-body" align="center">
+                                                <a class="main-cta" href="{{friend_profile_link}}">View Profile</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img style="display:block;" src="https://trytrue.com/static/images/email/p.png" width="1" height="25" border="0" /></td>
                                         </tr>
                                     </table>
                                 </div>
