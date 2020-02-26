@@ -122,13 +122,13 @@ html, body {
     font-family: TruenoBlack, sans-serif;
     opacity: 1;
     line-height: 1.2;
-    top: 43%;
+    top: 48%;
     left: 50%;
     transform: translate(-50%,-50%);
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
-    img {
+    .-animated-image {
         // transition: all .8s;
         // transition-delay: .4s;
         opacity: 1;
@@ -143,7 +143,7 @@ html, body {
     }
     &.-animate {
         opacity: 1;
-        img {
+        .-animated-image {
             // opacity: 1;
             transform: scale(1) translateY(0);
             transition: all $hero-sunrise-timing;
@@ -155,7 +155,7 @@ html, body {
     }
     &.-fixed {
         opacity: 1;
-        img {
+        .-animated-image {
             // opacity: 1;
             transform: scale(1) translateY(0) !important;
             transition: all 0s !important;
@@ -169,13 +169,31 @@ html, body {
         opacity: 0;
     }
     h1 {
-        font-size: 60px;
+        font-size: 58px;
+        line-height: 1.1;
     }
     p {
         padding-top: 20px;
         line-height: 1.3;
         font-size: 22px;
         font-family: TruenoRegular, sans-serif;
+    }
+}
+
+.hero-stage__ctas {
+    padding-top: 30px;
+}
+.hero-stage__download {
+    position: relative;
+    transition: all 0.25s;
+    opacity: 0.75;
+    z-index: 100;
+    img {
+        width: 140px;
+        margin: 0;
+    }
+    &:hover {
+        opacity: 1;
     }
 }
 
@@ -552,7 +570,7 @@ html, body {
         p {
             font-size: 20px;
         }
-        img {
+        .-animated-image {
             width: 280px;
             transform: scale(1.5) translateY(60px);
         }
@@ -588,7 +606,7 @@ html, body {
         h1 {
             font-size: 44px;
         }
-        img {
+        .-animated-image {
             width: 240px;
             transform: scale(1.3) translateY(40px);
         }
@@ -607,7 +625,7 @@ html, body {
         p {
             font-size: 18px;
         }
-        img {
+        .-animated-image {
             width: 200px;
         }
     }
@@ -730,7 +748,7 @@ html, body {
         p {
             font-size: 18px;
         }
-        img {
+        .-animated-image {
             width: 190px;
         }
     }
