@@ -51,7 +51,20 @@ html, body {
     }
 }
 
-
+#downloadActualButtons {
+    transition: all .2s;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index: 8;
+    opacity: 0;
+    &.-animate {
+        opacity: 1;
+    }
+    &.-fade {
+        opacity: 0;
+    }
+}
 
 .hero-outer {
     // background-color: $color-hero-bg;
@@ -181,8 +194,10 @@ html, body {
 }
 
 .hero-stage__ctas {
-    padding-top: 30px;
+    margin-top: 24px;
+    height: 30px;
 }
+
 .hero-stage__download {
     position: relative;
     transition: all 0.25s;
@@ -565,7 +580,7 @@ html, body {
     .hero-stage__header {
         top: 36%;
         h1 {
-            font-size: 55px;
+            font-size: 52px;
         }
         p {
             font-size: 20px;
@@ -573,6 +588,21 @@ html, body {
         .-animated-image {
             width: 280px;
             transform: scale(1.5) translateY(60px);
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .hero-stage__ctas {
+        margin-top: 14px;
+        height: 30px;
+    }
+    .hero-stage__header .-animated-image {
+        margin-bottom: 0;
+    }
+    .hero-stage__download {
+        img {
+            width: 130px;
         }
     }
 }
@@ -602,13 +632,21 @@ html, body {
 
 @media (max-width: 1000px) {
     .hero-stage__header {
-        top: 32%;
+        top: 30%;
         h1 {
             font-size: 44px;
         }
         .-animated-image {
             width: 240px;
             transform: scale(1.3) translateY(40px);
+        }
+    }
+    .hero-stage__ctas {
+        margin-top: 5px;
+    }
+    .hero-stage__download {
+        img {
+            width: 120px;
         }
     }
 }
@@ -734,6 +772,8 @@ html, body {
     }
 }
 
+
+
 @media (max-width: 640px) {
     .main-site__container {
         padding-top: 100px;
@@ -819,6 +859,12 @@ html, body {
     }
     .main-site__hills4 {
         top: 19%;
+    }
+
+    .hero-stage__download {
+        img {
+            width: 100px;
+        }
     }
 }
 
