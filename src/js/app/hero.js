@@ -113,7 +113,7 @@ $(window).on('load', function (e) {
   // try and get the position of the download buttons.
   var $downloadButtons = $('#downloadButtons');
   var $actualButtons = $('#downloadActualButtons');
-  var $buttonsOffset = 20;
+  var $buttonsOffset = 16;
 
   console.log($downloadButtons.offset().top)
 
@@ -123,7 +123,11 @@ $(window).on('load', function (e) {
 
   setTimeout(function(){
     $actualButtons.addClass('-animate');
-  },4500)
+    setTimeout(function(){
+      $actualButtons.addClass('-fixed');
+      $actualButtons.removeClass('-animate');
+    },1200)
+  },4000)
 
   if ($('body').hasClass('true-home')) {
     if (window.location.hash === '#waitlist') {
@@ -160,10 +164,22 @@ $(window).on('load', function (e) {
     
     var resizeTimeout;
     $(window).resize(function(){
+        $downloadButtons.css({
+          opacity: 1
+        })
+        $actualButtons.css({
+          top: $downloadButtons.offset().top + $buttonsOffset + 'px',
+          opacity: 0
+        })
+
         clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(function(){    
+        resizeTimeout = setTimeout(function(){   
+            $downloadButtons.css({
+              opacity: 0
+            }) 
             $actualButtons.css({
-              top: $downloadButtons.offset().top + $buttonsOffset + 'px'
+              top: $downloadButtons.offset().top + $buttonsOffset + 'px',
+              opacity: 1
             })
             if (ogWidth < 800 && $(window).width() > 800) {
               // init the parallax if the site starts at mobile and resizes to not mobile
@@ -179,7 +195,7 @@ $(window).on('load', function (e) {
             } else {
               $('.section-footer').appendTo('#ogFooterPosition');
             }
-        }, 500);
+        }, 600);
     });
 
   }

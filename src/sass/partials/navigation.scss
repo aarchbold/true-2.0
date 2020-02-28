@@ -320,9 +320,12 @@
 
 .footer-download__cta--link {
     transition: all 0.25s;
-    opacity: 0.75;
+    opacity: 0.85;
     &:hover {
         opacity: 1;
+    }
+    img {
+        width: 158px;
     }
 }
 
@@ -620,7 +623,7 @@
 @media (max-width: 376px) {
     .footer-download__cta--link {
         img {
-            width: 100px;
+            width: 114px;
         }
     }
     .section-footer {
@@ -636,5 +639,13 @@
     .footer-doggers {
         top: 4px;
         left: 166px;
+    }
+}
+
+@media (max-width: 321px) {
+    .footer-download__cta--link {
+        img {
+            width: 90px;
+        }
     }
 }
