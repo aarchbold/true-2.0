@@ -41,6 +41,7 @@ initHero = debounce(function() {
     var $nav = $('.topnav-container');
     var $navInner = $('.navigation-inner');
     var $heroClouds = $('.hero-sky',$heroContainer);
+    var $downloadButtonsAnimateOnly = $('#downloadButtons');
     var $downloadButtons = $('#downloadActualButtons');
     var $window = $(window);
     
@@ -59,6 +60,7 @@ initHero = debounce(function() {
     }
     startHeaderTextAnimation = function() {
         if (!$header.hasClass('-fixed')) {
+          $downloadButtonsAnimateOnly.addClass('-animate');
           $header.addClass('-animate');
         }
     }
@@ -113,21 +115,8 @@ $(window).on('load', function (e) {
   // try and get the position of the download buttons.
   var $downloadButtons = $('#downloadButtons');
   var $actualButtons = $('#downloadActualButtons');
-  var $buttonsOffset = 16;
+  var $buttonsOffset = 16; 
 
-  console.log($downloadButtons.offset().top)
-
-  $actualButtons.css({
-    top: $downloadButtons.offset().top + $buttonsOffset + 'px'
-  })
-
-  setTimeout(function(){
-    $actualButtons.addClass('-animate');
-    setTimeout(function(){
-      $actualButtons.addClass('-fixed');
-      $actualButtons.removeClass('-animate');
-    },1200)
-  },4000)
 
   if ($('body').hasClass('true-home')) {
     if (window.location.hash === '#waitlist') {
@@ -157,13 +146,34 @@ $(window).on('load', function (e) {
     if ($(window).width() > 800) {
       $('[data-scroll-speed]').moveIt();
     }
+    if ($(window).width() < 1200) {
+      $buttonsOffset = 17;
+    }
+    if ($(window).width() < 1000) {
+      $buttonsOffset = 22;
+    }
     if ($(window).width() < 640) {
+      $buttonsOffset = 30;
       // move footer
       $('.section-footer').appendTo('.section-starts');
     }
+    if ($(window).width() < 520) {
+      $buttonsOffset = 28;
+    }
+
+    console.log($downloadButtons.offset().top)
+
+    $actualButtons.css({
+      top: $downloadButtons.offset().top + $buttonsOffset + 'px'
+    })
+  
+    setTimeout(function(){
+      $actualButtons.addClass('-fixed');
+    },4040)
     
     var resizeTimeout;
     $(window).resize(function(){
+        $downloadButtons.removeClass('-animate');
         $downloadButtons.css({
           opacity: 1
         })
@@ -195,7 +205,7 @@ $(window).on('load', function (e) {
             } else {
               $('.section-footer').appendTo('#ogFooterPosition');
             }
-        }, 600);
+        }, 1000);
     });
 
   }

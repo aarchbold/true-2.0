@@ -1119,6 +1119,10 @@ html.-static, body.-static {
 #downloadButtons {
   opacity: 0;
 }
+#downloadButtons.-animate {
+  animation: buttonsswoop 1.8s;
+  animation-fill-mode: forwards;
+}
 
 #downloadActualButtons {
   position: absolute;
@@ -1126,7 +1130,7 @@ html.-static, body.-static {
   text-align: center;
   z-index: 8;
   opacity: 0;
-  transform: scale(1.4);
+  transform: scale(1);
 }
 #downloadActualButtons.-animate {
   transition: all 1s;
@@ -1143,7 +1147,7 @@ html.-static, body.-static {
   opacity: 0 !important;
 }
 #downloadActualButtons img {
-  margin: 0 4px;
+  margin: 0 5px;
 }
 
 .hero-stage {
@@ -1207,7 +1211,7 @@ html.-static, body.-static {
   font-family: TruenoBlack, sans-serif;
   opacity: 1;
   line-height: 1.2;
-  top: 48%;
+  top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 600px;
@@ -1273,7 +1277,7 @@ html.-static, body.-static {
 }
 .hero-stage__download img {
   width: 140px;
-  margin: 0;
+  margin: 0 5px;
 }
 .hero-stage__download:hover {
   opacity: 1;
@@ -1295,6 +1299,20 @@ html.-static, body.-static {
   100% {
     transform: translateY(0) scale(1);
     opacity: 1;
+  }
+}
+@keyframes buttonsswoop {
+  0% {
+    transform: translateY(350px) scale(1.4);
+    opacity: 0;
+  }
+  99% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
   }
 }
 .hero-stage__tree {
@@ -1614,7 +1632,7 @@ html.-static, body.-static {
   }
 
   .hero-stage__header {
-    top: 36%;
+    top: 38%;
   }
   .hero-stage__header h1 {
     font-size: 52px;
@@ -1668,7 +1686,7 @@ html.-static, body.-static {
 }
 @media (max-width: 1000px) {
   .hero-stage__header {
-    top: 30%;
+    top: 34%;
   }
   .hero-stage__header h1 {
     font-size: 44px;
@@ -1679,7 +1697,7 @@ html.-static, body.-static {
   }
 
   .hero-stage__ctas {
-    margin-top: 5px;
+    margin-top: 10px;
   }
 
   .hero-stage__download img {
@@ -1692,7 +1710,7 @@ html.-static, body.-static {
   }
 
   .hero-stage__header {
-    top: 26%;
+    top: 28%;
   }
   .hero-stage__header h1 {
     font-size: 36px;
@@ -1812,7 +1830,7 @@ html.-static, body.-static {
   }
 
   .hero-stage__header {
-    top: 20%;
+    top: 22%;
     max-width: 80%;
     width: 80%;
   }
@@ -1912,10 +1930,14 @@ html.-static, body.-static {
   .hero-stage__download img {
     width: 100px;
   }
+
+  .hero-stage__ctas {
+    margin-top: -10px;
+  }
 }
 @media (max-width: 520px) {
   .hero-stage__header {
-    top: 25%;
+    top: 26%;
   }
 
   .section-sharing {
@@ -1949,6 +1971,11 @@ html.-static, body.-static {
 
   .main-site__balloon2 {
     display: none;
+  }
+}
+@media (max-width: 400px) {
+  .hero-stage__header {
+    top: 26%;
   }
 }
 /* button styles

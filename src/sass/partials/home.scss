@@ -53,6 +53,10 @@ html, body {
 
 #downloadButtons {
     opacity: 0;
+    &.-animate {
+        animation: buttonsswoop $hero-sunrise-timing;
+        animation-fill-mode: forwards;
+    }
 }
 
 #downloadActualButtons {
@@ -61,7 +65,7 @@ html, body {
     text-align: center;
     z-index: 8;
     opacity: 0;
-    transform: scale(1.4);
+    transform: scale(1);
     &.-animate {
         transition: all 1s;
         opacity: 1;
@@ -77,7 +81,7 @@ html, body {
         opacity: 0 !important;
     }
     img {
-        margin: 0 4px;
+        margin: 0 5px;
     }
 }
 
@@ -150,7 +154,7 @@ html, body {
     font-family: TruenoBlack, sans-serif;
     opacity: 1;
     line-height: 1.2;
-    top: 48%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%,-50%);
     max-width: 600px;
@@ -220,7 +224,7 @@ html, body {
     z-index: 100;
     img {
         width: 140px;
-        margin: 0;
+        margin: 0 5px;
     }
     &:hover {
         opacity: 1;
@@ -251,6 +255,25 @@ html, body {
     100% {
         transform: translateY(0) scale(1);
         opacity: 1;
+    }
+}
+
+@keyframes buttonsswoop {
+    0% {
+        transform: translateY(350px) scale(1.4);
+        opacity: 0;
+    }
+    // 80% {
+    //     transform: translateY(-15px);
+    //     opacity: 1;
+    // }
+    99% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
     }
 }
 
@@ -593,7 +616,7 @@ html, body {
         height: 660px;
     }
     .hero-stage__header {
-        top: 36%;
+        top: 38%;
         h1 {
             font-size: 52px;
         }
@@ -647,7 +670,7 @@ html, body {
 
 @media (max-width: 1000px) {
     .hero-stage__header {
-        top: 30%;
+        top: 34%;
         h1 {
             font-size: 44px;
         }
@@ -657,7 +680,7 @@ html, body {
         }
     }
     .hero-stage__ctas {
-        margin-top: 5px;
+        margin-top: 10px;
     }
     .hero-stage__download {
         img {
@@ -671,7 +694,7 @@ html, body {
         display: none;
     }
     .hero-stage__header {
-        top: 26%;
+        top: 28%;
         h1 {
             font-size: 36px;
         }
@@ -794,7 +817,7 @@ html, body {
         padding-top: 100px;
     }
     .hero-stage__header {
-        top: 20%;
+        top: 22%;
         max-width: 80%;
         width: 80%;
         h1 {
@@ -881,11 +904,14 @@ html, body {
             width: 100px;
         }
     }
+    .hero-stage__ctas {
+        margin-top: -10px;
+    }
 }
 
 @media (max-width: 520px) {
     .hero-stage__header {
-        top: 25%;
+        top: 26%;
         // padding: 22% 10%;
     }
     .section-sharing {
@@ -916,5 +942,12 @@ html, body {
     }
     .main-site__balloon2 {
         display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-stage__header {
+        top: 26%;
+        // padding: 22% 10%;
     }
 }
