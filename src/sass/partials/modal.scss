@@ -5,6 +5,9 @@
 
 
 // properties
+.modile-line-break {
+    display: none;
+}
 .modal-waitlist {
     display: none;
     position: fixed;
@@ -207,6 +210,12 @@
     left: 50%;
     width: 100%;
     transform: translate(-50%,-50%);
+}
+
+@media (max-width: 610px) {
+    .modile-line-break {
+        display: inline;
+    }
 }
 
 @media (max-width: 540px) {

@@ -1632,7 +1632,7 @@ html.-static, body.-static {
   }
 
   .hero-stage__header {
-    top: 38%;
+    top: 36%;
   }
   .hero-stage__header h1 {
     font-size: 52px;
@@ -1686,7 +1686,7 @@ html.-static, body.-static {
 }
 @media (max-width: 1000px) {
   .hero-stage__header {
-    top: 34%;
+    top: 33%;
   }
   .hero-stage__header h1 {
     font-size: 44px;
@@ -1697,11 +1697,16 @@ html.-static, body.-static {
   }
 
   .hero-stage__ctas {
-    margin-top: 10px;
+    margin-top: 0;
   }
 
   .hero-stage__download img {
     width: 120px;
+  }
+}
+@media (max-width: 900px) {
+  .hero-stage__header {
+    top: 31%;
   }
 }
 @media (max-width: 800px) {
@@ -1710,7 +1715,7 @@ html.-static, body.-static {
   }
 
   .hero-stage__header {
-    top: 28%;
+    top: 26%;
   }
   .hero-stage__header h1 {
     font-size: 36px;
@@ -2324,6 +2329,10 @@ button.-small, .button.-small {
 }
 /* modal styles
 */
+.modile-line-break {
+  display: none;
+}
+
 .modal-waitlist {
   display: none;
   position: fixed;
@@ -2521,6 +2530,11 @@ button.-small, .button.-small {
   transform: translate(-50%, -50%);
 }
 
+@media (max-width: 610px) {
+  .modile-line-break {
+    display: inline;
+  }
+}
 @media (max-width: 540px) {
   .modal-waitlist__inner {
     padding: 40px 20px;
