@@ -543,6 +543,8 @@ function isElementInViewport (el) {
 var isScrollingDown = false;
 var scrollDirection;
 
+
+
 $.fn.moveIt = function(){
     var $window = $(window);
     var instances = [];
@@ -651,6 +653,10 @@ $(function() {
   }
 });
 
+function trackFBClick(eventName) {
+  fbq('track', eventName);
+}
+
 $(window).on('load', function (e) {
   initHero(); 
 
@@ -751,6 +757,7 @@ $(window).on('load', function (e) {
     });
 
   }
+
 })
 
 $.fn.handleLegalNav = function() {
