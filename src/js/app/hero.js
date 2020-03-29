@@ -96,6 +96,27 @@ initHero = debounce(function() {
     },5000)
 },250);
 
+var handleTryTrueButton  = function(){
+  var $button = $('#tryTrueNav');
+  var fbEventName = 'appStoreButtonClick';
+  var appStoreLink = 'https://apps.apple.com/us/app/true-private-social-network/id834451429';
+  var playStoreLink = 'https://play.google.com/store/apps/details?id=hellomobile.hello';
+  var realLink = '#';
+  var userAgent = navigator.userAgent.toLowerCase(); 
+  var isAndroid = userAgent.indexOf('android') > -1;
+
+  if (isAndroid) {
+    realLink = playStoreLink;
+    fbEventName = 'googleStoreButtonClick';
+  } else {
+    realLink = appStoreLink;
+    fbEventName = 'appStoreButtonClick';
+  }
+
+  trackFBClick(fbEventName);
+  $button.attr('href',realLink);
+}
+
 $(function() {
   if ($('body').hasClass('true-home')) {
     if (window.location.hash !== '#waitlist') {
@@ -116,6 +137,7 @@ function trackFBClick(eventName) {
 }
 
 $(window).on('load', function (e) {
+  handleTryTrueButton();
   initHero(); 
 
   // try and get the position of the download buttons.
