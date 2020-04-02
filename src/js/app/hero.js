@@ -96,9 +96,13 @@ initHero = debounce(function() {
     },5000)
 },250);
 
+function trackFBClick(eventName) {
+  fbq('trackCustom', eventName);
+}
+
 var handleTryTrueButton  = function(){
   var $button = $('#tryTrueNav');
-  var fbEventName = 'appStoreButtonClick';
+  var fbEventProp = 'appleStore';
   var appStoreLink = 'https://apps.apple.com/us/app/true-private-social-network/id834451429';
   var playStoreLink = 'https://play.google.com/store/apps/details?id=hellomobile.hello';
   var realLink = '#';
@@ -107,13 +111,15 @@ var handleTryTrueButton  = function(){
 
   if (isAndroid) {
     realLink = playStoreLink;
-    fbEventName = 'googleStoreButtonClick';
+    fbEventProp = 'googleStore';
   } else {
     realLink = appStoreLink;
-    fbEventName = 'appStoreButtonClick';
+    fbEventProp = 'appleStore';
   }
 
-  trackFBClick(fbEventName);
+  trackFBClick('TopNavButtonClick');
+  fbq('trackCustom', 'TopNavTryTrueButtonClick', {store: fbEventProp});
+  ga('send', 'event', 'Try True Topnav', 'clicked Try True', fbEventProp);
   $button.attr('href',realLink);
 }
 
@@ -131,10 +137,6 @@ $(function() {
     }
   }
 });
-
-function trackFBClick(eventName) {
-  fbq('track', eventName);
-}
 
 $(window).on('load', function (e) {
   handleTryTrueButton();
