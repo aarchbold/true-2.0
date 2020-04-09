@@ -102,6 +102,9 @@ function trackFBClick(eventName) {
 
 var handleTryTrueButton  = function(){
   var $button = $('#tryTrueNav');
+  var $contentButton1 = $('#waitListButton');
+  var $contentButton2 = $('#beRealButton');
+  var $contentButton3 = $('#letsDoItButton');
   var fbEventProp = 'appleStore';
   var appStoreLink = 'https://apps.apple.com/us/app/true-private-social-network/id834451429';
   var playStoreLink = 'https://play.google.com/store/apps/details?id=hellomobile.hello';
@@ -117,10 +120,28 @@ var handleTryTrueButton  = function(){
     fbEventProp = 'appleStore';
   }
 
-  trackFBClick('TopNavButtonClick');
-  fbq('trackCustom', 'TopNavTryTrueButtonClick', {store: fbEventProp});
-  ga('send', 'event', 'Try True Topnav', 'clicked Try True', fbEventProp);
   $button.attr('href',realLink);
+  $contentButton1.attr('href',realLink);
+  $contentButton2.attr('href',realLink);
+  $contentButton3.attr('href',realLink);
+
+  $button.click(function() {
+    trackFBClick('TopNavButtonClick');
+    fbq('trackCustom', 'TopNavTryTrueButtonClick', {store: fbEventProp});
+    ga('send', 'event', 'Try True Topnav', 'clicked Try True', fbEventProp);
+  })
+  $contentButton1.click(function() {
+    fbq('trackCustom', 'TryItButtonClick', {store: fbEventProp});
+    ga('send', 'event', 'Landing Page Buttons', 'clicked Try It button', fbEventProp);
+  })
+  $contentButton2.click(function() {
+    fbq('trackCustom', 'BeRealButtonClick', {store: fbEventProp});
+    ga('send', 'event', 'Landing Page Buttons', 'clicked Be Real button', fbEventProp);
+  })
+  $contentButton3.click(function() {
+    fbq('trackCustom', 'LetsDoItButtonClick', {store: fbEventProp});
+    ga('send', 'event', 'Landing Page Buttons', 'clicked Lets do It button', fbEventProp);
+  })
 }
 
 $(function() {
