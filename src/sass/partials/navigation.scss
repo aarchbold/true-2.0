@@ -492,8 +492,9 @@
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 700px) {
     .footer-download__ctas {
+        position: relative;
         right: 0;
     }
     .footer-download__cta--link {

@@ -764,8 +764,9 @@ section {
     font-size: 18px;
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 700px) {
   .footer-download__ctas {
+    position: relative;
     right: 0;
   }
 
@@ -2742,6 +2743,18 @@ button.-small, .button.-small {
 .faq-footer__content {
   font-size: 16px;
   font-family: TruenoRegular, sans-serif;
+}
+
+.faq-footer__legal {
+  margin-top: 20px;
+}
+.faq-footer__legal a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: TruenoRegular, sans-serif;
+}
+.faq-footer__legal a:hover {
+  text-decoration: underline;
 }
 
 @keyframes faqopen {

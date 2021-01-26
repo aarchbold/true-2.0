@@ -182,6 +182,18 @@
     font-family: TruenoRegular, sans-serif;
 }
 
+.faq-footer__legal {
+    margin-top: 20px;
+    a {
+        text-decoration: none;
+        color: #ffffff;
+        font-family: TruenoRegular, sans-serif;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
 @keyframes faqopen
 {
     0% {}
