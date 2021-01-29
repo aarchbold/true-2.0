@@ -18,7 +18,7 @@
 <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0087/6974.js" async="async"></script>
 
     </head>
-    <body class="true-blog blog-body-loader">
+    <body class="true-FAQ">
         <div class="modal-waitlist">
     <div class="modal-waitlist__inner -with-background">
         <a href="#" class="modal-close__button">x</a>
@@ -81,9 +81,9 @@
                 <a href="/index.html" class="button-nav -home"><img src="/static/images/icons/icon-home.svg" width="20" /></a>
             
             <div class="topnav-links">
-                <!-- <a class="button-nav -selected"  href="/blog/">BLOG</a> -->
+                <!-- <a  class="button-nav" href="/blog/">BLOG</a> -->
                 <a  class="button-nav" href="/faq.html">FAQ</a>
-                <a  class="button-nav" href="/community/">COMMUNITY GUIDELINES</a>
+                <a class="button-nav -selected"  href="/community/">COMMUNITY GUIDELINES</a>
                 <a  class="button-nav" id="tryTrueNav" target="_blank" href="/index.html#waitlist">TRY TRUE</a>
                 
             </div>
@@ -94,178 +94,106 @@
         
         <div class="faq-container">
             <div class="faq-header">
-                <div class="faq-header__h1">True Stories</div>
-                <img class="faq-header__img" src="/static/images/ui/scenery/header-faq.png" />
+                <div class="faq-header__h1">&nbsp;</div>
+                <img class="faq-header__img" src="../static/images/ui/scenery/header-faq.png" />
             </div>
-        </div>
-        
-        <div class="blog-home">
-            <div class="blog-loader">
-                <div class="blog-loader__inner">
-                    Just a sec...<br /><br />
-                    <img src="../static/images/ui/backgrounds/ajax-loader.gif" />
+
+            <div class="generic-container">
+                <div class="generic__item -no-background">
+                    <div class="generic__item--header -big">
+                        Community Guidelines
+                    </div>
+                    <div class="generic__item--content">
+                        <p><strong>Welcome to True</strong> — a place to connect and share with the people who matter most to you. We want you to love being on True, so it’s important we recognize that we are all in this together as part of this community, and agree to be good to each other.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="blog-feature">
+
+                <div class="generic__item">
+                    <div class="generic__item--header">
+                        <img src="../static/images/ui/community/icon-checkmark.svg" />
+                        Be Nice, Be Real, Be Honest
+                    </div>
+                    <div class="generic__item--content">
+                        <p>We strive to be a force for good in the world. We’re real people sharing original content and experiences to connect with friends and strengthen our sense of community.</p> 
+                        <p>True is for people of every gender, color and creed. We encourage everyone to be true — we encourage you to use your real identity and only share content and information you believe to be true.</p>
+                        <p>To create a safe space, we’ve chosen to take a stance against certain types of content that detracts from our community.</p>
+                    </div>
+                </div>
+
+                <div class="generic__item">
+                    <div class="generic__item--header">
+                        <img src="../static/images/ui/community/icon-checkmark.svg" />
+                        Intellectual Property
+                    </div>
+                    <div class="generic__item--content">
+                        <p>Only upload or share content of which you are the rightful owner. Do not share content from other people or use their copyrights or trademarks.</p>
+                    </div>
+                </div>
+
+                <div class="generic__item">
+                    <div class="generic__item--header">
+                        <img src="../static/images/ui/community/icon-x.svg" />
+                        Sensitive Personal Information & Privacy
+                    </div>
+                    <div class="generic__item--content">
+                        <p>Never share the personally identifying information (“pii”) of other people on True (doxing).</p>
+                    </div>
+                </div>
+
+                <div class="generic__item">
+                    <div class="generic__item--header">
+                        <img src="../static/images/ui/community/icon-x.svg" />
+                        Sexually-oriented content
+                    </div>
+                    <div class="generic__item--content">
+                        <p>We do not permit sexually related content, whether graphic or suggestive in nature. Posting or threatening to post intimate images of others, or potential exploitation of a minor, are explicitly illegal and will be dealt with accordingly.</p>
+                    </div>
+                </div>
+
+                <div class="generic__item">
+                    <div class="generic__item--header">
+                        <img src="../static/images/ui/community/icon-x.svg" />
+                        Threats
+                    </div>
+                    <div class="generic__item--content">
+                        <p>Threatening or antagonizing any person for any reason (such as bullying, trolling, threatening or harassing) is strictly prohibited.</p>
+                    </div>
+                </div>
+
+                <div class="generic__item">
+                    <div class="generic__item--header">
+                        <img src="../static/images/ui/community/icon-x.svg" />
+                        Violence
+                    </div>
+                    <div class="generic__item--content">
+                        <p>Any content that contains or depicts violence against a person, animal or property, whether real or fake (such as gore or shock content); that could incite violence, terror or lead to harm against others; or that could be considered hate speech is prohibited.</p>
+                    </div>
+                </div>
+
+                <div class="generic__item">
+                    <div class="generic__item--header -no-icon">
+                        Remember...
+                    </div>
+                    <div class="generic__item--content">
+                        <p>You are responsible for shaping our community, and we appreciate you bringing violations of our guidelines to our attention. We reserve the right to decide what constitutes a violation of our guidelines. Accounts found to be in violation of our policies will be immediately documented, and the account owner warned and/or banned depending on the nature of the violation. With any reports involving illegal activity, we have the right to report the issue to law enforcement, as appropriate. </p>
+                    </div>
+                </div>
+
+
+
                 
-<div id="blogFeature">
-</div>
-
-<script id="posts-feature-template" type="text/x-handlebars-template">
-        
-    {{#each posts}}
-        {{#unless @index}}
-        <div class="blog-feature__image">
-            <a href="page.html?id={{articleId}}" class="blog-feature__image--inner"  style="background-image: url({{this.articleImg}});"></a>
-        </div>
-        <div class="blog-feature__content">
-            <div class="blog-feature__header">
-                <a href="page.html?id={{articleId}}">{{this.articleHeadline}}</a>
-            </div>
-            <div class="blog-feature__description">
-                {{{this.articleExcerpt}}}
-            </div>
-            <div class="blog-author">
-                <div class="blog-author__thumbnail">
-                    <a href="page.html?id={{articleId}}"><img src="{{this.authorImg}}" /></a>
-                </div>
-                <div class="blog-author__name">{{this.authorName}}</div>
-                <div class="blog-author__date">{{this.articleDate}}</div>
             </div>
         </div>
-        <!-- <div class="blog-list__item">
-            <div class="blog-list__item--inner">
-                <div class="blog-list__item--image" style="background-image: url({{this.articleImg}});">
-                    <a href="#"></a>
-                </div>
-                <div class="blog-list__item--title">{{this.articleHeadline}}</div>
-                <div class="blog-list__item--description">{{this.articleExcerpt}}</div>
-                <div class="blog-author">
-                    <div class="blog-author__thumbnail">
-                        <a href="page.html"><img src="{{this.authorImg}}" /></a>
-                    </div>
-                    <div class="blog-author__name"><a href="#">{{this.authorName}}</a></div>
-                    <div class="blog-author__date">{{this.articleDate}}</div>
-                </div>
-            </div>
-        </div> -->
-        {{/unless}}
-    {{/each}}
-</script>
 
-<script type="text/javascript">
-    var featureObj = {
-        authorName: '',
-        authorImg: '',
-        articleDate: '',
-        articleId: '',
-        articleHeadline: '',
-        articleExcerpt: '',
-        articleImg: ''
-    }
-
-    var featurePost = [];
-
-    $.get('https://us-central1-trytruecom-website.cloudfunctions.net/getWordPressPosts', function(response){
-        var featureData = JSON.stringify(response.data);
-        var featureJSON = JSON.parse(featureData);
-        $.each(featureJSON, function(i,e) {
-            featureObj.authorName = e._embedded.author[0].name;
-            featureObj.authorImg = e._embedded.author[0].avatar_urls ? e._embedded.author[0].avatar_urls[96] : '../static/images/ui/logos/logo-blog-trueicon.png';
-            featureObj.articleDate = moment(e.date).format("MMM DD, YYYY");
-            featureObj.articleId = e.id;
-            featureObj.articleHeadline = e.title.rendered.replace('&nbsp;',' ');
-            featureObj.articleExcerpt = e.excerpt.rendered.replace(/<\/?[^>]+>/gi, '').substring(0, 140) + '...';
-            featureObj.articleImg = e.jetpack_featured_media_url;
-            featurePost.push(featureObj);
-            featureObj = {};
-        });
-        var featureData = {
-            posts: featurePost
-        };
-        var template = Handlebars.compile(document.getElementById('posts-feature-template').innerHTML);
-        var featureData = template(featureData);
-        document.getElementById('blogFeature').innerHTML += featureData;
-        $('.blog-loader').hide();
-        $('body').removeClass('blog-body-loader');
-    });
-</script>
-                <div class="blog-list">
-                    
-<div id="blogHome" class="blog-list__row">
-</div>
-
-<script id="posts-template" type="text/x-handlebars-template">
-    {{#each posts}}
-        {{#if @index}}
-        <div class="blog-list__item">
-            <div class="blog-list__item--inner">
-                <div class="blog-list__item--image" style="background-image: url({{this.articleImg}});">
-                    <a href="page.html?id={{articleId}}"></a>
-                </div>
-                <div class="blog-list__item--title"><a href="page.html?id={{articleId}}">{{this.articleHeadline}}</a></div>
-                <div class="blog-list__item--description">{{{this.articleExcerpt}}}</div>
-                <div class="blog-author">
-                    <div class="blog-author__thumbnail">
-                        <a href="page.html?id={{articleId}}"><img src="{{this.authorImg}}" /></a>
-                    </div>
-                    <div class="blog-author__name">{{this.authorName}}</div>
-                    <div class="blog-author__date">{{this.articleDate}}</div>
-                </div>
-            </div>
-        </div>
-        {{/if}}
-    {{/each}}
-</script>
-
-<script type="text/javascript">
-    var postObj = {
-        authorName: '',
-        authorImg: '',
-        articleDate: '',
-        articleId: '',
-        articleHeadline: '',
-        articleExcerpt: '',
-        articleImg: ''
-    }
-
-    var posts = [];
-
-    $.get('https://us-central1-trytruecom-website.cloudfunctions.net/getWordPressPosts', function(response){
-        var responseData = JSON.stringify(response.data);
-        var responseJSON = JSON.parse(responseData);
-
-        $.each(responseJSON, function(i,e) {
-            console.log(e);
-            postObj.authorName = e._embedded.author[0].name;
-            postObj.authorImg = e._embedded.author[0].avatar_urls ? e._embedded.author[0].avatar_urls[96] : '../static/images/ui/logos/logo-blog-trueicon.png';
-            postObj.articleDate = moment(e.date).format("MMM DD, YYYY");
-            postObj.articleId = e.id;
-            postObj.articleHeadline = e.title.rendered.replace('&nbsp;',' ');
-            postObj.articleExcerpt = e.excerpt.rendered.replace(/<\/?[^>]+>/gi, '').substring(0, 60) + '...';
-            postObj.articleImg = e.jetpack_featured_media_url;
-            posts.push(postObj);
-            postObj = {};
-        });
-        console.log(posts);
-        var data = {
-            posts: posts
-        };
-        var template = Handlebars.compile(document.getElementById('posts-template').innerHTML);
-        var postsData = template(data);
-        document.getElementById('blogHome').innerHTML += postsData;
-    });
-</script>
-                </div>
-            </div>
-        </div>
-        
         <div class="faq-footer">
             <div class="faq-footer__header">
                 Email us at <a href="mailto:hey@trytrue.com">hey@trytrue.com</a>
             </div>
             <div class="faq-footer__content">
-                &copy; 2021 True 
+                &copy; 2021 True
+                <div class="faq-footer__legal">
+                    <a href="https://trytrue.com/privacy/">Privacy Policy</a> | <a href="https://trytrue.com/terms/">Terms of Service</a>
+                </div>
             </div>
         </div>
 
