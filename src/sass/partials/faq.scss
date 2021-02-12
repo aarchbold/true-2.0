@@ -4,6 +4,12 @@
 // vars
 
 // properties
+
+.generic-header {
+    padding-top: 100px;
+    padding-bottom: 10px;
+}
+
 .generic-container {
     max-width: 640px;
     width: 100%;
@@ -22,6 +28,7 @@
     font-family: TruenoRegular, sans-serif;
     &.-no-background {
         box-shadow: none;
+        padding-top: 0;
     }
 }
 
@@ -78,6 +85,7 @@
     font-size: 35px;
     font-family: TruenoBlack, sans-serif;
     color: #414141;
+    margin-bottom: 10px;
 }
 
 .faq-header__img {
@@ -306,6 +314,12 @@
 }
 
 @media (max-width: 450px) {
+    .generic-header {
+        padding-top: 80px;
+        .faq-header__h1 {
+            margin-bottom: 14px;
+        }
+    }
     .faq-more__row {
         max-width: 640px;
         width: 100%;
