@@ -1,9 +1,10 @@
 <nav style="position: fixed;z-index:10;width: 100%;">
     <div class="topnav-container">
         <div class="navigation-inner">
-            @@if (section !== 'home') {
+            <img class="navigation-logo" src="static/images/ui/logos/logo-true__large.png" width="140" />
+            <!-- @@if (section !== 'home') {
                 <a href="/index.html" class="button-nav -home"><img src="/static/images/icons/icon-home.svg" width="20" /></a>
-            }
+            } -->
             <div class="topnav-links">
                 <!-- <a @@if (section === 'blog') {class="button-nav -selected"} @@if (section !== 'blog') {class="button-nav"} href="/blog/">BLOG</a> -->
                 <a @@if (section === 'faq') {class="button-nav -selected"} @@if (section !== 'faq') {class="button-nav"} href="/faq.html">FAQ</a>

@@ -576,7 +576,6 @@ initHero = debounce(function() {
     var $mainSite = $('.main-site__container');
     var $sun = $('.hero-stage__sun',$heroContainer);
     var $shine = $('.main-site__shine',$mainSite);
-    var $fogs = $('.hero-stage__fog',$mainSite);
     var $header = $('.hero-stage__header',$heroContainer);
     var $clouds = $('.animated-cloud',$heroContainer);
     var $birds = $('.animated-bird',$mainSite);
@@ -589,9 +588,6 @@ initHero = debounce(function() {
     var $downloadButtons = $('#downloadActualButtons');
     var $window = $(window);
     
-    // set the fog to the screen height
-    $fogs.height($(window).height());
-    
     startAnimations = function() {
         $sun.addClass('-animate');
         $shine.addClass('-animate');
@@ -602,36 +598,32 @@ initHero = debounce(function() {
         $baloon2.addClass('-animate');
         // $heroClouds.addClass('-animate');
     }
-    startHeaderTextAnimation = function() {
-        if (!$header.hasClass('-fixed')) {
-          $downloadButtonsAnimateOnly.addClass('-animate');
-          $header.addClass('-animate');
-        }
-    }
+    // startHeaderTextAnimation = function() {
+    //     if (!$header.hasClass('-fixed')) {
+    //       $downloadButtonsAnimateOnly.addClass('-animate');
+    //       $header.addClass('-animate');
+    //     }
+    // }
 
-    window.addEventListener('scroll', function(){
-      var scrollTop = $window.scrollTop();
-      if (scrollTop > 40) {
-        $navInner.addClass('-compact');
-        $header.addClass('-fade');
-        $downloadButtons.addClass('-fade');
-      } else {
-        $navInner.removeClass('-compact');
-        $header.removeClass('-fade');
-        $downloadButtons.removeClass('-fade');
-      }
-    });
+    // window.addEventListener('scroll', function(){
+    //   var scrollTop = $window.scrollTop();
+    //   if (scrollTop > 40) {
+    //     $nav.addClass('-compact');
+    //     $header.addClass('-fade');
+    //     $downloadButtons.addClass('-fade');
+    //   } else {
+    //     $nav.removeClass('-compact');
+    //     $header.removeClass('-fade');
+    //     $downloadButtons.removeClass('-fade');
+    //   }
+    // });
     // start animations
     setTimeout(function() {
         startAnimations();
     },1600)
-    setTimeout(function() {
-        startHeaderTextAnimation();
-    },2000)
-    setTimeout(function() {
-      // fade fogs
-      // $fogs.addClass('-animate');
-    },3000)
+    // setTimeout(function() {
+    //     startHeaderTextAnimation();
+    // },2000)
     setTimeout(function() {
         //make body scrollable 
         $('body').removeClass('-static');
@@ -753,8 +745,6 @@ $(window).on('load', function (e) {
     if ($(window).width() < 520) {
       $buttonsOffset = 28;
     }
-
-    console.log($downloadButtons.offset().top)
 
     $actualButtons.css({
       top: $downloadButtons.offset().top + $buttonsOffset + 'px'
