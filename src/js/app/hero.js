@@ -63,18 +63,18 @@ initHero = debounce(function() {
     //     }
     // }
 
-    // window.addEventListener('scroll', function(){
-    //   var scrollTop = $window.scrollTop();
-    //   if (scrollTop > 40) {
-    //     $nav.addClass('-compact');
-    //     $header.addClass('-fade');
-    //     $downloadButtons.addClass('-fade');
-    //   } else {
-    //     $nav.removeClass('-compact');
-    //     $header.removeClass('-fade');
-    //     $downloadButtons.removeClass('-fade');
-    //   }
-    // });
+    window.addEventListener('scroll', function(){
+      var scrollTop = $window.scrollTop();
+      if (scrollTop > 40) {
+        $nav.addClass('-compact');
+        // $header.addClass('-fade');
+        // $downloadButtons.addClass('-fade');
+      } else {
+        $nav.removeClass('-compact');
+        // $header.removeClass('-fade');
+        // $downloadButtons.removeClass('-fade');
+      }
+    });
     // start animations
     setTimeout(function() {
         startAnimations();
@@ -157,7 +157,7 @@ $(window).on('load', function (e) {
 
   // try and get the position of the download buttons.
   var $downloadButtons = $('#downloadButtons');
-  var $actualButtons = $('#downloadActualButtons');
+  // var $actualButtons = $('#downloadActualButtons');
   var $buttonsOffset = 16; 
 
 
@@ -204,13 +204,13 @@ $(window).on('load', function (e) {
       $buttonsOffset = 28;
     }
 
-    $actualButtons.css({
-      top: $downloadButtons.offset().top + $buttonsOffset + 'px'
-    })
+    // $actualButtons.css({
+    //   top: $downloadButtons.offset().top + $buttonsOffset + 'px'
+    // })
   
-    setTimeout(function(){
-      $actualButtons.addClass('-fixed');
-    },4040)
+    // setTimeout(function(){
+    //   $actualButtons.addClass('-fixed');
+    // },4040)
     
     var resizeTimeout;
     $(window).resize(function(){
@@ -218,20 +218,20 @@ $(window).on('load', function (e) {
         $downloadButtons.css({
           opacity: 1
         })
-        $actualButtons.css({
-          top: $downloadButtons.offset().top + $buttonsOffset + 'px',
-          opacity: 0
-        })
+        // $actualButtons.css({
+        //   top: $downloadButtons.offset().top + $buttonsOffset + 'px',
+        //   opacity: 0
+        // })
 
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(function(){   
             $downloadButtons.css({
               opacity: 0
             }) 
-            $actualButtons.css({
-              top: $downloadButtons.offset().top + $buttonsOffset + 'px',
-              opacity: 1
-            })
+            // $actualButtons.css({
+            //   top: $downloadButtons.offset().top + $buttonsOffset + 'px',
+            //   opacity: 1
+            // })
             if (ogWidth < 800 && $(window).width() > 800) {
               // init the parallax if the site starts at mobile and resizes to not mobile
               $('[data-scroll-speed]').moveIt();

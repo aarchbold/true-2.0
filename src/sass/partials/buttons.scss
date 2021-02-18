@@ -7,9 +7,9 @@ button, .button {
     margin: 0;
     padding: 18px 40px !important;
     border-radius: 25px;
-    font-family: TruenoBold;
+    font-family: TruenoRegular;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     background: $color-bg-button;
     color: $color-button;
     &:hover {
@@ -28,6 +28,25 @@ button, .button {
         font-family: TruenoRegular;
         border-radius: 20px;
         text-transform: uppercase;
+    }
+}
+
+.button-android {
+    background-color: $color-bg-android;
+}
+
+.button-shadow {
+    box-shadow: $button-box-shadow;
+}
+
+.button-icon {
+    position: relative;
+    padding-left: 62px !important;
+    img {
+        position: absolute;
+        top: 14px;
+        left: 28px;
+        width: 26px;
     }
 }
 
