@@ -84,6 +84,13 @@
         .footer-table {
             padding-top: 40px;
         }
+        
+        .page-image {
+            flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
         @media only screen and (max-width: 700px) {
             body {
@@ -186,12 +193,12 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img class="logo-spacer" src="https://trytrue.com/static/images/email/p.png" width="1" height="65" border="0" />
+                                        <img class="logo-spacer" src="https://trytrue.com/static/images/email/p.png" width="1" height="50" border="0" />
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td align="center">
-                                        <img style="border-radius: 20px;box-shadow:0px 3px 9px 0px rgba(0,0,0,0.3);" src="{{profile_img}}" width="100" height="100" border="0" />
+                                    <td align="center" style="padding: 10px">
+                                        <div style="border-radius: 20px;box-shadow:0px 3px 9px 0px rgba(0,0,0,0.3); background: url('{{profile_img}}'); height: 100px; width:100px; background-size: cover; background-position: center;"></div>
                                     </td>
                                 </tr>
                             </table>
@@ -248,8 +255,8 @@
                             <table width="700" class="footer-table" border="0" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td class="table-footer" align="center" style="text-align: center; font-family: Verdana,-apple-system,BlinkMacSystemFont; font-size: 16px; color: #3D4250; opacity:0.62; line-height:24px;">
-                                        <a href="{{{unsubscribe}}}" style="color: #3D4250;">Unsubscribe</a><br>
-                                        support@trytrue.com
+                                        Manage notifications in Profile > Settings<br>
+                                        <a href="mailto:support@trytrue.app" style="color: #3D4250;">support@trytrue.app</a>
                                         <br><br><br>
                                     </td>
                                 </tr>

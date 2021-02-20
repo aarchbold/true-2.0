@@ -5,9 +5,9 @@ button, .button {
     transition: all 0.4s;
     display: inline-block;
     margin: 0;
-    padding: 18px 40px !important;
-    border-radius: 25px;
-    font-family: TruenoRegular;
+    padding: 19px 40px !important;
+    border-radius: 28px;
+    font-family: TruenoBold;
     text-decoration: none;
     font-size: 18px;
     background: $color-bg-button;
@@ -44,7 +44,7 @@ button, .button {
     padding-left: 62px !important;
     img {
         position: absolute;
-        top: 14px;
+        top: 15px;
         left: 28px;
         width: 26px;
     }

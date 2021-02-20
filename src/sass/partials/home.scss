@@ -22,6 +22,7 @@ $hero-animation-duration-long: 2s;
     color: white;
     text-align: center;
     text-shadow: 1px 1px 2px #000000;
+    font-family: TruenoRegular, sans-serif;
 }
 
 .hero-panel {
@@ -37,6 +38,7 @@ $hero-animation-duration-long: 2s;
     margin: 0 auto;
     padding-right: 430px;
     box-sizing: border-box;
+    padding-top: 20px;
     h1 {
         font-size: 46px;
         font-family: TruenoBlack, sans-serif;
@@ -46,13 +48,14 @@ $hero-animation-duration-long: 2s;
         font-size: 22px;
         line-height: 1.4;
         padding-top: 20px;
+        font-family: TruenoRegular, sans-serif;
     }
     .hero-panel__phone {
         position: absolute;
         right: -50px;
         top: -142px;
         width: 50%;
-        max-width: 400px;
+        max-width: 428px;
     }
 }
 
@@ -444,7 +447,7 @@ html, body {
 .main-site__container {
     position: relative;
     z-index: 5;
-    padding-top: 220px;
+    padding-top: 240px;
     //overflow: hidden;
 }
 
@@ -558,7 +561,7 @@ html, body {
 }
 
 .section-sharing {
-    top: 40%;
+    top: 34%;
 }
 
 .section-friends {
@@ -566,7 +569,7 @@ html, body {
 }
 
 .section-secure {
-    top: 120%;
+    top: 116%;
 }
 
 
