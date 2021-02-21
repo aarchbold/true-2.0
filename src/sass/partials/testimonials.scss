@@ -43,3 +43,15 @@
     text-align: center;
     font-family: TruenoRegular, sans-serif;
 }
+
+@media (max-width: 900px) {
+    .testimonial-card__inner {
+        font-size: 19px;
+    }
+    .testimonial-card__author {
+        font-size: 20px;
+    }
+    .testimonial-card__location {
+        font-size: 19px;
+    }
+}

@@ -63,6 +63,52 @@
 }
 
 // footer
+.footer-table {
+    margin-bottom: 80px;
+    &:after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+}
+
+.footer-col {
+    width: 33.3%;
+    float: left;
+    box-sizing: border-box;
+    padding-right: 40px;
+}
+
+.footer-col__header {
+    color: white;
+    font-size: 26px;
+    font-family: TruenoBlack, sans-serif;
+    margin-bottom: 28px;
+}
+
+.footer-col__ul {
+    color: white;
+    font-family: TruenoRegular, sans-serif;
+    a {
+        transition: all 0.4s;
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        &:hover {
+            transform: scale(1.10);
+        }
+    }
+    li {
+        padding-bottom: 15px;
+    }
+}
+
+.footer-col__copyright {
+    font-family: TruenoRegular, sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
 .section-footer {
     position: relative;
     background-color: $color-bg-footer;
@@ -162,7 +208,7 @@
     width: 100%;
     max-width: 1200px;
     z-index: 5;
-    transform: translate(-100%,100%) scale(.5);
+    // transform: translate(-100%,100%) scale(.5);
     &.-animate {
         transform: translate(0,0) scale(1);
         .footer-boulder, .footer-old-man, .footer-doggers {
@@ -182,8 +228,10 @@
 .footer-inner {
     position: absolute;
     bottom: 0;
-    padding: 0 100px 100px 80px;
+    padding: 0 0 100px 80px;
     color: $color-footer-font;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .footer-boulder {
@@ -193,7 +241,7 @@
     top: -200px;
     max-width: 357px;
     width: 40%;
-    transform: translate(-100%,100%) scale(.5);
+    // transform: translate(-100%,100%) scale(.5);
 }
 
 .footer-old-man {
@@ -203,7 +251,7 @@
     top: -100px;
     max-width: 238px;
     width: 30%;
-    transform: translate(-100%,100%) scale(.5);
+    // transform: translate(-100%,100%) scale(.5);
 }
 
 .footer-doggers {
@@ -216,7 +264,7 @@
     width: 16%;
     height: 300px;
 
-    transform: translate(-100%,100%) scale(.5);
+    // transform: translate(-100%,100%) scale(.5);
     img {
         position: absolute;
         top: 0;

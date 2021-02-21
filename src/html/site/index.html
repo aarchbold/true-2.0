@@ -39,11 +39,11 @@
                             <h1>A better way to connect with people that matter to you</h1>
                             <p>True is a private threaded experience that makes it easier to have group conversations</p>
                             <div class="hero-panel__ctas">
-                                <a href="#" id="getForiOS" class="button button-icon button-shadow" target="_blank">
+                                <a onclick="trackFBClick('appStoreButtonClick');" href="https://apps.apple.com/us/app/true-private-social-network/id834451429" target="_blank" id="getForiOS" class="button button-icon button-shadow">
                                     <img src="static/images/v2/icons/icon-ios.png" />
                                     Get for iOS
                                 </a>&nbsp;
-                                <a href="#" id="getForAbdroid" class="button button-icon button-android button-shadow" target="_blank">
+                                <a onclick="trackFBClick('googleStoreButtonClick');" href="https://play.google.com/store/apps/details?id=hellomobile.hello"  target="_blank" id="getForAbdroid" class="button button-icon button-android button-shadow">
                                     <img src="static/images/v2/icons/icon-android.png" />
                                     Get for Android
                                 </a>
@@ -219,63 +219,42 @@
                         </div>
                     </div>
                     <div id="joinUs" class="footer-inner">
-                        <div class="footer-header">We can do this.</div>
-                        <div class="footer-subheader">Wanna be part of the family? Sign up for our beta list to see the latest release before anyone else.</div>
-                        <div class="footer-hashtag">&nbsp;</div>
-                        <div class="footer-input">
-                            <input id="trueFirstName" type="text" placeholder="First Name" />
-                            <input id="trueLastName" type="text" placeholder="Last Name" />
-                            <input id="trueEmail" type="email" placeholder="Email" />
-                            <a href="#" class="button footer-signup -disabled">Sign Up</a>
-                        </div>
-
-                        <!-- <div class="footer-social">
-                            <div class="footer-social__header">Share True so your friends can get on the waitlist too.</div>
-                        </div>
-
-                        <div class="footer-social__links">
-                            <a href="#" class="button-social -facebook facebook-share">
-                                <img src="static/images/ui/logos/logo-facebook2.png" />
-                            </a>
-                            <a href="#" class="button-social -twitter twitter-share">
-                                <img src="static/images/ui/logos/logo-twitter.svg" />
-                            </a>
-                            <input id="clipboardCopy" type="text" value="" />
-                            <a id="copyUrl" href="#" class="button button-weblink">Copy Web Link</a>
-                        </div> -->
-
-                        <!-- <div class="footer-social__links">
-                            <a href="https://www.facebook.com/trueappco/" target="_blank" class="button-social__mini -facebook">
-                                <img src="static/images/ui/logos/logo-facebook2.png" />
-                            </a>
-                            <a href="https://twitter.com/trytrueapp" target="_blank" class="button-social__mini -twitter">
-                                <img src="static/images/ui/logos/logo-twitter.svg" />
-                            </a>
-                            <a href="https://www.linkedin.com/company/3495839/admin/" target="_blank" class="button-social__mini -linkedin">
-                                <img src="static/images/ui/logos/logo-linkedin.png" />
-                            </a>
-                            <a href="https://instagram.com/trueappco" target="_blank" class="button-social__mini -instagram">
-                                <img src="static/images/ui/logos/logo-instagram.png" />
-                            </a>
-                            <a href="https://angel.co/company/true" target="_blank" class="button-social__mini -angellist">
-                                <img src="static/images/ui/logos/logo-angellist.png" />
-                            </a>
-                        </div> -->
-
-                        <div class="footer-legal">
-                            <div class="footer-legal__links">
-                                Questions? Email us at <a href="mailto:hey@trytrue.com">hey@trytrue.com</a><br />
-                                We're hiring. See our jobs on <a href="https://angel.co/company/true/jobs" target="_blank">AngelList</a> or <a href="mailto:careers@trytrue.com">email</a> your resume.<br /><br />
-                                <!-- <a href="privacy.html#section=privacy">Privacy Policy</a> | <a href="privacy.html#section=terms">Terms of Service</a><br /> -->
-                                &copy; 2021 True | <a href="https://trytrue.com/privacy/">Privacy Policy</a> | <a href="https://trytrue.com/terms/">Terms of Service</a>
+                        <div class="footer-table">
+                            <div class="footer-col">
+                                <div class="footer-col__header">Company</div>
+                                <ul class="footer-col__ul">
+                                    <li><a href="#">Our Story</a></li>
+                                    <li><a href="#">Terms of Service</a></li>
+                                    <li><a href="#">Community Guidelines</a></li>
+                                    <li><a href="#">Support</a></li>
+                                </ul>
                             </div>
-                            <div class="footer-download__ctas">
-                                <a onClick="trackFBClick('appStoreButtonClick');" href="https://apps.apple.com/us/app/true-private-social-network/id834451429" target="_blank" class="footer-download__cta--link"><img src="static/images/ui/buttons/btn-download-ios.svg" /></a>
-                                <a onClick="trackFBClick('googleStoreButtonClick');" href="https://play.google.com/store/apps/details?id=hellomobile.hello" target="_blank" class="footer-download__cta--link"><img src="static/images/ui/buttons/btn-download-android.svg" /></a>
+                            <div class="footer-col">
+                                <div class="footer-col__header">Stay in Touch</div>
+                                <ul class="footer-col__ul">
+                                    <li><a href="#">Press</a></li>
+                                    <li><a href="#">Twitter</a></li>
+                                    <li><a href="#">Facebook</a></li>
+                                    <li><a href="#">Shared Feedback</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-col">
+                                <a onclick="trackFBClick('appStoreButtonClick');" href="https://apps.apple.com/us/app/true-private-social-network/id834451429" target="_blank" id="getForiOSFooter" class="button button-icon button-shadow">
+                                    <img src="static/images/v2/icons/icon-ios.png" />
+                                    Get for iOS
+                                </a>
+                                <br /><br />
+                                <a onclick="trackFBClick('googleStoreButtonClick');" href="https://play.google.com/store/apps/details?id=hellomobile.hello"  target="_blank" id="getForAbdroidFooter" class="button button-icon button-android button-shadow">
+                                    <img src="static/images/v2/icons/icon-android.png" />
+                                    Get for Android
+                                </a>
                             </div>
                         </div>
+                        <div class="footer-col__copyright">&copy; 2021 True</div>
+
+
                     </div>
-                    <img class="footer-background" src="static/images/ui/scenery/footer-cliff.png" />
+                    <img class="footer-background" src="static/images/ui/scenery/footer-cliff2.png" />
                 </div>
                 <div class="footer-waterfall__animation">
                     <div class="waterfall-drop -drop1"></div>

@@ -219,6 +219,23 @@ button, .button {
     height: auto !important;
 }
 
+@media (max-width: 950px) {
+    button, .button {
+        padding: 16px 30px !important;
+        font-size: 16px;
+    } 
+    .button-icon {
+        position: relative;
+        padding-left: 45px !important;
+        img {
+            position: absolute;
+            top: 12px;
+            left: 18px;
+            width: 22px;
+        }
+    }
+}
+
 @media (max-width: 800px) {
     .button-social__mini {
         width: 38px;

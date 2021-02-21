@@ -106,18 +106,38 @@
 }
 
 @media (max-width: 1000px) {
+    .cards-container {
+        max-width: 100%;
+    }
+    .card-grid {
+        padding: 10px 10px 0 10px;
+    }
+    .card-image {
+        height: 140px;
+    }
     .card-outer {
+        padding: 32px 30px;
         h2 {
-            font-size: 32px;
+            font-size: 28px;
+            line-height: 1.2;
         }
         p {
-            font-size: 18px;
+            font-size: 16px;
         }
     }
     .section-image {
         width: 48% !important;
     }
 }
+
+@media (max-width: 920px) {
+    .page-inner {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
+
+
 
 @media (max-width: 850px) {
     .card-outer {

@@ -569,7 +569,7 @@ html, body {
 }
 
 .section-secure {
-    top: 116%;
+    top: 120%;
 }
 
 
@@ -736,10 +736,10 @@ html, body {
         top: 35%;
     }
     .section-friends {
-        top: 73%;
+        top: 82%;
     }
     .section-secure {
-        top: 110%;
+        top: 116%;
     }
 }
 
@@ -764,9 +764,32 @@ html, body {
     }
 }
 
+@media (max-width: 920px) {
+    .main-site__container {
+        padding-top: 225px;
+    }
+    .hero-panel__inner {
+        padding-top: 0;
+        padding-right: 290px;
+        h1 {
+            font-size: 32px;
+        }
+        .hero-panel__phone {
+            max-width: 340px;
+        }
+    }
+}
+
+
 @media (max-width: 900px) {
     .hero-stage__header {
         top: 31%;
+    }
+    .h2-home {
+        font-size: 38px;
+    }
+    .p-home {
+        font-size: 24px;
     }
 }
 
@@ -792,7 +815,7 @@ html, body {
         }
     }
     .section-sharing {
-        top: 25%;
+        top: 30%;
     }
     .section-friends {
         top: 56%;

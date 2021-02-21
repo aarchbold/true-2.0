@@ -42,3 +42,22 @@
     bottom: -2px;
     left: -18px;
 }
+
+@media (max-width: 1000px) {
+    .phone-features__quote {
+        font-size: 30px;
+        min-height: 266px;
+        width: 45%;
+        margin-left: 40px;
+        bottom: 190px;
+    }
+    .phone-features__quote--profile {
+        width: 72px;
+        height: 72px;
+        bottom: -54px;
+        left: -94px;    
+        img {
+            width: 72px;
+        }
+    }
+}
