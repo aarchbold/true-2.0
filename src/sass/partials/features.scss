@@ -13,7 +13,7 @@
     transition: all 0.3s;
     position: absolute;
     left: 0;
-    bottom: 150px;
+    bottom: 200px;
     padding: 50px;
     width: 50%;
     box-sizing: border-box;
@@ -28,7 +28,7 @@
 
 .phone-features__quote--profile {
     position: absolute;
-    bottom: -46px;
+    bottom: -55px;
     left: -112px;
     width: 90px;
     height: 90px;
@@ -39,8 +39,12 @@
 
 .phone-features__quote--bubble {
     position: absolute;
-    bottom: -2px;
-    left: -18px;
+    bottom: -17px;
+    left: -15px;
+}
+
+.phone-features__video {
+    width: 450px;
 }
 
 @media (max-width: 1000px) {
