@@ -44,7 +44,18 @@
 }
 
 .phone-features__video {
-    width: 450px;
+    width: 120%;
+    max-width: 490px;
+}
+
+@media (max-width: 1100px) {
+    .phone-features__quote {
+        left: 20px;
+        font-size: 34px;
+    }
+    .phone-features__video {
+        max-width: 470px;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -63,5 +74,35 @@
         img {
             width: 72px;
         }
+    }
+    .phone-features__video {
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 800px) {
+    .phone-features__video {
+        max-width: 360px;
+    }
+    .phone-features__quote {
+        font-size: 24px;
+        padding: 50px 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    .phone-features__video {
+        max-width: 360px;
+    }
+    .phone-features__quote {
+        font-size: 18px;
+        padding: 34px 40px;
+        font-family: TruenoSemiBold, sans-serif;
+        min-height: 158px;
+        width: 40%;
+        left: 84px;
+    }
+    .phone-features__video {
+        max-width: 320px;
     }
 }

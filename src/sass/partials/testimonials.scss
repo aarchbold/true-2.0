@@ -55,3 +55,24 @@
         font-size: 19px;
     }
 }
+
+@media (max-width: 800px) {
+    .testimonial-card__inner {
+        font-size: 17px;
+    }
+    .testimonial-card__author {
+        font-size: 18px;
+    }
+    .testimonial-card__location {
+        font-size: 17px;
+    }
+    .slick-dots {
+        bottom: 20px !important;
+    }
+    .testimonial-card__inner {
+        padding: 40px 40px 70px 40px;
+    }
+    .testimonial-card__author {
+        padding: 20px 20px 0 20px;
+    }
+}

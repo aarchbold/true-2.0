@@ -61,6 +61,10 @@ $hero-animation-duration-long: 2s;
 
 .hero-panel__ctas {
     padding-top: 30px;
+    a {
+        display: inline-block;
+        margin-bottom: 6px;
+    }
 }
 
 
@@ -766,7 +770,7 @@ html, body {
 
 @media (max-width: 920px) {
     .main-site__container {
-        padding-top: 225px;
+        padding-top: 260px;
     }
     .hero-panel__inner {
         padding-top: 0;
@@ -794,6 +798,20 @@ html, body {
 }
 
 @media (max-width: 800px) {
+    .h2-home {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+    .p-home {
+        font-size: 22px;
+    }
+    .hero-panel__inner {
+        margin-top: -40px;
+        .hero-panel__phone {
+            top: -100px;
+            max-width: 320px;
+        }
+    }
     .main-site__shine {
         display: none;
     }
@@ -818,13 +836,21 @@ html, body {
         top: 30%;
     }
     .section-friends {
-        top: 56%;
+        top: 79%;
     }
     .section-secure {
-        top: 86%;
+        top: 110%;
     }
     .section-sharing, .section-friends, .section-secure {
         transform: translateY(0) !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .hero-panel {
+        top: 180px;
+        padding: 0px 20px;
+        box-sizing: border-box;
     }
 }
 
@@ -914,11 +940,36 @@ html, body {
     }
 }
 
+@media (max-width: 750px) {
+    .section-sharing {
+        top: 33%;
+    }
+    .section-friends {
+        top: 82%;
+    }
+    .section-secure {
+        top: 114%;
+    }
+}
 
-
-@media (max-width: 640px) {
+@media (max-width: 700px) {
     .main-site__container {
-        padding-top: 100px;
+        padding-top: 340px;
+    }
+    .section-sharing {
+        top: 30%;
+    }
+    .section-friends {
+        top: 77%;
+    }
+    .section-secure {
+        top: 104%;
+    }
+}
+
+@media (max-width: 650px) {
+    .main-site__container {
+        padding-top: 240px;
     }
     .hero-stage__header {
         top: 22%;
@@ -948,7 +999,7 @@ html, body {
     }
     .section-sharing {
         position: relative;
-        top: 0;
+        top: -120px;
         margin-bottom: 0;
     }
     .section-friends {
@@ -958,7 +1009,7 @@ html, body {
     }
     .section-secure {
         position: relative;
-        top: 0;
+        top: 100px;
         margin-bottom: 0;
     }
     .main-site__balloon1 {

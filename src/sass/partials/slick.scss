@@ -126,3 +126,13 @@
         }
     }
 }
+
+@media (max-width: 800px) {
+    .slick-dots {
+        button {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+        }
+    }
+}

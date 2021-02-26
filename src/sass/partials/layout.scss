@@ -116,7 +116,7 @@
         height: 140px;
     }
     .card-outer {
-        padding: 32px 30px;
+        padding: 32px 23px;
         h2 {
             font-size: 28px;
             line-height: 1.2;
@@ -160,12 +160,23 @@
         }
         h2 {
             font-size: 26px;
-            margin-bottom: 24px;
+            margin-bottom: 18px;
         }
         p {
             font-size: 16px;
-            margin-bottom: 24px;
+            margin-bottom: 18px;
         }
+    }
+    .card-inner {
+        .card-image {
+            height: 124px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .cards-container {
+        padding: 0;
     }
 }
 
