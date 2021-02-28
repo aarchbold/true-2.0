@@ -178,13 +178,31 @@
     .cards-container {
         padding: 0;
     }
+    .card-inner {
+        .card-image {
+            height: 100px;
+        }
+    }
+    .card-outer {
+        padding: 25px 23px;
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+    }
+    .card-grid {
+        padding-top: 2px;
+    }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 650px) {
     .card-outer {
         position: relative;
-        top: -50px;
-        width: 90%;
+        max-width: 100%;
         z-index: 1;
         padding: 30px;
         border-radius: 60px;
@@ -193,6 +211,10 @@
         &.-right {
             margin-left: auto;
         }
+    }
+    .card-grid {
+        width: 100%;
+        padding: 0;
     }
 }
 

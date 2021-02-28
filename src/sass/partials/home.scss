@@ -63,7 +63,7 @@ $hero-animation-duration-long: 2s;
     padding-top: 30px;
     a {
         display: inline-block;
-        margin-bottom: 6px;
+        margin: 0 2px 6px;
     }
 }
 
@@ -960,14 +960,42 @@ html, body {
         top: 30%;
     }
     .section-friends {
-        top: 77%;
+        top: 73%;
     }
     .section-secure {
-        top: 104%;
+        top: 101%;
     }
 }
 
 @media (max-width: 650px) {
+    .hero-panel__inner {
+        padding-right: 0;
+        padding-left: 0;
+        text-align: center;
+        top: -50px;
+        .hero-panel__phone {
+            position: relative;
+            right: auto;
+            top: 0;
+        }
+    }
+
+    .hero-panel__ctas {
+        max-width: 300px;
+        margin: 0 auto;
+        a {
+            margin: 5px 0;
+            min-width: 140px;
+            font-size: 18px;
+            padding: 17px 40px 17px 50px !important;
+            img {
+                top: 14px;
+                left: 19px;
+                width: 24px;
+            }
+        }
+    }
+
     .main-site__container {
         padding-top: 240px;
     }
@@ -999,18 +1027,21 @@ html, body {
     }
     .section-sharing {
         position: relative;
-        top: -120px;
+        top: 250px;
         margin-bottom: 0;
     }
     .section-friends {
         position: relative;
-        top: 0;
+        top: 250px;
         margin-bottom: 0;
     }
     .section-secure {
         position: relative;
-        top: 100px;
+        top: 229px;
         margin-bottom: 0;
+    }
+    .section-why-true {
+        padding: 0;
     }
     .main-site__balloon1 {
         top: 5%;
@@ -1020,7 +1051,7 @@ html, body {
     }
     .section-starts {
         position: absolute;
-        top: 26%;
+        top: 30%;
         z-index: 1000;
         left: 50%;
         transform: translateX(-50%);
@@ -1064,19 +1095,31 @@ html, body {
     }
 }
 
+@media (max-width: 590px) {
+    .section-sharing {
+        top: 290px;
+    }
+    .section-friends {
+        top: 335px;
+    }
+    .section-secure {
+        top: 311px;
+    }
+}
+
 @media (max-width: 520px) {
     .hero-stage__header {
         top: 26%;
         // padding: 22% 10%;
     }
     .section-sharing {
-        top: 31%;
+        top: 354px;
     }
     .section-friends {
-        top: 77%;
+        top: 354px;
     }
     .section-secure {
-        top: 125%;
+        top: 354px;
     }
     .main-site__container {
         padding-top: 200px;
@@ -1100,9 +1143,18 @@ html, body {
     }
 }
 
+@media (max-width: 476px) {
+    .section-starts {
+        top: 37%;
+    }
+}
+
 @media (max-width: 400px) {
     .hero-stage__header {
         top: 26%;
         // padding: 22% 10%;
+    }
+    .section-starts {
+        top: 40%;
     }
 }

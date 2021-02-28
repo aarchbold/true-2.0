@@ -106,3 +106,36 @@
         max-width: 320px;
     }
 }
+
+@media (max-width: 600px) {
+    .phone-features__quote {
+        width: 55%;
+        left: -19px;
+        font-size: 16px;
+    }
+    .phone-features__quote--bubble {
+        bottom: -31px;
+        left: 54px;
+    }
+    .phone-features__quote--profile {
+        bottom: -79px;
+        left: -18px;
+    }
+    .phone-features__video {
+        max-width: 300px;
+    }
+    .phone-features {
+        padding-left: 31%;
+    }
+}
+@media (max-width: 450px) {
+    .phone-features {
+        padding-left: 24%;
+    }
+    .phone-features__video {
+        max-width: 260px;
+    }
+    .phone-features__quote {
+        bottom: 100px;
+    }
+}
