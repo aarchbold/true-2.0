@@ -31,6 +31,14 @@
             width: 100%;
             background-color: #F5F8FA;
         }
+        .profile-picture {
+            border-radius: 20px;
+            box-shadow:0px 3px 9px 0px rgba(0,0,0,0.3);
+            height: 80px;
+            width:80px;
+            background-size: cover;
+            background-position: center;
+        }
         .true-logo {
             width: 175px;
         }
@@ -173,6 +181,11 @@
         }
 
         @media only screen and (max-width: 500px) {
+            .profile-picture {
+                border-radius: 10px;
+                height: 50px;
+                width: 50px;
+            }
             .main-table {
                 background-color: #ffffff;
             }
@@ -238,8 +251,8 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <img class="logo-spacer" src="https://trytrue.com/static/images/email/p.png" width="1" height="85" border="0" />
+                                    <td align="center" style="padding: 10px">
+                                        <div class="profile-picture" style="background-image: url('{{profile_img}}');"></div>
                                     </td>
                                 </tr>
                             </table>
@@ -251,7 +264,7 @@
                                 <table width="90%">
                                     <tr>
                                         <td class="table-header" align="left" style="text-align: center; font-family: Trueno, Verdana,-apple-system,BlinkMacSystemFont; font-weight: 600; font-size: 40px; color: #303030; line-height: 1.4;">
-                                            Personal Invitation - <br>Join Our Beta Program
+                                            Welcome to True
                                         </td>
                                     </tr>
                                     <tr>
@@ -261,40 +274,8 @@
                                                     <td><img class="content-spacer" style="display:block;" src="https://trytrue.com/static/images/email/p.png" width="1" height="20" border="0" /></td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="left" style="font-size: 20px;">
-                                                        Hey {{sender_full_name}},
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img style="display:block;" src="https://trytrue.com/static/images/email/p.png" width="1" height="20" border="0" /></td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left" style="font-size: 20px;">
-                                                        Thank you for your interest in our closed beta program.
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img style="display:block;" src="https://trytrue.com/static/images/email/p.png" width="1" height="20" border="0" /></td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left" style="font-size: 20px;">
-                                                        We are excited about what we have built - <strong>a social app for private group conversations</strong> - and we want to get True out into the world. Before we do, we need your help shaping the experience.
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img style="display:block;" src="https://trytrue.com/static/images/email/p.png" width="1" height="20" border="0" /></td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left" style="font-size: 20px;">
-                                                        We are extending an invitation to a limited group of people to be a part of the <strong>True Insiders</strong> thread on the app. Post questions or suggestions in the True Insiders thread and our product team will personally reply to them!
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img style="display:block;" src="https://trytrue.com/static/images/email/p.png" width="1" height="20" border="0" /></td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left" style="font-size: 20px;">
-                                                        Please remember to add <a style="color:#303030;font-weight:bold;text-decoration:none;">{{email}}</a> to your profile.
+                                                    <td align="center" style="font-size: 20px;">
+                                                        Your account is ready. Now let’s start a private thread on any topic and invite some friends to it.
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -302,32 +283,8 @@
                                                 </tr>
                                                 <tr>
                                                     <td class="table-body" align="center">
-                                                        <a class="main-cta" href="{{sender_thread_link}}">Join our True Insiders&nbsp;thread</a>
+                                                        <a class="main-cta" href="{{profile_link}}">Create a thread</a>
                                                         <div style="color: #747474;padding-top:8px;">(tap from your phone)</div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img style="display:block;" src="https://trytrue.com/static/images/email/p.png" width="1" height="30" border="0" /></td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left" style="font-size: 20px;">
-                                                        <img width="100%" src="https://trytrue.com/static/images/email/email-image-invitation2a.png" />
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img style="display:block;" src="https://trytrue.com/static/images/email/p.png" width="1" height="20" border="0" /></td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left" style="font-size: 20px;">
-                                                        Tell us what you love, what you don’t and what you want to see more of so we can be a better social platform for everyone.
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img style="display:block;" src="https://trytrue.com/static/images/email/p.png" width="1" height="20" border="0" /></td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left" style="font-size: 20px;">
-                                                        We can't wait to build great things with you.
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -336,22 +293,8 @@
                                             </table>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td class="table-footer" align="center" style="text-align: center; font-family: Verdana,-apple-system,BlinkMacSystemFont; font-size: 20px; color: #303030; line-height: 36px;padding: 10px 0;">
-                                            Cheers,<br>
-                                            <strong style="font-weight:600;">Bret Cox</strong><br>
-                                            <strong style="font-weight:600;">CEO True</strong><br>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><img style="display:block;" src="https://trytrue.com/static/images/email/p.png" width="1" height="20" border="0" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td align="center">
-                                            <a href="https://apps.apple.com/us/app/true-private-social-network/id834451429"><img class="download-button" width="160" src="https://trytrue.com/static/images/email/btn-ios.png" border="0" /></a>
-                                            <a href="https://play.google.com/store/apps/details?id=hellomobile.hello"><img class="download-button" width="160" src="https://trytrue.com/static/images/email/btn-android.png" border="0" /></a>
-                                        </td>
-                                    </tr>
+                                    
+                                    
                                 </table>
                             </div>
                         </td>
@@ -360,8 +303,9 @@
                         <td>
                             <table width="700" class="footer-table" border="0" cellpadding="0" cellspacing="0">
                                 <tr>
-                                    <td class="table-footer" align="center" style="text-align: center; font-family: Verdana,-apple-system,BlinkMacSystemFont; font-size: 16px; color: #3D4250; opacity:0.62; line-height:20px;">
-                                        <a href="{{{unsubscribe}}}" style="color: #3D4250;">Click here to unsubscribe</a>
+                                    <td class="table-footer" align="center" style="text-align: center; font-family: Verdana,-apple-system,BlinkMacSystemFont; font-size: 16px; color: #3D4250; opacity:0.62; line-height:24px;">
+                                        Manage notifications in Profile > Settings<br>
+                                        <a href="mailto:support@trytrue.app" style="color: #3D4250;">support@trytrue.app</a>
                                         <br><br><br>
                                     </td>
                                 </tr>

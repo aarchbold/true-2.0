@@ -31,7 +31,9 @@
             width: 100%;
             background-color: #F5F8FA;
         }
-
+        .true-logo {
+            width: 175px;
+        }
         .main-table {
             background-color: #f5f8fa;
         }
@@ -66,7 +68,6 @@
             position: relative;
             border-radius: 0 0 30px 30px;
             background-color: #ffffff;
-            padding-top:20px;
             padding-bottom: 40px;
         }
 
@@ -114,12 +115,18 @@
             }
         }
 
-        @media only screen and (max-width: 605px) {
+        @media only screen and (max-width: 650px) {
+            .welcome-table tr td br {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
             .download-button {
                 width: 130px;
             }
             .logo-spacer {
-                height: 110px !important;
+                height: 77px !important;
             }
         }
 
@@ -134,11 +141,8 @@
             .outer-table, .footer-table {
                 margin: 0;
             }
-            .logo-table {
-                background-position: 50% -80px !important;
-            }
             .table-header {
-                font-size: 30px !important;
+                font-size: 25px !important;
             }
             .table-cta {
                 width: 94%;
@@ -150,7 +154,7 @@
                 font-size: 16px !important;
             }
             .table-footer {
-                font-size: 14px !important;
+                font-size: 16px !important;
                 line-height: 25px !important;
             }
             /* .main-cta {
@@ -191,8 +195,17 @@
                 font-size: 12px !important;
             }
             .main-cta {
-                padding:16px 22px;
-                font-size:16px;
+                padding:12px 32px;
+                font-size:15px;
+            }
+            .logo-spacer {
+                height: 40px !important;
+            }
+            .logo-spacer-top {
+                height: 25px !important;
+            }
+            .true-logo {
+                width: 110px;
             }
         }
     
@@ -207,10 +220,10 @@
                 <table width="700" class="outer-table" border="0" cellpadding="0" cellspacing="0">
                     <tr>
                         <td>
-                            <table width="100%" class="logo-table" style="background-image:url(https://trytrue.com/static/images/email/background-no-logo.jpg);background-repeat: no-repeat;background-color:#298584;background-position:50% 100%;border-radius: 30px 30px 0 0;" border="0" cellpadding="0" cellspacing="0">
+                            <table width="100%" class="logo-table" style="background-image:url(https://trytrue.com/static/images/email/background-no-logo-slim2.jpg);background-repeat: no-repeat;background-color:#298584;background-position:50% 100%;background-size: 100% 100%;border-radius: 30px 30px 0 0;" border="0" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td>
-                                        <img src="https://trytrue.com/static/images/email/p.png" width="100%" height="50" border="0" />
+                                        <img class="logo-spacer-top" src="https://trytrue.com/static/images/email/p.png" width="100%" height="50" border="0" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -220,7 +233,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img class="logo-spacer" src="https://trytrue.com/static/images/email/p.png" width="1" height="160" border="0" />
+                                        <img class="logo-spacer" src="https://trytrue.com/static/images/email/p.png" width="1" height="85" border="0" />
                                     </td>
                                 </tr>
                             </table>
@@ -243,7 +256,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td align="center" style="font-size: 20px;">
-                                                        We're excited to have you in our beta program! A team member will be in touch shortly with more details.
+                                                        We're excited to have you in our beta program! A team<br> member will be in touch shortly with more&nbsp;details.
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -251,7 +264,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td align="center" style="font-size: 20px;">
-                                                        In the meantime, please download our app and add <strong>brandon@trytrue.com</strong> to complete your profile.
+                                                        In the meantime, please download our app and add <a style="color:#303030;font-weight:bold;text-decoration:none;">{{email}}</a> to complete your profile.
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -259,7 +272,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td class="table-body" align="center">
-                                                        <a class="main-cta" href="{{sender_thread_link}}">TAKE ME TO THE APP</a>
+                                                        <a class="main-cta" href="{{app_link}}">TAKE ME TO THE APP</a>
                                                         <div style="color: #747474;padding-top:8px;">(tap from your phone)</div>
                                                     </td>
                                                 </tr>
@@ -329,7 +342,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="table-footer" align="center" style="text-align: center; font-family: Verdana,-apple-system,BlinkMacSystemFont; font-size: 20px; color: #555F85; line-height: 36px;padding: 10px 0;">
+                                        <td class="table-footer" align="center" style="text-align: center; font-family: Verdana,-apple-system,BlinkMacSystemFont; font-size: 20px; color: #303030; line-height: 36px;padding: 10px 0;">
                                             Cheers,<br>
                                             <strong style="font-weight:600;">The True Team</strong>
                                         </td>
@@ -351,8 +364,8 @@
                         <td>
                             <table width="700" class="footer-table" border="0" cellpadding="0" cellspacing="0">
                                 <tr>
-                                    <td class="table-footer" align="center" style="text-align: center; font-family: Verdana,-apple-system,BlinkMacSystemFont; font-size: 16px; color: #3D4250; opacity:0.62; line-height:20px;">                     <a href="{{{unsubscribe}}}" style="color: #3D4250;">Unsubscribe</a><br>            
-                                        <a href="mailto:beta.group@trytrue.com">beta.group@trytrue.com</a>
+                                    <td class="table-footer" align="center" style="text-align: center; font-family: Verdana,-apple-system,BlinkMacSystemFont; font-size: 16px; color: #3D4250; opacity:0.62; line-height:20px;">
+                                        <a href="{{{unsubscribe}}}" style="color: #3D4250;">Click here to unsubscribe</a>
                                         <br><br><br>
                                     </td>
                                 </tr>
