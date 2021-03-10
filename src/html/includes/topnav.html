@@ -1,16 +1,22 @@
 <nav style="position: fixed;z-index:10;width: 100%;">
     <div class="topnav-container">
         <div class="navigation-inner">
-            <img class="navigation-logo" src="static/images/ui/logos/logo-true__large.png" width="140" />
+            <a href="/"><img class="navigation-logo" src="/static/images/ui/logos/logo-true__large.png" width="140" /></a>
             <!-- @@if (section !== 'home') {
                 <a href="/index.html" class="button-nav -home"><img src="/static/images/icons/icon-home.svg" width="20" /></a>
             } -->
             <div class="topnav-links">
-                <!-- <a @@if (section === 'blog') {class="button-nav -selected"} @@if (section !== 'blog') {class="button-nav"} href="/blog/">BLOG</a> -->
-                <a @@if (section === 'faq') {class="button-nav -selected"} @@if (section !== 'faq') {class="button-nav"} href="/faq.html">FAQ</a>
-                <a @@if (section === 'community') {class="button-nav -selected"} @@if (section !== 'community') {class="button-nav"} href="/guidelines/">COMMUNITY GUIDELINES</a>
-                <a @@if (section === 'home') {class="button-nav -selected"} @@if (section !== 'home') {class="button-nav"} id="tryTrueNav" target="_blank" href="/index.html#waitlist">TRY TRUE</a>
+                <a @@if (section === 'support') {class="button-nav -selected"} @@if (section !== 'support') {class="button-nav"} href="/support/">SUPPORT</a>
+                <a @@if (section === 'careers') {class="button-nav -selected"} @@if (section !== 'careers') {class="button-nav"} href="/careers/">CAREERS</a>
+                <a @@if (section === 'story') {class="button-nav -selected"} @@if (section !== 'story') {class="button-nav"} href="/story/">OUR STORY</a>
+                <a @@if (section === 'safety') {class="button-nav -selected"} @@if (section !== 'safety') {class="button-nav"} href="/safety/">SAFETY</a>
                 
+            </div>
+            <div class="mobile-nav-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </div>

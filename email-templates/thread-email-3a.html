@@ -31,6 +31,12 @@
             width: 100%;
             background-color: #F5F8FA;
         }
+        .main-cta.-mobile-link {
+            display: none;
+        }
+        .main-cta.-desktop-link {
+            display: inline-block;
+        }
         .true-logo {
             width: 175px;
         }
@@ -173,6 +179,12 @@
         }
 
         @media only screen and (max-width: 500px) {
+            .main-cta.-mobile-link {
+                display: inline-block;
+            }
+            .main-cta.-desktop-link {
+                display: none;
+            }
             .main-table {
                 background-color: #ffffff;
             }
@@ -262,7 +274,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td align="left" style="font-size: 20px;">
-                                                        Hey {{sender_full_name}},
+                                                        Hey {{ insert first_name 'default=there' }},
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -294,7 +306,8 @@
                                                 </tr>
                                                 <tr>
                                                     <td class="table-body" align="center">
-                                                        <a class="main-cta" href="https://app.adjust.com/zzrrb6u?redirect=https%3A%2F%2Ftrytrue.com%2F%3Ffpp%3Dtrue">Join our True Insiders&nbsp;thread</a>
+                                                        <a class="main-cta -mobile-link" href="https://link.trytrue.com/vgsU">Join our True Insiders&nbsp;thread</a>
+                                                        <a class="main-cta -desktop-link" href="https://trytrue.com/mobile/">Join our True Insiders&nbsp;thread</a>
                                                         <div style="color: #747474;padding-top:8px;">(tap from your phone)</div>
                                                     </td>
                                                 </tr>

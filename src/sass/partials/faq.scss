@@ -10,12 +10,64 @@
     padding-bottom: 10px;
 }
 
+.generic-header__h1 {
+    text-align: center;
+    font-family: TruenoBlack, sans-serif;
+    font-size: 35px;
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: 1.4;
+}
+
+.generic-header__image {
+    text-align: center;
+    margin: 40px 0 10px;
+    img {
+        max-width: 474px;
+        width: 100%;
+    }
+}
+
+.generic-subheader__image {
+    text-align: center;
+    margin-bottom: 40px;
+    img {
+        max-width: 150px;
+        width: 100%;
+    }
+}
+
+.generic-hr {
+    margin: 30px auto 40px;
+    height: 10px;
+    max-width: 200px;
+    background-color: #F7F7F7;
+}
+
 .generic-container {
     max-width: 640px;
     width: 100%;
     margin: 0 auto;
     padding: 0px 16px 60px;
     box-sizing: border-box;
+}
+
+.generic-container__section {
+    font-size: 22px;
+    line-height: 1.5;
+    font-family: TruenoRegular, sans-serif;
+    border-bottom: 10px solid #F7F7F7;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    h2 {
+        font-family: TruenoBlack, sans-serif;
+        font-size: 26px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+    a {
+        color: #4c8bff;
+    }
 }
 
 .generic__item {
