@@ -3134,9 +3134,19 @@ button.-small, .button.-small {
   text-align: center;
   font-family: TruenoBlack, sans-serif;
   font-size: 35px;
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
   line-height: 1.4;
+}
+.generic-header__h1.-margin-top {
+  margin-top: 44px;
+}
+
+.generic-subheader {
+  text-align: center;
+  font-family: TruenoRegular, sans-serif;
+  font-size: 18px;
+  padding: 15px 0;
 }
 
 .generic-header__image {
@@ -3148,6 +3158,64 @@ button.-small, .button.-small {
   width: 100%;
 }
 
+.faq-input__container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.faq-input__icon {
+  position: absolute;
+  top: 21px;
+  left: 28px;
+  z-index: 1;
+}
+
+.faq-input {
+  position: relative;
+  background-color: #F7F7F7;
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  border: none;
+  font-size: 16px;
+  padding: 20px 20px 20px 60px;
+  box-sizing: border-box;
+  margin: 20px auto;
+  border-radius: 50px;
+  font-family: TruenoRegular, sans-serif;
+}
+
+.faq-article__list {
+  list-style: none !important;
+  margin: 20px 0 0 0 !important;
+}
+.faq-article__list li {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 22px;
+  font-family: TruenoBlack, sans-serif;
+}
+.faq-article__list li a {
+  position: relative;
+  color: #303030;
+  text-decoration: none;
+  padding: 22px 60px 22px 0;
+  display: block;
+  border-bottom: 10px solid #F7F7F7;
+}
+.faq-article__list li:first-child {
+  border-top: 10px solid #F7F7F7;
+}
+
+.faq-link__icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
 .generic-subheader__image {
   text-align: center;
   margin-bottom: 40px;
@@ -3155,6 +3223,12 @@ button.-small, .button.-small {
 .generic-subheader__image img {
   max-width: 150px;
   width: 100%;
+}
+.generic-subheader__image img.-guidelines {
+  max-width: 140px;
+}
+.generic-subheader__image img.-conversations {
+  max-width: 200px;
 }
 
 .generic-hr {
@@ -3177,17 +3251,36 @@ button.-small, .button.-small {
   line-height: 1.5;
   font-family: TruenoRegular, sans-serif;
   border-bottom: 10px solid #F7F7F7;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   margin-bottom: 40px;
+}
+.generic-container__section.-no-border {
+  border-bottom: none;
 }
 .generic-container__section h2 {
   font-family: TruenoBlack, sans-serif;
   font-size: 26px;
   line-height: 1.4;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .generic-container__section a {
   color: #4c8bff;
+}
+.generic-container__section p {
+  display: block;
+  margin-bottom: 20px;
+}
+.generic-container__section strong {
+  font-family: TruenoBold, sans-serif;
+}
+.generic-container__section ul {
+  margin-bottom: 20px;
+  list-style: disc;
+  margin-left: 30px;
+}
+.generic-container__section ul li {
+  padding-left: 10px;
+  margin-bottom: 30px;
 }
 
 .generic__item {
