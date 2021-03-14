@@ -977,7 +977,8 @@ html, body {
             position: relative;
             right: auto;
             top: 0;
-            max-width: 400px;
+            max-width: 70%;
+            width: 70%;
         }
     }
 
@@ -1134,6 +1135,19 @@ html, body {
 }
 
 @media (max-width: 500px) {
+    .hero-panel {
+        padding: 0px;
+    }
+    .hero-panel__intro {
+        padding: 0 10px;
+    }
+    .hero-panel__inner p {
+        line-height: 1.2;
+        font-size: 20px;
+    }
+    .hero-panel__inner h1 {
+        line-height: 1.2;
+    }
     .hero-stage__header {
         h1 {
             font-size: 32px;
@@ -1149,7 +1163,11 @@ html, body {
 
 @media (max-width: 476px) {
     .section-starts {
-        top: 40%;
+        top: 43%;
+    }
+    .hero-panel__inner .hero-panel__phone {
+        width: 100%;
+        max-width: 100%;
     }
 }
 
@@ -1159,6 +1177,6 @@ html, body {
         // padding: 22% 10%;
     }
     .section-starts {
-        top: 40%;
+        top: 44%;
     }
 }

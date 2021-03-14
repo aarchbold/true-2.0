@@ -450,6 +450,17 @@
     .faq-questions__item {
         padding: 26px 30px;
     }
+    .generic-header__h1 {
+        br {
+            display: none;
+        }
+    }
+    .generic-container {
+        padding: 0px 20px 60px;
+    }
+    .generic-container__section {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 650px) {
@@ -460,7 +471,7 @@
 
 @media (max-width: 450px) {
     .generic-header {
-        padding-top: 80px;
+        padding: 80px 20px 0 20px;
         .faq-header__h1 {
             margin-bottom: 14px;
         }
