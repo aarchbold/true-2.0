@@ -146,17 +146,25 @@
     .phone-features__quote {
         position: relative;
         left: auto;
-        width: 80%;
+        width: 92%;
         font-size: 18px;
         line-height: 1.5;
+        margin-left: 30px;
     }
     .phone-features {
         padding-top: 0;
         text-align: right;
     }
     .phone-features__video {
-        max-width: 84%;
-        margin-left: 0
+        max-width: 104%;
+        margin-left: 0px;
+    }
+    .phone-features__quote--profile {
+        bottom: -79px;
+        left: -50px;
+    }
+    .phone-features__quote--bubble {
+        left: 20px;
     }
 }
 

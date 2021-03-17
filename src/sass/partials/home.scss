@@ -56,6 +56,19 @@ $hero-animation-duration-long: 2s;
         top: -190px;
         width: 50%;
         max-width: 510px;
+        .video {
+            position: absolute;
+            top: 11.1%;
+            left: 21.1%;
+            width: 59%;
+            video {
+                width: 100%;
+                border-radius: 25px;
+            }
+        }
+        img {
+            width: 100%;
+        }
     }
 }
 
@@ -979,6 +992,8 @@ html, body {
             top: 0;
             max-width: 70%;
             width: 70%;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 
