@@ -343,6 +343,7 @@ section {
 }
 
 .footer-table {
+  text-align: left;
   margin-bottom: 80px;
 }
 .footer-table:after {
@@ -387,6 +388,7 @@ section {
 }
 
 .footer-col__copyright {
+  text-align: left;
   font-family: TruenoRegular, sans-serif;
   color: white;
   font-size: 20px;
@@ -3148,6 +3150,29 @@ button.-small, .button.-small {
 }
 /* FAQ styles
 */
+.faq-back-button {
+  position: relative;
+  padding: 10px 0 10px 50px;
+  font-family: TruenoRegular, sans-serif;
+  font-size: 18px;
+  color: #303030;
+  text-decoration: none;
+}
+.faq-back-button .faq-back__icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%) rotate(180deg);
+}
+
+.iframe-container {
+  margin: 0 -100px;
+}
+.iframe-container iframe {
+  height: 600px;
+  width: 100%;
+}
+
 .generic-header {
   padding-top: 100px;
   padding-bottom: 10px;
@@ -3163,6 +3188,10 @@ button.-small, .button.-small {
 }
 .generic-header__h1.-margin-top {
   margin-top: 44px;
+}
+.generic-header__h1.-align-left {
+  text-align: left;
+  max-width: 100%;
 }
 
 .generic-subheader {
@@ -3268,6 +3297,10 @@ button.-small, .button.-small {
   padding: 0px 16px 60px;
   box-sizing: border-box;
 }
+.generic-container.-margin-top {
+  padding-top: 165px;
+  text-align: left;
+}
 
 .generic-container__section {
   font-size: 22px;
@@ -3280,11 +3313,17 @@ button.-small, .button.-small {
 .generic-container__section.-no-border {
   border-bottom: none;
 }
+.generic-container__section.-margin-top {
+  margin-top: 30px;
+}
 .generic-container__section h2 {
   font-family: TruenoBlack, sans-serif;
   font-size: 26px;
   line-height: 1.4;
   margin-bottom: 30px;
+}
+.generic-container__section h3 {
+  display: none;
 }
 .generic-container__section a {
   color: #4c8bff;
@@ -3292,6 +3331,9 @@ button.-small, .button.-small {
 .generic-container__section p {
   display: block;
   margin-bottom: 20px;
+}
+.generic-container__section .wp-block-image {
+  text-align: center;
 }
 .generic-container__section strong {
   font-family: TruenoBold, sans-serif;
@@ -3502,7 +3544,7 @@ button.-small, .button.-small {
   text-align: left;
 }
 
-.faq-footer {
+.faq-footer, .generic-footer {
   width: 100%;
   background-color: #1e6453;
   padding: 60px;
@@ -3513,30 +3555,37 @@ button.-small, .button.-small {
   background-size: cover;
 }
 
-.faq-footer__header {
+.generic-footer__inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 80px;
+}
+
+.faq-footer__header, .generic-footer__header {
   font-size: 20px;
   font-family: TruenoBold, sans-serif;
   margin-bottom: 6px;
 }
-.faq-footer__header a {
+.faq-footer__header a, .generic-footer__header a {
   color: #ffffff !important;
   text-decoration: none;
 }
 
-.faq-footer__content {
+.faq-footer__content, .generic-footer__content {
   font-size: 16px;
   font-family: TruenoRegular, sans-serif;
 }
 
-.faq-footer__legal {
+.faq-footer__legal, .generic-footer__legal {
   margin-top: 20px;
 }
-.faq-footer__legal a {
+.faq-footer__legal a, .generic-footer__legal a {
   text-decoration: none;
   color: #ffffff;
   font-family: TruenoRegular, sans-serif;
 }
-.faq-footer__legal a:hover {
+.faq-footer__legal a:hover, .generic-footer__legal a:hover {
   text-decoration: underline;
 }
 
@@ -3547,6 +3596,11 @@ button.-small, .button.-small {
   100% {
     height: auto;
     overflow: visible;
+  }
+}
+@media (max-width: 1200px) {
+  .generic-footer__inner {
+    padding-left: 0;
   }
 }
 @media (max-width: 750px) {

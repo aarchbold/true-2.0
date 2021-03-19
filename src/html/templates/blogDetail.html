@@ -3,40 +3,9 @@
 </div>
 
 <script id="blog-detail-template" type="text/x-handlebars-template">
-       
-    <div class="blog-hero__container">
-        <div class="blog-hero">
-            <div class="blog-hero__title">
-                <h1>{{post.articleHeadline}}</h1>
-                <p>{{{post.articleExcerpt}}}</p>
-            </div>
-            <div class="blog-hero__image" style="background-image: url({{post.articleImg}});">
-
-            </div>
-        </div>
-    </div>
-
-    <div class="blog-post__container">
-        <div class="blog-post__info">
-            <div class="blog-post__info--author">
-                <img src="../static/images/ui/logos/logo-blog-trueicon.png">
-                By {{post.authorName}}, {{post.articleDate}}
-            </div>
-            <div class="blog-post__info--social">
-                <a href="#" target="_blank" class="twitter twitter-share">
-                    <img src="../static/images/ui/logos/logo-share-twitter.png" />
-                </a>
-                <a href="#" target="_blank" class="linkedin linkedin-share">
-                    <img src="../static/images/ui/logos/logo-share-linkedin.png" />
-                </a>
-                <a href="#" target="_blank" class="reddit reddit-share">
-                    <img src="../static/images/ui/logos/logo-share-reddit.png" />
-                </a>
-            </div>
-        </div>
-        <div class="blog-post__inner">
-            {{{post.articleBody}}}
-        </div>
+    <h1 class="generic-header__h1 -margin-top -align-left">{{post.articleHeadline}}</h1>
+    <div class="generic-container__section -no-border -margin-top">
+        {{{post.articleBody}}}
     </div>
 </script>
 

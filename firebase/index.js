@@ -101,7 +101,7 @@ exports.getWordPressPostById = functions.https.onRequest((req, httpResponse) => 
   let postId = req.query.id;
   // let wordpressUrl = 'https://public-api.wordpress.com/wp/v2/sites/' + req.query.id + '/posts/' + req.query.id;
   
-  axios.get('https://public-api.wordpress.com/wp/v2/sites/trytrue.wordpress.com/posts/' + postId + '?_embed')
+  axios.get('https://public-api.wordpress.com/wp/v2/sites/pulsegrenade.wordpress.com/posts/' + postId + '?_embed')
   .then(response => {
     console.log(response.data);
     jsonResponse = { 
@@ -127,7 +127,7 @@ exports.getWordPressPosts = functions.https.onRequest((req, httpResponse) => {
   let jsonResponse = {};
   // let wordpressUrl = 'https://public-api.wordpress.com/wp/v2/sites/' + req.query.siteid + '/posts/';
   
-  axios.get('https://public-api.wordpress.com/wp/v2/sites/trytrue.wordpress.com/posts?_embed')
+  axios.get('https://public-api.wordpress.com/wp/v2/sites/pulsegrenade.wordpress.com/posts?_embed')
   .then(response => {
     console.log(response.data);
     jsonResponse = { 

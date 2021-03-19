@@ -1,27 +1,10 @@
-
-<div id="blogHome" class="blog-list__row">
-</div>
+<ul id="blogHome" class="faq-article__list">
+    
+</ul>
 
 <script id="posts-template" type="text/x-handlebars-template">
     {{#each posts}}
-        {{#if @index}}
-        <div class="blog-list__item">
-            <div class="blog-list__item--inner">
-                <div class="blog-list__item--image" style="background-image: url({{this.articleImg}});">
-                    <a href="page.html?id={{articleId}}"></a>
-                </div>
-                <div class="blog-list__item--title"><a href="page.html?id={{articleId}}">{{this.articleHeadline}}</a></div>
-                <div class="blog-list__item--description">{{{this.articleExcerpt}}}</div>
-                <div class="blog-author">
-                    <div class="blog-author__thumbnail">
-                        <a href="page.html?id={{articleId}}"><img src="{{this.authorImg}}" /></a>
-                    </div>
-                    <div class="blog-author__name">{{this.authorName}}</div>
-                    <div class="blog-author__date">{{this.articleDate}}</div>
-                </div>
-            </div>
-        </div>
-        {{/if}}
+        <li><a href="faq.html?id={{articleId}}">{{this.articleHeadline}}<img class="faq-link__icon" src="/static/images/v2/icons/icon-link-arrow.svg" /></a></li>
     {{/each}}
 </script>
 

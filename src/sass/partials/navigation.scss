@@ -65,6 +65,7 @@
 
 // footer
 .footer-table {
+    text-align: left;
     margin-bottom: 80px;
     &:after {
         content: '';
@@ -109,6 +110,7 @@
 }
 
 .footer-col__copyright {
+    text-align: left;
     font-family: TruenoRegular, sans-serif;
     color: white;
     font-size: 20px;

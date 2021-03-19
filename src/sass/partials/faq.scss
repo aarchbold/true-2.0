@@ -5,6 +5,30 @@
 
 // properties
 
+.faq-back-button {
+    position: relative;
+    padding: 10px 0 10px 50px;
+    font-family: TruenoRegular, sans-serif;
+    font-size: 18px;
+    color: #303030;
+    text-decoration: none;
+    .faq-back__icon {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%) rotate(180deg);
+
+    }
+}
+
+.iframe-container {
+    margin: 0 -100px;
+    iframe {
+        height: 600px;
+        width: 100%;
+    }
+}
+
 .generic-header {
     padding-top: 100px;
     padding-bottom: 10px;
@@ -19,6 +43,10 @@
     line-height: 1.4;
     &.-margin-top {
         margin-top: 44px;
+    }
+    &.-align-left {
+        text-align: left;
+        max-width: 100%;
     }
 }
 
@@ -124,6 +152,10 @@
     margin: 0 auto;
     padding: 0px 16px 60px;
     box-sizing: border-box;
+    &.-margin-top {
+        padding-top: 165px;
+        text-align: left;
+    }
 }
 
 .generic-container__section {
@@ -136,11 +168,17 @@
     &.-no-border {
         border-bottom: none;
     }
+    &.-margin-top {
+        margin-top: 30px;
+    }
     h2 {
         font-family: TruenoBlack, sans-serif;
         font-size: 26px;
         line-height: 1.4;
         margin-bottom: 30px;
+    }
+    h3 {
+        display: none;
     }
     a {
         color: #4c8bff;
@@ -148,6 +186,9 @@
     p {
         display: block;
         margin-bottom: 20px;
+    }
+    .wp-block-image {
+        text-align: center;
     }
     strong {
         font-family: TruenoBold, sans-serif;
@@ -367,7 +408,7 @@
     text-align: left;
 }
 
-.faq-footer {
+.faq-footer, .generic-footer {
     width: 100%;
     background-color: #1e6453;
     padding: 60px;
@@ -378,7 +419,14 @@
     background-size: cover;
 }
 
-.faq-footer__header {
+.generic-footer__inner {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 80px;
+}
+
+.faq-footer__header, .generic-footer__header {
     font-size: 20px;
     font-family: TruenoBold, sans-serif;
     margin-bottom: 6px;
@@ -388,12 +436,12 @@
     }
 }
 
-.faq-footer__content {
+.faq-footer__content, .generic-footer__content {
     font-size: 16px;
     font-family: TruenoRegular, sans-serif;
 }
 
-.faq-footer__legal {
+.faq-footer__legal, .generic-footer__legal {
     margin-top: 20px;
     a {
         text-decoration: none;
@@ -414,6 +462,11 @@
     100% {
         height: auto;
         overflow: visible;
+    }
+}
+@media (max-width: 1200px) {
+    .generic-footer__inner {
+        padding-left: 0;
     }
 }
 
