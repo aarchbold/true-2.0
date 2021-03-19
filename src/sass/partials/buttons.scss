@@ -39,6 +39,24 @@ button, .button {
     box-shadow: $button-box-shadow;
 }
 
+.button-faq {
+    border: 1px solid $color-button-border;
+    color: $color-button-font;
+    font-size: 16px;
+    font-family: TruenoRegular;
+    background-color: transparent;
+    padding: 14px 14px !important;
+    margin: 0 5px;
+    &.-selected {
+        color: $color-button;
+        background-color: $color-button-selected;
+        border: 1px solid $color-button-selected;
+    }
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
 .button-icon {
     position: relative;
     padding-left: 62px !important;

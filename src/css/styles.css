@@ -2559,6 +2559,24 @@ button.-small, .button.-small {
   box-shadow: 0px 10px 40px 0px rgba(7, 55, 102, 0.3);
 }
 
+.button-faq {
+  border: 1px solid #D2D2D2;
+  color: #1E1E1E;
+  font-size: 16px;
+  font-family: TruenoRegular;
+  background-color: transparent;
+  padding: 14px 14px !important;
+  margin: 0 5px;
+}
+.button-faq.-selected {
+  color: #ffffff;
+  background-color: #175A66;
+  border: 1px solid #175A66;
+}
+.button-faq:hover {
+  transform: scale(1.05);
+}
+
 .button-icon {
   position: relative;
   padding-left: 62px !important;
@@ -3208,6 +3226,14 @@ button.-small, .button.-small {
 .generic-header__image img {
   max-width: 474px;
   width: 100%;
+}
+
+.faq-buttons__container {
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px 0 20px;
 }
 
 .faq-input__container {
