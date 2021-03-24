@@ -357,21 +357,21 @@ exports.waitlist = functions.https.onRequest((req, httpResponse) => {
             } 
           })
 
-          const msg = {
-            to: userEmail,
-            category: 'Insiders thread - Website sign up confirmation (1)',
-            from: 'hey@trytrue.com',
-            templateId: sendGridTemplateId,
-            dynamic_template_data: {
-              email: userEmail,
-              first_name: firstName,
-              last_name: lastName,
-              invite_code: inviteCode
-            },
-            sendAt: moment().add(1,'hours').unix()
-          };
+          // const msg = {
+          //   to: userEmail,
+          //   category: 'Insiders thread - Website sign up confirmation (1)',
+          //   from: 'hey@trytrue.com',
+          //   templateId: sendGridTemplateId,
+          //   dynamic_template_data: {
+          //     email: userEmail,
+          //     first_name: firstName,
+          //     last_name: lastName,
+          //     invite_code: inviteCode
+          //   },
+          //   sendAt: moment().add(1,'hours').unix()
+          // };
+          // sgMail.send(msg);
 
-          sgMail.send(msg);
           alertTrueStaff(userEmail,firstName,lastName)
           let jsonResponse = { 
             message: 'Added to waitlist!',
