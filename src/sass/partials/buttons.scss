@@ -74,12 +74,21 @@ button, .button {
 }
 
 .button-icon {
+    box-sizing: border-box;
     position: relative;
     padding-left: 62px !important;
     img {
         position: absolute;
         top: 15px;
         left: 28px;
+        width: 26px;
+    }
+}
+
+.button-ios {
+    padding-left: 82px !important;
+    img {
+        left: 49px;
         width: 26px;
     }
 }

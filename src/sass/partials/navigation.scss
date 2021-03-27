@@ -33,7 +33,7 @@
     position: absolute;
     transition: all 0.5s;
     right: 30px;
-    top: 60px;
+    top: 35px;
     width: 80%;
     text-align: right;
     a {
@@ -50,14 +50,15 @@
 .navigation-logo {
     transition: all 0.5s;
     position: relative;
+    width: 100px;
 }
 
 .navigation-inner {
     position: relative;
     transition: all 0.5s;
-    padding: 40px 20px;
+    padding: 25px 20px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -81,6 +82,9 @@
     padding-right: 40px;
     &:last-child {
         padding-right: 0;
+    }
+    .button {
+        min-width: 175px;
     }
 }
 

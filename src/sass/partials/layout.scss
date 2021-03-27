@@ -15,6 +15,9 @@
     margin: 0 auto;
     padding: 0 40px;
     box-sizing: border-box;
+    &.section-why-true {
+        padding: 0 0;
+    }
 }
 
 .card-inner {
@@ -23,9 +26,9 @@
 }
 
 .cards-container {
-    max-width: 940px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0;
     box-sizing: border-box;
     &:after {
         content: '';
@@ -36,9 +39,9 @@
 
 .card-grid {
     float: left;
-    width: 50%;
+    width: 33.3%;
     box-sizing: border-box;
-    padding: 20px 20px 0 20px;
+    padding: 0 10px;
 }
 
 .card-image {
@@ -46,6 +49,14 @@
     left: 50%;
     transform: translatex(-50%);
     height: 170px;
+}
+
+.feature-outer {
+    position: relative;
+    margin-bottom: 380px;
+    &.last-child {
+        margin-bottom: 280px;
+    }
 }
 
 .card-outer {
@@ -68,25 +79,36 @@
     //     background: inherit;
     //     border-radius: 5% / 50%;
     // }
+    &.-half {
+        width: 55%;
+        margin-left: 60px;
+    }
     &.-right {
-        margin-left: 45%;
+        margin-left: 40%;
     }
     h2 {
         text-align: center;
-        font-size: 32px;
+        font-size: 26px;
         font-family: TruenoBlack, sans-serif;
         margin-bottom: 20px;
         line-height: 1.4;
     }
+    .feature-body {
+        min-height: auto;
+        font-size: 32px;
+        font-family: TruenoBold, sans-serif;
+        line-height: 1.6;
+        padding: 0 60px;
+    }
     p {
         text-align: center;
-        font-size: 20px;
+        font-size: 16px;
         font-family: TruenoSemiBold, sans-serif;
-        line-height: 1.6;
+        line-height: 1.7;
         margin-bottom: 30px;
         opacity: 1;
         padding: 0 0;
-        min-height: 128px;
+        min-height: 100px;
     }
     &.-with-image {
         padding-top: 10px;
