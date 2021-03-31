@@ -1,5 +1,36 @@
 /* Slider */
 
+.slick-arrow {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 36px;
+    height: 55px;
+    display: inline-block;
+    text-indent: -9999px;
+    padding: 0 !important;
+    background: url('../images/v2/icons/icon-slidehow-arrow.svg') 0 0 no-repeat;
+    z-index: 100;
+    &:hover {
+        transform: translate(0,-50%);
+    }
+}
+
+.slick-next {
+    right: 24px;
+}
+
+.slick-prev {
+    left: 24px;
+    transform: translate(0,-50%) rotate(180deg);
+    &:hover {
+        transform: translate(0,-50%) rotate(180deg);
+    }
+}
+
 .slick-slider {
     position: relative;
     display: block;

@@ -264,17 +264,17 @@ button, .button {
 
 @media (max-width: 950px) {
     button, .button {
-        padding: 16px 30px !important;
-        font-size: 16px;
+        // padding: 16px 30px;
+        // font-size: 16px;
     } 
     .button-icon {
-        position: relative;
-        padding-left: 45px !important;
+        // position: relative;
+        // padding-left: 45px;
         img {
-            position: absolute;
-            top: 12px;
-            left: 18px;
-            width: 22px;
+            // position: absolute;
+            // top: 12px;
+            // left: 18px;
+            // width: 22px;
         }
     }
 }
@@ -312,7 +312,7 @@ button, .button {
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 700px) {
     .button-nav {
         font-size: 14px;
         padding: 8px 14px;
@@ -324,6 +324,13 @@ button, .button {
         }
         &.-selected {
             display: none;
+        }
+    }
+    .button-ios {
+        padding-left: 82px !important;
+        img {
+            left: 40px !important;
+            width: 26px;
         }
     }
 }
