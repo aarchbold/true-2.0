@@ -29,14 +29,27 @@
     font-family: TruenoBlack, sans-serif;
     line-height: 1.6;
     box-sizing: border-box;
-  }
-  
-  .testimonial-card__author {
-    padding: 30px 20px 0 20px;
+}
+
+.testimonial-card__author {
+    position: relative;
+    padding: 10px 20px 0 20px;
     font-size: 24px;
     text-align: center;
     font-family: TruenoSemiBold, sans-serif;
-  }
+}
+
+.testimonial-card__thumb {
+    display: inline-block;
+    width: 60px;
+    padding-right: 5px;
+    img {
+        display: inline-block;
+        position: relative;
+        top: 22px; 
+        width: 100%;
+    }
+}
 
 .testimonial-card__location {
     padding: 0 20px 0 20px;
@@ -90,14 +103,25 @@
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     .testimonials-container {
+        max-width: 70%;
+        width: 100%;
         padding-top: 110px;
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
+    .testimonials-container {
+        max-width: 90%;
+    }
     .testimonial-card__inner {
         font-size: 19px;
+    }
+}
+
+@media (max-width: 420px) {
+    .testimonials-container {
+        max-width: 100%;
     }
 }

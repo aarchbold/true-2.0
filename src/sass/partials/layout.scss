@@ -66,7 +66,7 @@
     box-sizing: border-box;
     padding: 35px 30px;
     box-shadow: $card-box-shadow;
-    border-radius: 60px;
+    border-radius: 90px;
     // border-radius: 50% / 10%;
     margin-top: 20px;
     // &:after {
@@ -93,13 +93,23 @@
         margin-bottom: 20px;
         line-height: 1.4;
     }
+    .feature-header {
+        font-size: 34px;
+        font-family: TruenoBlack, sans-serif;
+        line-height: 1.6;
+        padding: 0 60px 20px 60px;
+        text-align: center;
+    }
     .feature-body {
         min-height: auto;
-        font-size: 32px;
-        font-family: TruenoBold, sans-serif;
-        line-height: 1.6;
-        padding: 0 60px;
+        font-size: 22px;
+        font-family: TruenoSemiBold, sans-serif;
+        line-height: 1.4;
+        padding: 14px 40px 24px 72px;
         text-align: left;
+        &.-offset {
+            padding: 14px 30px 24px 90px
+        }
     }
     p {
         text-align: center;
@@ -232,6 +242,7 @@
             min-height: auto;
         }
         .feature-body {
+            font-size: 22px;
             padding: 0 28px;
         }
         &.-half {
@@ -249,7 +260,7 @@
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     .cards-container {
         padding: 0;
     }
@@ -268,6 +279,9 @@
             font-size: 16px;
             margin-bottom: 16px;
         }
+        .feature-body {
+            text-align: center;
+        }
     }
     .card-grid {
         padding-top: 2px;
@@ -278,12 +292,10 @@
             margin-bottom: 0;
         }
     }
-}
-
-@media (max-width: 700px) {
     .card-outer {
         position: relative;
-        max-width: 100%;
+        width: 100%;
+        max-width: 70%;
         z-index: 1;
         padding: 30px;
         border-radius: 60px;
@@ -291,7 +303,7 @@
         margin-right: auto;
         &.-half {
             width: 100%;
-            max-width: 100%;
+            max-width: 70%;
             margin: 0 auto;
             &.-right {
                 margin-left: auto;
@@ -308,12 +320,13 @@
 }
 
 
-@media (max-width: 520px) {
+@media (max-width: 550px) {
     .page-inner {
         padding: 0 20px;
     }
     .card-outer {
         padding: 35px 30px !important;
+        max-width: 90%;
         &.-with-image {
             padding-top: 18px !important;
         }
@@ -328,10 +341,22 @@
             margin-bottom: 20px;
             min-height: auto;
         }
+        &.-half {
+            max-width: 90%;
+        }
     }
     .card-inner {
         .card-image {
             height: 134px;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .card-outer {
+        max-width: 100%;
+        &.-half {
+            max-width: 100%;
         }
     }
 }

@@ -430,17 +430,19 @@ $(function() {
         })
 
         // slow down video playback
-        // var $firstVideo = $('#firstVideo');
-        // $firstVideo[0].playbackRate = 0.65;
-        // $firstVideo[0].play();
+        var $firstVideo = $('#firstVideo');
+        $firstVideo[0].play();
 
-        // var $secondVideo = $('#secondVideo');
+        var $secondVideo = $('#secondVideo');
         // $secondVideo[0].playbackRate = 0.65;
-        // $secondVideo[0].play();
+        $secondVideo[0].play();
 
-        // var $thirdVideo = $('#thirdVideo');
-        // $thirdVideo[0].playbackRate = 0.65;
-        // $thirdVideo[0].play();
+        var $thirdVideo = $('#thirdVideo');
+        $thirdVideo[0].play();
+        var $fourthVideo = $('#fourthVideo');
+        $fourthVideo[0].play();
+        var $fifthVideo = $('#fifthVideo');
+        $fifthVideo[0].play();
 
         $(window).on('DOMContentLoaded load resize scroll', function() {
 
@@ -744,7 +746,7 @@ $(window).on('load', function (e) {
     if ($(window).width() < 1000) {
       $buttonsOffset = 22;
     }
-    if ($(window).width() < 700) {
+    if ($(window).width() < 750) {
       $buttonsOffset = 30;
       // move footer
       $('.section-footer').appendTo('.section-starts');
@@ -785,12 +787,12 @@ $(window).on('load', function (e) {
               // init the parallax if the site starts at mobile and resizes to not mobile
               $('[data-scroll-speed]').moveIt();
             }
-            if (ogWidth < 700 && $(window).width() > 700) {
+            if (ogWidth < 800 && $(window).width() > 800) {
               // check if the footer has been moved.
               $('.section-footer').appendTo('#ogFooterPosition');
-            } else if (ogWidth > 700 && $(window).width() < 700) {
+            } else if (ogWidth > 800 && $(window).width() < 800) {
               $('.section-footer').appendTo('.section-starts');
-            } else if (ogWidth < 700 && $(window).width() < 700) {
+            } else if (ogWidth < 800 && $(window).width() < 800) {
               $('.section-footer').appendTo('.section-starts');
             } else {
               $('.section-footer').appendTo('#ogFooterPosition');

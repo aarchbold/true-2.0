@@ -1,5 +1,5 @@
 var gulp = require('gulp'),    
-    sass = require('gulp-ruby-sass'),
+    sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     concat = require('gulp-concat'),
     fileinclude = require('gulp-file-include'),
@@ -49,15 +49,23 @@ gulp.task('compress', function () {
         .pipe(gulp.dest(config.jsDest));
 });
 
-gulp.task('sass', function() {
-    return sass(config.sassPath + '/styles.scss', { 
-    		style: 'expanded',
-            loadPath: [
-               './src/sass'
-            ]
-    	})
-        .pipe(gulp.dest(config.cssPath));
-});
+
+gulp.task( 'sass', function() {
+    return gulp.src(config.sassPath + '/styles.scss')
+      .pipe(sass())
+      .pipe(gulp.dest(config.cssPath));
+})
+
+// gulp.task('sass', function() {
+//     console.log('hello');
+//     return sass(config.sassPath + '/styles.scss', { 
+//     		style: 'expanded',
+//             loadPath: [
+//                './src/sass'
+//             ]
+//     	})
+//         .pipe(gulp.dest(config.cssPath));
+// });
 
 
 gulp.task('autoprefixer', function () {
