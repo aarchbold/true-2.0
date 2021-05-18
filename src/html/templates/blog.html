@@ -25,6 +25,9 @@
         $.get('https://us-central1-trytruecom-website.cloudfunctions.net/getWordPressPosts', function(response){
             var responseData = JSON.stringify(response.data);
             var responseJSON = JSON.parse(responseData);
+            // console.log(responseJSON);
+
+            responseJSON.reverse();
 
             $.each(responseJSON, function(i,e) {
                 console.log(e);

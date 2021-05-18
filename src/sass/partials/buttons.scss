@@ -285,10 +285,10 @@ button, .button {
         height: 38px;
         margin-right: 4px;
     }
-    button, .button {
-        font-size: 15px;
-        padding: 14px 26px !important;
-    }
+    // button, .button {
+    //     font-size: 15px;
+    //     padding: 14px 26px !important;
+    // }
     .button-social {
         width: 42px;
         height: 42px;
@@ -303,13 +303,13 @@ button, .button {
             }
         }
     }
-    .button-icon {
-        padding-left: 42px !important;
-        img {
-            top: 10px;
-            left: 15px;
-        }
-    }
+    // .button-icon {
+    //     padding-left: 42px !important;
+    //     img {
+    //         top: 10px;
+    //         left: 15px;
+    //     }
+    // }
 }
 
 @media (max-width: 800px) {

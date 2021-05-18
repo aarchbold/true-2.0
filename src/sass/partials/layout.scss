@@ -218,7 +218,16 @@
     }
 }
 
-
+@media (max-width: 860px) {
+    .feature-outer {
+        .feature-body {
+            padding-right: 20px;
+            &.-offset {
+                padding-left: 40px;
+            }
+        }
+    }
+}
 
 @media (max-width: 850px) {
     .feature-outer {
