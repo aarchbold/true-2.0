@@ -1,5 +1,11 @@
 
-<div id="blogDetail">
+<div>
+    <div class="blog-post-loader">
+        <br />Just a second...<br /><br />
+        <img src="../static/images/ui/backgrounds/ajax-loader.gif" />
+    </div>
+    <div id="blogDetail">
+    </div>
 </div>
 
 <script id="blog-detail-template" type="text/x-handlebars-template">
@@ -12,6 +18,7 @@
 <script type="text/javascript">
     $(function() {
         var postId = getParam('id');
+        $('.blog-post-loader').show();
         $.get('https://us-central1-trytruecom-website.cloudfunctions.net/getWordPressPostById?id='+postId, function(response){
             var blogDetailData = JSON.stringify(response.data);
             var blogDetailJSON = JSON.parse(blogDetailData);
@@ -32,6 +39,7 @@
             var blogData = template(blogDetailData);
             document.getElementById('blogDetail').innerHTML += blogData;
             $('.blog-loader').hide();
+            $('.blog-post-loader').hide();
 
             // Set meta tags
             $('meta[name=description]').attr('content', postObj.articleExcerpt);

@@ -64,6 +64,14 @@ $hero-height-privacy: 260px;
     }
 }
 
+.blog-post-loader {
+    display: block;
+    text-align: center;
+    min-height: 200px;
+    font-size: 22px;
+    line-height: 1.5;
+    font-family: TruenoRegular, sans-serif;
+}
 
 .blog-home {
     max-width: 900px;

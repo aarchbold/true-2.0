@@ -335,5 +335,11 @@ button, .button {
     }
 }
 
+@media (max-width: 575px) {
+    .button-faq {
+        margin: 0 5px 14px;
+    }
+}
+
 
 
