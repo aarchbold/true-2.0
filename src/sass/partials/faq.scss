@@ -111,13 +111,19 @@
         padding: 0 !important;
         font-size: 22px;
         font-family: TruenoBlack, sans-serif;
-        a {
+        .faq-link {
             position: relative;
             color: #303030;
             text-decoration: none;
-            padding: 22px 100px 22px 0;
+            padding: 22px 100px 22px 1px;
             display: block;
             border-bottom: 10px solid #F7F7F7;
+            &.-active {
+                border-bottom: none;
+                img {
+                    transform: translateY(-50%) rotate(90deg);
+                }
+            }
         }
         &:first-child {
             border-top: 10px solid #F7F7F7;
@@ -126,6 +132,7 @@
 }
 
 .faq-link__icon {
+    transition: all 0.25s;
     position: absolute;
     top: 50%;
     right: 0;
@@ -221,6 +228,13 @@
         li {
             padding-left: 10px;
             margin-bottom: 30px;
+        }
+    }
+    &.-inline {
+        display: none;
+        p {
+            font-size: 20px;
+            line-height: 1.5;
         }
     }
 }

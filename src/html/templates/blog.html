@@ -7,7 +7,7 @@
             <input class="faq-input" placeholder="Search" />
         </div>
         <div class="faq-buttons__container">
-            <a href="#" data-category="355593524" class="button button-faq">About True</a>
+            <a href="#" data-category="355593524" class="button button-faq -selected">About True</a>
             <a href="#" data-category="719451347" class="button button-faq">Getting Started</a>
             <a href="#" data-category="1274" class="button button-faq">Using True</a>
             <a href="#" data-category="11934513" class="button button-faq">Privacy and Safety</a>
@@ -31,7 +31,10 @@
 
 <script id="posts-template" type="text/x-handlebars-template">
     {{#each posts}}
-        <li><a href="faq.html?id={{articleId}}">{{this.articleHeadline}}<img class="faq-link__icon" src="/static/images/v2/icons/icon-link-arrow.svg" /></a></li>
+        <li>
+            <a class="faq-link" href="faq.html?id={{articleId}}">{{this.articleHeadline}}<img class="faq-link__icon" src="/static/images/v2/icons/icon-link-arrow.svg" /></a>
+            <div class="generic-container__section -no-border -inline">{{{this.articleContent}}}</div>
+        </li>
     {{/each}}
 </script>
 
@@ -67,7 +70,6 @@
             responseJSON.reverse();
 
             $.each(responseJSON, function(i,e) {
-                console.log(e);
                 postObj.authorName = e._embedded.author[0].name;
                 postObj.authorImg = e._embedded.author[0].avatar_urls ? e._embedded.author[0].avatar_urls[96] : '../static/images/ui/logos/logo-blog-trueicon.png';
                 postObj.articleDate = moment(e.date).format("MMM DD, YYYY");
@@ -79,14 +81,15 @@
                 postObj.articleContent = e.content.rendered;
                 // categories
                 // 1 = uncategorized
-                // 1274 = Getting Started
+                // 1274 = Using True
                 // 11934513 = Privacy and Safety
                 // 355593524 = About True
+                // 719451347 = Getting Started
+                // 
 
                 if (searchTerm) {
-                    if (postObj.articleContent.includes(searchTerm)) {
+                    if (postObj.articleContent.toLowerCase().includes(searchTerm.toLowerCase()) || postObj.articleHeadline.toLowerCase().includes(searchTerm.toLowerCase())) {
                         posts.push(postObj);  
-                        console.log('has a search term');
                     }
                 } else {
                     posts.push(postObj);   
@@ -97,7 +100,6 @@
             if (category) {
                 // filter the results
                 posts.forEach(function(post) {
-                    console.log(post.categories)
                     if (post.categories.includes(category)) {
                         filteredPosts.push(post);
                     }
@@ -105,7 +107,6 @@
                 posts = filteredPosts;
             }
 
-            console.log(posts);
             data.posts = posts
         
             if (searchTerm) {
@@ -116,10 +117,25 @@
             }
             $('.blog-post-loader').hide();
             document.getElementById('blogHome').innerHTML += postsData;
+
+            $('.faq-link').click(function(e){
+                let $element = $(this);
+                e.preventDefault();
+                if ($(this).hasClass('-active')) {
+                    $element.removeClass('-active');
+                    $('.generic-container__section',$(this).parent()).slideUp('fast');
+                } else {
+                    $(this).addClass('-active');
+                    $('.generic-container__section',$(this).parent()).slideDown();
+                    
+                }
+                console.log($(this)); 
+            })
+
         });
     }
 
-    getThePosts();
+    getThePosts(null,355593524);
 
     $(function() {
         var $context = $('.faq-buttons__container'),
@@ -128,9 +144,7 @@
         setFilter = '';
 
         $searchInput.keyup(function(e) {
-            console.log(e.target.value);
             if (e.which === 13) {
-                console.log('do the search');
                 getThePosts(e.target.value)
             }
         });
@@ -140,7 +154,6 @@
             if ($(this).hasClass('-selected')) {
                 $(this).removeClass('-selected');
                 setFilter = '';
-                console.log(setFilter);
                 $('#blogHome').empty();
                 getThePosts();
                 return false;
@@ -149,7 +162,6 @@
             $filters.removeClass('-selected');
             $(this).addClass('-selected');  
             setFilter = $(this).text(); 
-            console.log(setFilter);
             getThePosts(null,$(this).data('category'));
         })
     });
