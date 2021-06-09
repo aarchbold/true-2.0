@@ -2699,7 +2699,7 @@ button, .button {
       display: block;
       border-bottom: 10px solid #F7F7F7; }
       .faq-article__list li .faq-link.-active {
-        border-bottom: none; }
+        border-bottom: 10px solid white; }
         .faq-article__list li .faq-link.-active img {
           transform: translateY(-50%) rotate(90deg); }
     .faq-article__list li:first-child {
@@ -3159,7 +3159,7 @@ button, .button {
     transform: translate(-50%, -50%); }
 
 .blog-post-loader {
-  display: block;
+  display: none;
   text-align: center;
   min-height: 200px;
   font-size: 22px;
