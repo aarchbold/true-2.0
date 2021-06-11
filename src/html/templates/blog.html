@@ -4,7 +4,8 @@
         <p class="generic-subheader">Find answers to common questions here 🎉</p>
         <div class="faq-input__container">    
             <img class="faq-input__icon" src="/static/images/v2/icons/icon-search.svg" />
-            <input class="faq-input" placeholder="Search" />
+            <input class="faq-input" />
+            <button class="button button-blog-search" id="buttonBlogSearch">Search</button>
         </div>
         <div class="faq-buttons__container">
             <a href="#" data-category="355593524" class="button button-faq">About True</a>
@@ -32,7 +33,7 @@
 <script id="posts-template" type="text/x-handlebars-template">
     {{#each posts}}
         <li data-postid="{{articleId}}">
-            <a class="faq-link" href="faq.html?id={{articleId}}">{{this.articleHeadline}}<img class="faq-link__icon" src="/static/images/v2/icons/icon-link-arrow.svg" /></a>
+            <a class="faq-link" href="/faq/faq.html?id={{articleId}}">{{this.articleHeadline}}<img class="faq-link__icon" src="/static/images/v2/icons/icon-link-arrow.svg" /></a>
             <div class="generic-container__section -no-border -inline">{{{this.articleContent}}}</div>
         </li>
     {{/each}}
@@ -70,7 +71,6 @@
                 $('.generic-container__section',$(this).parent()).slideDown();
                 
             }
-            console.log($(this)); 
         })
 
         $bodyLinks.click(function(e) {
@@ -85,13 +85,9 @@
         var postsArray = [];
         var searchablePosts = JSON.parse(sessionStorage.getItem('trytrue-faq-list')).posts;
         var $filters = $('.button-faq');
-        console.log('Search me');
-        console.log(term);
-        console.log(searchablePosts);
         if (term) {
             searchablePosts.forEach(function(post) {
                 if (post.articleContent.toLowerCase().includes(term.toLowerCase()) || post.articleHeadline.toLowerCase().includes(term.toLowerCase())) {
-                    console.log(post)
                     postsArray.push(post);
                 }
             })
@@ -115,7 +111,6 @@
     function filterPosts(filter) {
         var postsArray = [];
         var searchablePosts = JSON.parse(sessionStorage.getItem('trytrue-faq-list')).posts;
-        console.log(filter);
         if (filter) {
             // filter the results
             searchablePosts.forEach(function(post) {
@@ -146,7 +141,6 @@
         if (sessionStorage.getItem('trytrue-faq-list')) {
             let storagePosts = JSON.parse(sessionStorage.getItem('trytrue-faq-list'));
 
-            console.log(storagePosts.posts)
             data.posts = storagePosts.posts
             
             if (searchTerm) {
@@ -157,19 +151,25 @@
             }
             $('.blog-post-loader').hide();
             document.getElementById('blogHome').innerHTML += postsData;
-            handleLinks();
+            // handleLinks();
             if (storagePosts.currentId) {
+                handleLinks();
                 var $faqLinks = $('.faq-link');
                 $faqLinks.each(function(i) {
                     if ($(this).parent().data('postid') === parseInt(storagePosts.currentId,10)) {
                         $(this).click();
                         $(window).animate({
                             scrollTop: ($(this).offset().top - 100)
-                            },300);
-                        }
-                })
+                        },300,function(){
+                            storagePosts.currentId = '';
+                            sessionStorage.setItem('trytrue-faq-list',JSON.stringify(storagePosts));
+                        });
+                    }
+                })      
             } else {
-                console.log($('.button-faq[data-category="355593524"]'));
+                $(window).animate({
+                    scrollTop: 0
+                },300);
                 setTimeout(function() {
                     $('.button-faq[data-category="355593524"]').click();
                 },200)
@@ -224,8 +224,6 @@
                 // put posts in to localStorage
                 sessionStorage.setItem('trytrue-faq-list', JSON.stringify(storageObject));
 
-                console.log(posts)
-
                 data.posts = posts
             
                 if (searchTerm) {
@@ -236,9 +234,8 @@
                 }
                 $('.blog-post-loader').hide();
                 document.getElementById('blogHome').innerHTML += postsData;
-                console.log($('.button-faq[data-category="355593524"]'));
                 $('.button-faq[data-category="355593524"]').click();
-                handleLinks();
+                // handleLinks();
             });
         }
     }
@@ -248,6 +245,7 @@
     $(function() {
         var $context = $('.faq-buttons__container'),
         $filters = $('.button-faq',$context),
+        $searchBtn = $('#buttonBlogSearch');
         $searchInput = $('.faq-input'),
         setFilter = '';
 
@@ -256,6 +254,13 @@
                 searchPosts(e.target.value)
             }
         });
+
+        $searchBtn.click(function(e) {
+            e.preventDefault();
+            searchPosts($searchInput.val());
+        })
+
+        
 
         $filters.click(function(e) {
             e.preventDefault();
