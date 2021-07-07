@@ -1,3 +1,27 @@
+<!-- Nextdoor Pixel Code -->
+<script type="text/javascript">
+    (function(win, doc, sdk_url){
+    if(win.ndp) return;
+    var tr=win.ndp=function(){
+    tr.handleRequest? tr.handleRequest.apply(tr, arguments):tr.queue.push(arguments);
+  };
+    tr.queue = [];
+    var s='script';
+    var new_script_section=doc.createElement(s);
+    new_script_section.async=!0;
+    new_script_section.src=sdk_url;
+    var insert_pos=doc.getElementsByTagName(s)[0];
+    insert_pos.parentNode.insertBefore(new_script_section, insert_pos);
+  })(window, document, 'https://ads.nextdoor.com/public/pixel/ndp.js');
+    ndp('init','e9f6e04c-3597-463b-ba39-c8cc3d45086d', {})
+    ndp('track','PAGE_VIEW');
+</script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://flask.nextdoor.com/pixel?pid=e9f6e04c-3597-463b-ba39-c8cc3d45086d&ev=PAGE_VIEW&noscript=1" />
+  </noscript>
+  <!-- End Nextdoor Pixel Code -->
+
 <nav style="position: fixed;z-index:10;width: 100%;">
     <div class="topnav-container">
         <div class="navigation-inner">
