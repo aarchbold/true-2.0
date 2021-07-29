@@ -5,6 +5,10 @@
 
 
 // properties
+#appleStore, #androidStore {
+    display: none;
+}
+
 .store-container {
     width: 100%;
     max-width: 425px;
@@ -21,11 +25,20 @@
     box-sizing: border-box;
     padding-left: 130px;
     margin-bottom: 15px;
+    &.-android {
+        padding-left: 90px;
+        margin: 0 10px 15px;
+    }
     .store-icon {
         position: absolute;
         left: 0;
         top: 0;
         width: 114px;
+        &.-android {
+            width: 65px;
+            box-shadow: $button-box-shadow-tight;
+            border-radius: 15px;
+        }
     }
 }
 
@@ -33,6 +46,10 @@
     color: #000;
     font-size: 21px;
     line-height: 24px;
+    &.-android {
+        font-size: 24px;
+        line-height: 1.3;
+    }
 }
 
 .store-app-description {
@@ -40,6 +57,13 @@
     font-size: 14px;
     line-height: 17px;
     padding: 6px 0 10px;
+    &.-android {
+        color: #00875E;
+    }
+}
+
+.android-app-rating {
+    padding: 0 20px 24px;
 }
 
 .store-app-button {
@@ -50,6 +74,17 @@
     color: white;
     size: 14px;
     padding: 9px 20px 8px;
+}
+
+.android-app-button {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: #00875E;
+    border-radius: 4px;
+    color: white;
+    size: 14px;
+    padding: 10px 0;
 }
 
 .store-app-header {
@@ -66,6 +101,14 @@
     color: #000;
     font-size: 15px;
     line-height: 19px;
+    &.-android {
+        border-top: none;
+    }
+    h3 {
+        font-size: 18px;
+        padding-bottom: 20px;
+        font-weight: 600;
+    }
     p {
         margin-bottom: 20px;
     }
@@ -101,9 +144,22 @@
     }
 }
 
+.store-app-footer-button {
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #D8D8D8;
+    padding: 8px 16px;
+    color: #636363;
+    border-radius: 50px;
+}
+
 .store-app-slider {
     margin-bottom: 20px;
     width: 285px;
+    &.store-app-slider-android {
+        margin-top: 30px;
+        width: 195px;
+    }
     .slick-list {
         overflow: visible !important;
     }
@@ -113,5 +169,10 @@
     img {
         width: 270px;
         margin-right: 10px;
+    }
+    &.-android {
+        img {
+            width: 180px;
+        }
     }
 }

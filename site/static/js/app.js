@@ -734,7 +734,7 @@ var handleTryTrueButton  = function(){
   var $contentButton2 = $('#beRealButton');
   var $contentButton3 = $('#letsDoItButton');
   var $iosButton = $('#getForiOS');
-  var $androindButton = $('#getForAbdroid');
+  var $androidButton = $('#getForAndroid');
   
   var fbEventProp = 'appleStore';
   var appStoreLink = 'https://apps.apple.com/us/app/true-private-social-network/id834451429';
@@ -760,7 +760,7 @@ var handleTryTrueButton  = function(){
   $iosButton.click(function() {
     ndp('track','CONVERSION');
   })
-  $androindButton.click(function() {
+  $androidButton.click(function() {
     ndp('track','CONVERSION');
   })
   $('#getForiOSFooter').click(function() {
