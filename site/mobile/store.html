@@ -250,6 +250,11 @@
                 } else {
                     $('#androidStore').show();
                 }
+
+                if (getParam('browser') === 'android') {
+                    $('#androidStore').show();
+                    $('#appleStore').hide();
+                }
                 
             });
         </script>
