@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head>
+<!DOCTYPE html><head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
     <title>True Email</title>
@@ -32,13 +32,6 @@
             background-color: #F5F8FA;
         }
 
-        .main-cta.-mobile-link {
-            display: none;
-        }
-        .main-cta.-desktop-link {
-            display: inline-block;
-        }
-
         .main-table {
             background-color: #f5f8fa;
         }
@@ -56,6 +49,10 @@
             color: white !important;
         }
 
+        .thread-message a {
+            color: #4B5579 !important;
+        }
+
         .footer-table a {
             color: #3D4250 !important;
         }
@@ -69,8 +66,8 @@
             position: relative;
             border-radius: 0 0 30px 30px;
             background-color: #ffffff;
-            padding-top:40px;
-            padding-bottom: 120px;
+            padding-top:20px;
+            padding-bottom: 40px;
         }
 
         .main-cta {
@@ -79,10 +76,26 @@
             text-decoration:none;
             background-color:#4C8BFF;
             display:inline-block;
-            padding:18px 70px;
+            padding:18px 20px;
+            border-radius:30px;
+            font-size:18px;
+            min-width: 180px;
+            font-weight:600;text-transform: uppercase;
+        }
+        .token-container {
+            font-family: Trueno, Verdana,-apple-system,BlinkMacSystemFont;
+            color:#555F86;
+            text-decoration:none;
+            background-color:#E9EDEF;
+            display:inline-block;
+            padding:18px 20px;
             border-radius:30px;
             font-size:20px;
+            min-width: 180px;
             font-weight:600;text-transform: uppercase;
+        }
+        .table-body a.token-container {
+            color:#555F86 !important;
         }
         .table-footer {
             padding-top: 0px;
@@ -91,22 +104,6 @@
         .footer-table {
             padding-top: 40px;
         }
-        
-        .page-image {
-            flex-shrink: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        @media only screen and (max-width: 960px) {
-            .main-cta.-mobile-link {
-                display: inline-block;
-            }
-            .main-cta.-desktop-link {
-                display: none;
-            }
-        }
 
         @media only screen and (max-width: 700px) {
             body {
@@ -114,6 +111,12 @@
             }
             .outer-table, .footer-table {
                 width: 100%!important;
+            }
+        }
+
+        @media only screen and (max-width: 605px) {
+            .download-button {
+                width: 130px;
             }
         }
 
@@ -127,6 +130,9 @@
             }
             .outer-table, .footer-table {
                 margin: 0;
+            }
+            .logo-table {
+                background-position: 50% -80px !important;
             }
             .table-header {
                 font-size: 30px !important;
@@ -142,12 +148,20 @@
             }
             .table-footer {
                 font-size: 14px !important;
+                line-height: 25px !important;
             }
             .main-cta {
-                padding:18px 50px;
+                padding:18px 20px;
             }
             .main-content {
+                padding-top: 0;
                 padding-bottom: 40px;
+            }
+            .true-logo {
+                width: 140px;
+            }
+            .content-spacer {
+                height: 10px !important;
             }
         }
 
@@ -165,20 +179,17 @@
                 width: 80px !important;
                 height: 80px !important;
             }
-            .table-cta td {
-                font-size: 20px !important;
-                line-height: 26px !important;
+            .welcome-table td {
+                font-size: 16px !important;
+                line-height: 24px !important;
             }
             .table-tap {
                 line-height: 22px !important;
                 font-size: 12px !important;
             }
             .main-cta {
-                padding:16px 40px;
+                padding:16px 20px;
                 font-size:18px;
-            }
-            .true-logo {
-                width: 140px;
             }
             .logo-spacer {
                 height: 22px !important;
@@ -225,44 +236,59 @@
                             <div class="main-content">
                                 <table width="90%">
                                     <tr>
-                                        <td class="table-header" align="center" style="text-align: center; font-family: Trueno, Verdana,-apple-system,BlinkMacSystemFont; font-weight: 600; font-size: 44px; color: #555F85; line-height: 1;">
-                                            Welcome to True
+                                        <td class="table-header" align="left" style="text-align: center; font-family: Trueno, Verdana,-apple-system,BlinkMacSystemFont; font-weight: 600; font-size: 40px; color: #252525; line-height: 1.4;">
+                                            How’s your experience so far?
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="table-body" align="center" style="font-family: Trueno, Verdana,-apple-system,BlinkMacSystemFont; font-size: 23px; font-weight: 300;color: #555F85; line-height: 32px;">
-                                            <table class="table-cta">
+                                        <td>
+                                            <table class="welcome-table" style="font-family: Trueno, Verdana,-apple-system,BlinkMacSystemFont; font-size: 23px; font-weight: 300;color: #303030; line-height: 32px;">
                                                 <tr>
-                                                    <td><img style="display:block;" src="https://trytrue.com/static/images/email/p.png" width="1" height="30" border="0" /></td>
+                                                    <td><img class="content-spacer" style="display:block;" src="https://trytrue.com/static/images/email/p.png" width="1" height="20" border="0" /></td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="center" style="font-size: 23px;">
-                                                        Your account is ready. Now let’s start a private thread on any topic and invite some friends to it.
+                                                    <td style="font-size: 20px;">
+                                                        Welcome {{first_name}},<br />
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td><img style="display:block;" src="https://trytrue.com/static/images/email/p.png" width="1" height="20" border="0" /></td>
+                                                    <td><img style="display:block;" src="https://trytrue.com/static/images/email/p.png" width="1" height="22" border="0" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-size: 20px;">
+                                                        I just want to check in and see how your experience has been been with True Insiders. <strong>We’d love to hear your ideas how to make True even better</strong>. 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img style="display:block;" src="https://trytrue.com/static/images/email/p.png" width="1" height="22" border="0" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-size: 20px;">
+                                                        <strong>Please reply to this email</strong> if you are interested in sharing your experience - we’d love to feature you on our website or blog.
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img style="display:block;" src="https://trytrue.com/static/images/email/p.png" width="1" height="30" border="0" /></td>
                                                 </tr>
                                             </table>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="table-tap" align="center" style="opacity: 0.6;text-align: center; font-family: Trueno, Verdana,-apple-system,BlinkMacSystemFont; font-size: 14px; color: #555F86; line-height: 30px;padding-bottom: 10px;">
-                                            (Tap from your phone)
+                                        <td class="table-footer" align="center" style="text-align: center; font-family: Verdana,-apple-system,BlinkMacSystemFont; font-size: 20px; color: #303030; line-height: 30px;padding: 10px 0;">
+                                            Warmly,<br>
+                                            <strong style="font-weight:600;">Bret Cox</strong><br />
+                                            <strong style="font-weight:600;">CEO | True</strong>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="table-body" align="center">
-                                            <a class="main-cta -mobile-link" href="https://link.trytrue.com/yh2d">CREATE A THREAD</a>
-                                            <a class="main-cta -desktop-link" href="https://trytrue.com/mobile/">CREATE A THREAD</a>
+                                        <td><img style="display:block;" src="https://trytrue.com/static/images/email/p.png" width="1" height="20" border="0" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <a href="https://apps.apple.com/us/app/true-private-social-network/id834451429"><img class="download-button" width="160" src="https://trytrue.com/static/images/email/btn-ios.png" border="0" /></a>
+                                            <a href="https://play.google.com/store/apps/details?id=hellomobile.hello"><img class="download-button" width="160" src="https://trytrue.com/static/images/email/btn-android.png" border="0" /></a>
                                         </td>
                                     </tr>
-                                    <!-- <tr>
-                                        <td class="table-footer" align="center" style="border-top: 1px solid #888888; text-align: center; font-family: Verdana,-apple-system,BlinkMacSystemFont; font-size: 16px; color: #888888; line-height: 20px;">
-                                            <br>Didn't sign up for True? Click <a href="[%not_me_link%]" style="text-decoration: none;color: #1A1A1A;">here</a> to report this message.
-                                            <br><br><br>
-                                        </td>
-                                    </tr> -->
                                 </table>
                             </div>
                         </td>
@@ -271,9 +297,9 @@
                         <td>
                             <table width="700" class="footer-table" border="0" cellpadding="0" cellspacing="0">
                                 <tr>
-                                    <td class="table-footer" align="center" style="text-align: center; font-family: Verdana,-apple-system,BlinkMacSystemFont; font-size: 16px; color: #3D4250; opacity:0.62; line-height:24px;">
-                                        Manage notifications in Profile > Settings<br>
-                                        <a href="mailto:support@trytrue.app" style="color: #3D4250;">support@trytrue.app</a>
+                                    <td class="table-footer" align="center" style="text-align: center; font-family: Verdana,-apple-system,BlinkMacSystemFont; font-size: 16px; color: #3D4250; opacity:0.62; line-height:20px;">
+                                        Manage notifications in Profile > Settings<br />      
+                                        <a href="mailto:support@trytrue.app">support@trytrue.app</a>
                                         <br><br><br>
                                     </td>
                                 </tr>
