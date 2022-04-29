@@ -80,7 +80,9 @@
             border-radius:30px;
             font-size:18px;
             min-width: 180px;
-            font-weight:600;text-transform: uppercase;
+            font-weight:600;
+            text-transform: uppercase;
+            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.16);
         }
         .token-container {
             font-family: Trueno, Verdana,-apple-system,BlinkMacSystemFont;
@@ -194,6 +196,9 @@
             .logo-spacer {
                 height: 22px !important;
             }
+            .desktop-break {
+                display: none;
+            }
         }
     
     </style>
@@ -237,7 +242,7 @@
                                 <table width="90%">
                                     <tr>
                                         <td class="table-header" align="left" style="text-align: center; font-family: Trueno, Verdana,-apple-system,BlinkMacSystemFont; font-weight: 600; font-size: 40px; color: #252525; line-height: 1.4;">
-                                            Last chance to join True Insiders
+                                            Last chance to join<br class="desktop-break" /> True Insiders
                                         </td>
                                     </tr>
                                     <tr>
@@ -273,13 +278,13 @@
                                                     <td><img style="display:block;" src="https://trytrue.com/static/images/email/p.png" width="1" height="22" border="0" /></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="table-tap" align="center" style="opacity: 0.6;text-align: center; font-family: Trueno, Verdana,-apple-system,BlinkMacSystemFont; font-size: 14px; color: #555F86; line-height: 30px;padding-bottom: 10px;">
-                                                        (Tap from your phone)
+                                                    <td class="table-body" align="center">
+                                                        <a class="main-cta" href="{{insider_link}}">JOIN TRUE INSIDERS THREAD</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="table-body" align="center">
-                                                        <a class="main-cta" href="{{insider_link}}">JOIN TRUE INSIDERS THREAD</a>
+                                                    <td class="table-tap" align="center" style="opacity: 0.6;text-align: center; font-family: Trueno, Verdana,-apple-system,BlinkMacSystemFont; font-size: 14px; color: #555F86; line-height: 30px;padding-bottom: 10px;">
+                                                        (Tap from your phone)
                                                     </td>
                                                 </tr>
                                                 <tr>
