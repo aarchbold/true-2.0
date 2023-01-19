@@ -11,6 +11,7 @@ If you need to make edits to files, see below.
 This site is strictly client side. There is no server side code in this repo. Some of the JavaScript may point to existing code. Details coming soon.
 
 ### install environment
+This repo uses an older version of node. It was developed with node 8.9.0. If you are getting errors trying to get it to run this is probably why
 * Clone this repo to your local machine
 * Navigate to the root of the repo
 * Run "npm install" (this should install all dependencies)
