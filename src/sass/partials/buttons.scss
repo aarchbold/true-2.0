@@ -68,6 +68,11 @@ button, .button {
         background-color: $color-button-selected;
         border: 1px solid $color-button-selected;
     }
+    &.-block {
+        display: block;
+        text-align: center;
+        margin: 20px 0;
+    }
     &:hover {
         transform: scale(1.05);
     }

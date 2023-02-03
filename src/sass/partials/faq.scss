@@ -34,6 +34,11 @@
     padding-bottom: 10px;
 }
 
+.generic-header__logo {
+    margin: 0 auto 30px;
+    display: block;
+}
+
 .generic-header__h1 {
     text-align: center;
     font-family: TruenoBlack, sans-serif;
@@ -47,6 +52,9 @@
     &.-align-left {
         text-align: left;
         max-width: 100%;
+    }
+    &.-small {
+        font-size: 30px;
     }
 }
 
@@ -259,6 +267,9 @@
         box-shadow: none;
         padding-top: 0;
     }
+    @media (max-width: 800px) {
+        padding: 26px 20px;
+    }
 }
 
 .generic__item--header {
@@ -294,6 +305,10 @@
     }
     strong {
         font-family: TruenoSemiBold, sans-serif; 
+    }
+    &.-slim {
+        max-width: 360px;
+        margin: 0 auto;
     }
 }
 
