@@ -1,0 +1,143 @@
+/* testimonials styles
+*/
+
+// vars
+
+// properties
+.press-container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding-top: 240px;
+    &:after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+    @media (max-width: 1200px) {
+        padding-top: 150px;
+    }
+    @media (max-width: 800px) {
+        padding-top: 110px;
+        max-width: 70%;
+    }
+    @media (max-width: 550px) {
+        max-width: 90%;
+    }
+    @media (max-width: 420px) {
+        max-width: 100%;
+    }
+}
+
+.press-card {
+    background-color: $color-bg-card;
+    box-sizing: border-box;
+    box-shadow: $card-box-shadow;
+    border-radius: 60px;
+}
+
+.press-card__inner {
+    text-align: center;
+    padding: 50px 100px;
+    font-size: 32px;
+    font-family: TruenoBlack, sans-serif;
+    line-height: 1.6;
+    box-sizing: border-box;
+    @media (max-width: 800px) {
+        padding: 50px 60px;
+    }
+    @media (max-width: 760px) {
+        padding: 50px 30px;
+    }
+}
+
+.press-card--tiles {
+    position: relative;
+    &:after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+}
+
+.press-card__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.press-card--tile {
+    float: left;
+    width: 33.3%;
+    box-sizing: border-box;
+    padding: 20px 10px 10px 10px;
+    @media (max-width: 800px) {
+        width: 33.3%;
+        img {
+            width: 100px;
+        }
+    }
+    @media (max-width: 760px) {
+        width: 50%;
+        padding: 10px 5px 5px 5px;
+        img {
+            width: 100px;
+        }
+    }
+}
+
+.press-card--tile__inner {
+    transition: all 0.4s;
+    display: block;
+    margin: 0;
+    padding: 5px 10px;
+    border-radius: 28px;
+    font-family: TruenoBold;
+    text-decoration: none;
+    border: 1px solid $color-button-border;
+    color: $color-button-font;
+    font-size: 16px;
+    font-family: TruenoRegular;
+    background-color: transparent;
+    text-align: center;
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.press-flair-left, .press-flair-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -40px;
+    width: 40px;
+    @media (max-width: 760px) {
+        display: none;
+    }
+}
+
+.press-flair-right {
+    left: auto;
+    right: -40px;
+}
+
+.press-page__link {
+    position: relative;
+    padding: 25px 0px 25px 160px;
+    border-bottom: 10px solid #F7F7F7;
+    a {
+        text-decoration: none;
+        font-weight: 900;
+        font-size: 22px;
+        line-height: 1.2;
+        color: #454545;
+        @media (max-width: 760px) {
+            font-size: 18px;
+        }
+    }
+}
+
+.press-page__links {
+    padding-bottom: 100px;
+}

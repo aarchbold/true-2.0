@@ -30,6 +30,7 @@
                 <a href="/index.html" class="button-nav -home"><img src="/static/images/icons/icon-home.svg" width="20" /></a>
             } -->
             <div class="topnav-links">
+                <a @@if (section === 'press') {class="button-nav -selected"} @@if (section !== 'press') {class="button-nav"} href="/press">PRESS</a>
                 <a @@if (section === 'faq') {class="button-nav -selected"} @@if (section !== 'faq') {class="button-nav"} href="/faq.html">FAQ</a>
                 <a @@if (section === 'community') {class="button-nav -selected"} @@if (section !== 'community') {class="button-nav"} href="/guidelines/">COMMUNITY GUIDELINES</a>
                 <a id="tryTrueNav" class="button-nav" target="_blank" href="/index.html#waitlist">TRY TRUE</a>

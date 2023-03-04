@@ -104,6 +104,12 @@ button, .button {
     }
 }
 
+.button-download {
+    img {
+        top: 18px;
+    }
+}
+
 .button-nav {
     background-color: $color-button;
     border: 1px solid $color-button-border;
