@@ -3903,7 +3903,7 @@ progress::-moz-progress-bar {
 .testimonial-card__inner {
   text-align: center;
   padding: 50px 70px 100px 70px;
-  font-size: 32px;
+  font-size: 27px;
   font-family: TruenoBlack, sans-serif;
   line-height: 1.6;
   box-sizing: border-box; }
@@ -3937,7 +3937,7 @@ progress::-moz-progress-bar {
 
 @media (max-width: 1000px) {
   .testimonial-card__inner {
-    font-size: 27px;
+    font-size: 25px;
     line-height: 1.4; }
     .testimonial-card__inner br {
       display: none; }
