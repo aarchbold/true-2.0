@@ -21,6 +21,9 @@
 
 .slick-next {
     right: 24px;
+    @media (max-width: 800px) {
+        right: 10px;
+    }
 }
 
 .slick-prev {
@@ -28,6 +31,9 @@
     transform: translate(0,-50%) rotate(180deg);
     &:hover {
         transform: translate(0,-50%) rotate(180deg);
+    }
+    @media (max-width: 800px) {
+        left: 10px;
     }
 }
 
