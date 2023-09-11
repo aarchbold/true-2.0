@@ -418,7 +418,7 @@
                             <input id="trueFirstName" type="text" placeholder="First Name" />
                             <input id="trueLastName" type="text" placeholder="Last Name" />
                             <input id="trueEmail" type="email" placeholder="Email" />
-                            <a href="#" class="button footer-signup -disabled">Sign Up</a>
+                            <a href="#" id="betaSignUpForm" class="button footer-signup -disabled">Sign Up</a>
                         </div>
                         <div class="footer-legal">
                             <div class="footer-legal__links">
@@ -428,7 +428,7 @@
                                 &copy; <script>document.write(new Date().getFullYear())</script> True | <a href="https://trytrue.com/privacy/">Privacy Policy</a> | <a href="https://trytrue.com/terms/">Terms of Service</a>
                             </div>
                             <div class="footer-download__ctas">
-                                <a onclick="trackFBClick('appStoreButtonClick');" href="https://apps.apple.com/us/app/true-private-social-network/id834451429" target="_blank" id="getForiOSFooter" class="button button-icon button-shadow button-ios">
+                                <a onclick="trackFBClick('appStoreButtonClick');return gtag_report_conversion('https://apps.apple.com/us/app/true-private-social-network/id834451429');" href="https://apps.apple.com/us/app/true-private-social-network/id834451429" target="_blank" id="getForiOSFooter" class="button button-icon button-shadow button-ios">
                                     <img src="static/images/v2/icons/icon-ios.png" />
                                     iOS
                                 </a>
